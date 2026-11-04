@@ -102,10 +102,14 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    /* Inside the page margins rather than full bleed: with mandatory snap a
-       full-bleed rail pulled the first photo flush to the screen edge. */
-    margin-inline: 0;
-    padding-inline: 0;
+    /* The left edge keeps the page margin (snap aligns the first photo to it).
+       The right edge bleeds to the screen so the next photo peeks in while
+       there is more to swipe, and the padding brings the margin back only
+       after the last photo. */
+    margin-left: 0;
+    margin-right: calc(var(--gutter) * -1);
+    padding-left: 0;
+    padding-right: var(--gutter);
   }
 
   .grid::-webkit-scrollbar {
