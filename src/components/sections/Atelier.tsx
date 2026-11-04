@@ -2,18 +2,17 @@ import Image, { type StaticImageData } from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import ritual from '@/assets/images/ritual.jpg';
-import emrah from '@/assets/images/team/emrah.jpg';
 import { team } from '@/lib/site';
 import { Headline } from '@/components/ui/Headline';
 import { ArrowButton } from '@/components/ui/LinkArrow';
 import styles from './Atelier.module.css';
 
 /**
- * Portraits the salon has supplied. Everyone else renders the monogram plate,
- * which reads as a frame waiting for its photograph rather than as a gap.
- * Do not pad the roster with stock faces.
+ * Team portraits, once the salon supplies them. Until then every card renders
+ * the monogram plate, which reads as a frame waiting for its photograph rather
+ * than as a gap. Do not pad the roster with stock faces.
  */
-const portraits: Partial<Record<(typeof team)[number]['key'], StaticImageData>> = { emrah };
+const portraits: Partial<Record<(typeof team)[number]['key'], StaticImageData>> = {};
 
 export async function Atelier() {
   const t = await getTranslations('atelier');
@@ -43,14 +42,6 @@ export async function Atelier() {
               ))}
             </div>
 
-            <ul className={styles.facts} data-reveal>
-              {(t.raw('facts') as { value: string; label: string }[]).map((f) => (
-                <li key={f.label}>
-                  <span className={styles.factValue}>{f.value}</span>
-                  <span className={styles.factLabel}>{f.label}</span>
-                </li>
-              ))}
-            </ul>
 
             <ArrowButton>{t('cta')}</ArrowButton>
           </div>

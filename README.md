@@ -52,15 +52,15 @@ fills those in by itself.
 
 ## Media
 
-- Hero: Pexels 4587909 (Ketut Subiyanto). Closing band: Pexels 8956142
-  (KoolShooters). Both free under the Pexels licence. Originals are in
+- Hero: Pexels 8956111 (KoolShooters), the client's pick. Closing band: Pexels
+  8956142 (KoolShooters). Both free under the Pexels licence. Originals are in
   `media-src/stock/` (git-ignored, 73 MB).
 - Reels and gallery stills: cut from @emrahair's own reels.
-- Service-card clips: four from the clips used on the Panfili site
-  (`media-src/panfili-clips/`, client's choice); "care" is Emrahair's own reel.
-  Those clips appear to be filmed in Panfili's rooms — replace them with
-  Emrahair footage before the site is promoted.
-- Second-section photos: the salon's Google Maps gallery (`media-src/photos/maps-*.jpg`).
+- Service-card clips (Pexels, free licence): colour 37306468, cut 6502872,
+  care 5109926, bridal 8935487, nails 3997849. Originals in `media-src/stock/`.
+- Second section and Çalışmalar: the salon's Google Maps gallery
+  (`media-src/photos/maps-*.jpg`, `media-src/photos/work/`).
+- Reels: @emrahair's own, served at their source 720p quality (not re-encoded).
 - `ritual.jpg` (Emrah at the brick wall) and `about-main.png`: supplied photos.
 
 ## To confirm with the salon before going live
@@ -70,6 +70,6 @@ fills those in by itself.
 - **`about-main.png`** came from Schwarzkopf Pro TR's Instagram. The stylist in
   it is not confirmed to be Emrah, so it is never captioned with his name.
 - **Logo.** There is none; the wordmark is typographic (`Wordmark.tsx`).
-- **Team portraits** for Serdar, Merve, Zeynep and Gizem (monogram plates for now).
+- **Team portraits** for all five (monogram plates for now).
 - **Domain** (`site.url` in `src/lib/site.ts`, currently `emrahair.com`).
 - Unit number: Google writes 21/19, Kolay Randevu 19/21.

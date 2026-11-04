@@ -22,7 +22,8 @@ const mk = (f) => fs.mkdirSync(path.dirname(f), { recursive: true });
 
 const ff = (args) => execFileSync(ffmpeg, ['-y', '-v', 'error', ...args], { stdio: 'inherit' });
 
-const HERO = src('stock', '4587909-uhd_3840_2160_25fps.mp4');
+// Hero: Pexels 8956111 (KoolShooters), the client's pick. Was 4587909.
+const HERO = src('stock', '8956111-uhd_3840_2160_24fps.mp4');
 const INVITE = src('stock', '8956142-uhd_3840_2160_24fps.mp4');
 
 const x264 = (crf) => ['-an', '-c:v', 'libx264', '-preset', 'slow', '-crf', String(crf), '-pix_fmt', 'yuv420p', '-movflags', '+faststart'];
@@ -40,11 +41,13 @@ function poster(file, input, t, vf) {
   ff(['-ss', String(t), '-i', input, '-frames:v', '1', '-vf', vf, '-q:v', '3', file]);
 }
 
-/* --- Hero: wind through dark hair on espresso. 10.4s, looped. ------------ */
-video(out('public/videos/hero/hero-desktop.mp4'), ['-i', HERO], `scale=1920:-2,${GRADE}`, 27);
-video(out('public/videos/hero/hero-mobile.mp4'), ['-i', HERO], `crop=ih*9/16:ih:(iw-ih*9/16)/2+iw*0.02:0,scale=720:-2,${GRADE}`, 28);
-poster(out('src/assets/images/hero-poster-desktop.jpg'), HERO, 4, `scale=1920:-2,${GRADE}`);
-poster(out('src/assets/images/hero-poster-mobile.jpg'), HERO, 4, `crop=ih*9/16:ih:(iw-ih*9/16)/2+iw*0.02:0,scale=720:-2,${GRADE}`);
+/* --- Hero: balayage in window light, 17s, looped. ------------------------- */
+const HERO_V = 'scale=1920:-2';
+const HERO_M = 'crop=ih*9/16:ih:(iw-ih*9/16)/2:0,scale=720:-2';
+video(out('public/videos/hero/hero-desktop.mp4'), ['-i', HERO], HERO_V, 26);
+video(out('public/videos/hero/hero-mobile.mp4'), ['-i', HERO], HERO_M, 27);
+poster(out('src/assets/images/hero-poster-desktop.jpg'), HERO, 2, HERO_V);
+poster(out('src/assets/images/hero-poster-mobile.jpg'), HERO, 2, HERO_M);
 
 /* --- Closing band: caramel balayage in warm light. 4–14s: the first three
    seconds are an empty wall. Taken down a stop to sit in a dark band. ----- */
@@ -53,42 +56,40 @@ video(out('public/videos/invitation/invitation.mp4'), ['-ss', '4', '-t', '10', '
 poster(out('src/assets/images/invitation-poster.jpg'), INVITE, 8, `scale=1600:-2,${DARK}`);
 
 /* --- Reels: Emrah's own work, lighter for the web. ----------------------- */
+/* Copied, not re-encoded: the sources are already 720x1280 web encodes, and
+   every further pass at a lower size was visibly softer. */
 for (const n of [1, 2, 3, 4]) {
-  const input = src('reels', `${n}.mp4`);
-  video(out(`public/videos/reels/${n}.mp4`), ['-i', input], 'scale=540:-2', 30);
-  poster(out(`src/assets/images/reels/${n}.jpg`), input, 1.5, 'scale=540:-2');
+  const file = out(`public/videos/reels/${n}.mp4`);
+  mk(file);
+  fs.copyFileSync(src('reels', `${n}.mp4`), file);
+  console.log('copy  ', path.relative(root, file), Math.round(fs.statSync(file).size / 1024) + 'KB');
 }
 
-/* --- Service-card clips: 5s loops. --------------------------------------
-   Four from the clips used on the Panfili site (media-src/panfili-clips/),
-   chosen by the client; "care" stays on Emrah's own reel because neither of
-   the remaining Panfili clips (a facial machine, make-up) is a service this
-   salon offers. */
+/* --- Service-card clips: 5s loops from Pexels (free licence). ------------
+   One per card, chosen for that card's service:
+     color   15802849 / pexels 37306468  balayage waves being shown off
+     cut     6502872   scissors close-up, profile
+     care    5109926   sleek straight hair after smoothing
+     bridal  8935487   a soft updo, in profile
+     beauty  3997849   red polish going on */
 const clips = {
-  color: [src('panfili-clips', 'hair.mp4'), 0.5],   // blow-dry on blonde hair
-  cut: [src('panfili-clips', 'hair.mp4'), 10],      // the finished cut, revealed
-  care: [src('reels', '4.mp4'), 9],                 // soft waves after treatment
-  bridal: [src('panfili-clips', 'bridal.mp4'), 4],  // bridal styling and the dress
-  beauty: [src('panfili-clips', 'nails.mp4'), 2],   // nail work
+  color: ['15802849_2160_3840_60fps.mp4', 0, 5],
+  cut: ['6502872-hd_1080_1920_30fps.mp4', 30, 5],
+  care: ['5109926-hd_1080_1920_30fps.mp4', 0, 5.3],
+  bridal: ['8935487-uhd_2160_3840_25fps.mp4', 33, 4.8],
+  beauty: ['3997849-uhd_2160_4096_25fps.mp4', 2, 5],
 };
-for (const [key, [input, t]] of Object.entries(clips)) {
-  video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', '5', '-i', input], 'scale=480:-2', 30);
+for (const [key, [file, t, d]] of Object.entries(clips)) {
+  video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', String(d), '-i', src('stock', file)], 'scale=540:-2,fps=30', 27);
 }
 
-/* --- Stills: the gallery, from the reels at full resolution. -------------- */
-const stills = {
-  'work-balayage-front': [3, 12],
-  'work-balayage-back': [3, 24],
-  'work-brunette-volume': [2, 15],
-  'work-brunette-waves': [4, 12],
-  'work-foils': [1, 15],
-  'work-blowout': [2, 21],
-  'work-finish': [3, 18],
-  'work-brunette-glow': [4, 21],
-};
-for (const [name, [n, t]] of Object.entries(stills)) {
-  poster(out(`src/assets/images/work/${name}.jpg`), src('reels', `${n}.mp4`), t, 'scale=720:-2');
+/* --- Çalışmalar: the salon's own Google Maps photos. ---------------------- */
+for (const name of ['pink-waves', 'emrah-client', 'copper', 'nail-art', 'pink-balayage', 'night-sign', 'lounge-lights', 'orange-arch']) {
+  const file = out(`src/assets/images/work/${name}.jpg`);
+  mk(file);
+  await sharp(src('photos', 'work', `${name}.jpg`)).rotate().resize({ width: 1200, height: 1600, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(file);
 }
+console.log('work photos done');
 
 /* --- The salon's photographs. -------------------------------------------- */
 const photos = {
@@ -120,15 +121,3 @@ await sharp(src('photos', 'ritual.jpg'))
   .jpeg({ quality: 82 })
   .toFile(out('public/og-emrahair.jpg'));
 console.log('done');
-
-/* --- Emrah's roster card: his face from the ritual photograph, the one
-   where the apron reads "EMRAH". (about-main.png came from Schwarzkopf
-   Pro TR's feed and is not confirmed to be him, so it is never captioned
-   with his name.) ---------------------------------------------------------- */
-fs.mkdirSync(out('src/assets/images/team'), { recursive: true });
-await sharp(src('photos', 'ritual.jpg'))
-  .extract({ left: 250, top: 60, width: 520, height: 650 })
-  .resize(640, 800)
-  .jpeg({ quality: 84, mozjpeg: true })
-  .toFile(out('src/assets/images/team/emrah.jpg'));
-console.log('portrait done');

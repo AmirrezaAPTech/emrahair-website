@@ -1,34 +1,34 @@
 import Image, { type StaticImageData } from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
-import balayageFront from '@/assets/images/work/work-balayage-front.jpg';
-import balayageBack from '@/assets/images/work/work-balayage-back.jpg';
-import brunetteVolume from '@/assets/images/work/work-brunette-volume.jpg';
-import brunetteWaves from '@/assets/images/work/work-brunette-waves.jpg';
-import foils from '@/assets/images/work/work-foils.jpg';
-import blowout from '@/assets/images/work/work-blowout.jpg';
-import finish from '@/assets/images/work/work-finish.jpg';
-import glow from '@/assets/images/work/work-brunette-glow.jpg';
+import emrahClient from '@/assets/images/work/emrah-client.jpg';
+import pinkWaves from '@/assets/images/work/pink-waves.jpg';
+import nailArt from '@/assets/images/work/nail-art.jpg';
+import nightSign from '@/assets/images/work/night-sign.jpg';
+import copper from '@/assets/images/work/copper.jpg';
+import pinkBalayage from '@/assets/images/work/pink-balayage.jpg';
+import loungeLights from '@/assets/images/work/lounge-lights.jpg';
+import orangeArch from '@/assets/images/work/orange-arch.jpg';
 import { contact } from '@/lib/site';
 import { Headline } from '@/components/ui/Headline';
 import styles from './Work.module.css';
 
 /**
- * Not in Panfili's repo build, but on its live site ("Craft you can see"),
- * and for a colourist it is the section that sells: the work itself. Every
- * frame is from @emrahair's own reels, so nothing here is borrowed.
+ * Not in Panfili's repo build, but on its live site ("Craft you can see").
+ * Every plate is from the salon's own Google Maps gallery: the work (colour,
+ * nails, Emrah at the chair) and the room it is done in.
  *
- * Desktop: an editorial grid with two tall plates. Phone: a swipe rail.
+ * Desktop: five columns by two rows, two plates run tall. Phone: a swipe rail.
  */
 const TILES: { key: string; src: StaticImageData; tall?: boolean; pos?: string }[] = [
-  { key: 'airtouch', src: balayageFront, tall: true, pos: '50% 30%' },
-  { key: 'volume', src: brunetteVolume, pos: '50% 35%' },
-  { key: 'foils', src: foils, pos: '50% 40%' },
-  { key: 'length', src: balayageBack, tall: true, pos: '50% 45%' },
-  { key: 'waves', src: brunetteWaves, pos: '50% 45%' },
-  { key: 'blowout', src: blowout, pos: '50% 35%' },
-  { key: 'finish', src: finish, pos: '50% 35%' },
-  { key: 'glow', src: glow, pos: '50% 40%' },
+  { key: 'emrah', src: emrahClient, tall: true, pos: '62% 40%' },
+  { key: 'pinkWaves', src: pinkWaves, pos: '50% 40%' },
+  { key: 'nails', src: nailArt, pos: '45% 45%' },
+  { key: 'night', src: nightSign, tall: true, pos: '50% 55%' },
+  { key: 'copper', src: copper, pos: '50% 30%' },
+  { key: 'pinkBalayage', src: pinkBalayage, pos: '50% 35%' },
+  { key: 'lounge', src: loungeLights, pos: '50% 50%' },
+  { key: 'arch', src: orangeArch, pos: '50% 45%' },
 ];
 
 export async function Work() {
@@ -60,8 +60,8 @@ export async function Work() {
                   <Image
                     src={tile.src}
                     alt={t(`tiles.${tile.key}.alt`)}
-                    sizes="(max-width: 899px) 70vw, 25vw"
-                    quality={72}
+                    sizes="(max-width: 899px) 70vw, 22vw"
+                    quality={76}
                     style={{ objectPosition: tile.pos }}
                   />
                 </div>

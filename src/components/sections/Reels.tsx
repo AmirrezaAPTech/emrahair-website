@@ -44,7 +44,7 @@ export async function Reels() {
               <video
                 className={styles.video}
                 data-svc-video
-                src={`/videos/reels/${n}.mp4#t=0.001`}
+                src={`/videos/reels/${n}.mp4?v=2#t=0.001`}
                 preload="metadata"
                 muted
                 loop

@@ -51,7 +51,7 @@
     "cta": "Randevu oluştur",
     "prices": "Fiyat listesi",
     "meta": "{count} değerlendirme · Kolay Randevu",
-    "imageAlt": "Koyu kahve bir fonun önünde, rüzgârda savrulan uzun koyu saçlı bir kadın"
+    "imageAlt": "Pencere ışığında, karamel balyajlı saçlarıyla gülümseyen bir kadın"
   },
   "philosophy": {
     "eyebrow": "Salon",
@@ -103,70 +103,56 @@
       "Ellerimizden "
     ],
     "titleAccent": "çıkanlar.",
-    "lede": "Hepsi Emrahair koltuğunda, gerçek misafirlerle çekildi. Filtre yok, stok fotoğraf yok.",
+    "lede": "Salonun Google sayfasından: koltuktan çıkan renkler, tırnaklar ve hepsinin yapıldığı salon.",
     "cta": "Instagram’da tümünü gör",
     "tiles": {
-      "airtouch": {
-        "label": "Balyaj",
-        "alt": "Kahküllü, bal tonlarında uzun balyaj, önden"
+      "emrah": {
+        "label": "Emrah Bey, koltukta",
+        "alt": "Emrah Çabkur salonda bir misafirinin saçıyla çalışırken"
       },
-      "volume": {
-        "label": "Hacimli fön",
-        "alt": "Uzun, koyu kahve saçlarda hacimli dalgalı fön"
+      "pinkWaves": {
+        "label": "Pembe dalgalar",
+        "alt": "Pastel pembe tonlarda dalgalı uzun saç"
       },
-      "foils": {
-        "label": "Folyo uygulaması",
-        "alt": "Bir müşterinin saçına folyo ile renk uygulanırken"
+      "nails": {
+        "label": "Nail art",
+        "alt": "Yeşil desenli kalıcı oje ve nail art"
       },
-      "length": {
-        "label": "Balyaj · arkadan",
-        "alt": "Arkadan görünen, uçlara doğru açılan uzun balyaj"
+      "night": {
+        "label": "Galeria Çarşı",
+        "alt": "Akşam ışıklarıyla Emrahair tabelası ve salonun önü"
       },
-      "waves": {
-        "label": "Doğal dalga",
-        "alt": "Kuaförün elleri arasında doğal dalgalı esmer saçlar"
+      "copper": {
+        "label": "Bakır ton",
+        "alt": "Bakır tonlarda uzun düz saç, aynada"
       },
-      "blowout": {
-        "label": "Fön & şekillendirme",
-        "alt": "Fön sonrası parlak, hacimli koyu saçlar"
+      "pinkBalayage": {
+        "label": "Pembe balyaj",
+        "alt": "Uçlarda pembe balyajlı uzun dalgalı saç"
       },
-      "finish": {
-        "label": "Kahküllü balyaj",
-        "alt": "Perdeli kahkülle tamamlanan açık tonlu balyaj"
+      "lounge": {
+        "label": "Teras, akşam",
+        "alt": "Işık zincirleriyle aydınlatılmış teras bekleme alanı"
       },
-      "glow": {
-        "label": "Esmer parlaklık",
-        "alt": "Bakım sonrası parlayan uzun esmer saçlar"
+      "arch": {
+        "label": "Turuncu duvar",
+        "alt": "Turuncu duvarlı kemer ayna ve ürün rafları"
       }
     }
   },
   "atelier": {
     "eyebrow": "Uzmanlık",
     "titleLines": [
-      "Rengin "
+      "Uzmanlığın "
     ],
-    "titleAccent": "zanaatı.",
+    "titleAccent": "sanatı.",
     "bodyLines": [
-      "Emrahair, Emrah Çabkur’un adıyla ve elleriyle kuruldu. Bugün Echosline Türkiye Ambassador’ı olarak İtalyan renk dünyasını Bahçeşehir’deki koltuğuna taşıyor.",
-      "Uzmanlığı Air Touch balyaj ve açık tonlar: saçı yıpratmadan açmak, ışığı doğru yere koymak. Misafir yorumlarında en sık geçen kelimeler titizlik, güven ve bilgilendirme.",
-      "Ekipte kesim ve renkte Serdar Sezer, renk ve fönde Merve ve Zeynep Aydemir, tırnak, kaş ve ağdada Gizem Değişener var."
+      "Emrahair, Emrah Çabkur’un uzmanlığıyla şekilleniyor: kendini saç rengine ve kesime adamış, bugün Echosline Türkiye Ambassador’ı olarak tanınan bir kuaför ve renk uzmanı.",
+      "Yolculuğu kesimle başladı; zamanla saçın yapısını, rengini ve ışığı okumayı işinin merkezine koydu. Bugün özellikle Air Touch balyaj ve saçı yıpratmadan açılan tonlarla tanınıyor. Bahçeşehir’deki salonunda renk, kesim, keratin bakımları, tırnak ve ağda tek bir çatı altında buluşuyor.",
+      "Emrahair’de uzmanlık teknik beceriden fazlası demek: deneyimin, titizliğin, sanatsal bakışın ve her misafiri özel kılan şeyi anlamanın birleşimi."
     ],
-    "facts": [
-      {
-        "value": "4,9",
-        "label": "297 Kolay Randevu puanı"
-      },
-      {
-        "value": "6,6B",
-        "label": "Instagram takipçisi"
-      },
-      {
-        "value": "5",
-        "label": "kişilik ekip"
-      }
-    ],
-    "cta": "Randevu oluştur",
-    "imageAlt": "Emrah Çabkur, tuğla duvarlı salonda bir müşterinin saçına folyo ile renk uyguluyor",
+    "cta": "Uzmanınızı seçin",
+    "imageAlt": "Emrah Çabkur, tuğla duvarlı salonda bir misafirinin saçına folyo ile renk uyguluyor",
     "team": {
       "eyebrow": "Ekip",
       "titleLines": [

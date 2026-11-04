@@ -38,8 +38,8 @@ export async function Hero({ locale }: { locale: string }) {
         <video
           className={styles.video}
           data-hero-video
-          data-src-desktop="/videos/hero/hero-desktop.mp4"
-          data-src-mobile="/videos/hero/hero-mobile.mp4"
+          data-src-desktop="/videos/hero/hero-desktop.mp4?v=2"
+          data-src-mobile="/videos/hero/hero-mobile.mp4?v=2"
           preload="none"
           muted
           loop
