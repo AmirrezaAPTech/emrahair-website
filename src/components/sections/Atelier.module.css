@@ -25,7 +25,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  /* Portrait first (left), text second (right). */
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   /* One explicit row that takes the band's whole height, so the portrait
      column has something definite to stretch into and reaches both floors. */
   grid-template-rows: 1fr;
@@ -42,7 +43,7 @@
   gap: clamp(1.25rem, 2.6vh + 0.7vw, 2.5rem);
   /* The masthead's own inset is what sets the band's height, and the portrait
      beside it then runs the full measure of that, edge to edge. */
-  padding: var(--section-pad) clamp(2rem, 4vw, 4.5rem) var(--section-pad) var(--gutter);
+  padding: var(--section-pad) var(--gutter) var(--section-pad) clamp(2rem, 4vw, 4.5rem);
   max-width: 46rem;
   width: 100%;
 }
@@ -83,6 +84,8 @@
 .figure {
   position: relative;
   margin: 0;
+  /* Before the text in both layouts: left on desktop, on top on phones. */
+  order: -1;
   align-self: stretch;
   min-width: 0;
   min-height: clamp(18rem, 46svh, 32rem);
@@ -306,7 +309,7 @@
   }
 
   .text {
-    padding: var(--section-pad) var(--gutter) 0;
+    padding: 0 var(--gutter) var(--section-pad);
     max-width: none;
   }
 

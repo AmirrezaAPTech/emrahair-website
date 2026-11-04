@@ -8,16 +8,12 @@ interface Props {
 }
 
 /**
- * The salon has no logo file, so the mark is typographic: a Bodoni italic "e"
- * in a hairline ring (the crest's job), then the name tracked out in the
- * grotesque. Replace the ring with the real logo if the salon supplies one.
+ * The salon has no logo file, so the mark is the name alone, tracked out in
+ * the grotesque, with its subline. Swap in the real logo if one is supplied.
  */
 export function Wordmark({ size = 'sm', sub, stacked = false, className }: Props) {
   return (
     <span className={[styles.wordmark, styles[size], stacked && styles.stacked, className].filter(Boolean).join(' ')}>
-      <span className={styles.crest} aria-hidden="true">
-        <span className={styles.crestLetter}>e</span>
-      </span>
       <span className={styles.type}>
         <span className={styles.name}>Emrahair</span>
         {sub ? <span className={styles.sub}>{sub}</span> : null}

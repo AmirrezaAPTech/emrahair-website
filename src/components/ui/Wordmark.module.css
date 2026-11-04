@@ -12,25 +12,6 @@
   gap: 1.15em;
 }
 
-.crest {
-  display: grid;
-  place-items: center;
-  width: var(--crest-h, 1.9em);
-  height: var(--crest-h, 1.9em);
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  flex: none;
-}
-
-.crestLetter {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: calc(var(--crest-h, 1.9em) * 0.62);
-  line-height: 1;
-  /* The italic e sits low in its box; this centres it optically. */
-  transform: translate(-3%, -6%);
-  color: var(--accent);
-}
 
 .type {
   display: flex;

@@ -149,6 +149,14 @@
   color: var(--accent);
 }
 
+/* On a phone the eyebrow sat on her chin and pushed the headline down; the
+   headline and the rating carry the message alone there. */
+@media (max-width: 767px) {
+  .eyebrow {
+    display: none;
+  }
+}
+
 .cta {
   display: flex;
   flex-wrap: wrap;

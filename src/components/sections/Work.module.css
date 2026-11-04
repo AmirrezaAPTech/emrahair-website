@@ -102,8 +102,10 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    margin-inline: calc(var(--gutter) * -1);
-    padding-inline: var(--gutter);
+    /* Inside the page margins rather than full bleed: with mandatory snap a
+       full-bleed rail pulled the first photo flush to the screen edge. */
+    margin-inline: 0;
+    padding-inline: 0;
   }
 
   .grid::-webkit-scrollbar {
