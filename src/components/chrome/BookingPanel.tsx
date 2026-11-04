@@ -159,6 +159,17 @@ export function BookingPanel() {
     scrollRef.current?.scrollTo({ top: 0 });
   }, [step]);
 
+  /* The summary's hand-off link appears exactly where "Devam" was, so a
+     double tap on "Devam" would land on it and leave the site before the
+     guest has seen the summary. It ignores taps for half a second after the
+     summary appears. */
+  const [handoffArmed, setHandoffArmed] = useState(false);
+  useEffect(() => {
+    if (step !== 'summary') return setHandoffArmed(false);
+    const id = window.setTimeout(() => setHandoffArmed(true), 500);
+    return () => window.clearTimeout(id);
+  }, [step]);
+
   /* --- Derived lists ------------------------------------------------------- */
   const visible = useMemo(() => {
     const q = fold(query.trim());
@@ -391,7 +402,14 @@ export function BookingPanel() {
                 {t('continue')}
               </button>
             ) : (
-              <a className="btn" href={bookingUrl(selected)} rel="noopener">
+              <a
+                className="btn"
+                href={bookingUrl(selected)}
+                rel="noopener"
+                onClick={(e) => {
+                  if (!handoffArmed) e.preventDefault();
+                }}
+              >
                 {t('handoff.cta')}
               </a>
             )}
