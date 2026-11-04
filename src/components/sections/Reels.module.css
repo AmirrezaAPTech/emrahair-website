@@ -1,0 +1,98 @@
+/* PANFILI · Reels
+   Five of the salon's own reels in phone frames, and the door to the feed.
+   The last light ground before the dark half of the page. */
+
+.reels {
+  position: relative;
+  overflow: clip;
+  padding-block: clamp(2rem, 5vh + 1vw, 4rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.2vw, 1.1rem);
+}
+
+.tile {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: clamp(0.6rem, 1vw, 1rem);
+  background-color: var(--ink-raised);
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The link sits over the video and owns the tile. */
+.tileLink {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+}
+
+.glyph {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  color: var(--cream-soft);
+  background: rgba(8, 8, 7, 0.45);
+  backdrop-filter: blur(4px);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.glyph svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tileLink:hover .glyph,
+.tileLink:focus-visible .glyph {
+  background: rgba(8, 8, 7, 0.7);
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Phone: a rail the finger pushes, tiles near full height ----------- */
+
+@media (max-width: 899px) {
+  .rail {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Full bleed: the rail runs edge to edge like the photography above it. */
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tile {
+    flex: 0 0 min(62vw, 17rem);
+    scroll-snap-align: center;
+  }
+}

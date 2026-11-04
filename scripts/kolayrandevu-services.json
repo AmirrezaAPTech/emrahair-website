@@ -1,0 +1,310 @@
+[
+ {
+  "category": "Saç",
+  "services": [
+   {
+    "id": "258-1",
+    "domId": "hizmet-bayan-258",
+    "name": "Saç Yıkama",
+    "price": ""
+   },
+   {
+    "id": "205-1",
+    "domId": "hizmet-bayan-205",
+    "name": "Saç Kaynağı",
+    "price": ""
+   },
+   {
+    "id": "22-1",
+    "domId": "hizmet-bayan-22",
+    "name": "Fön",
+    "price": ""
+   },
+   {
+    "id": "221-1",
+    "domId": "hizmet-bayan-221",
+    "name": "Kırık Fön",
+    "price": ""
+   },
+   {
+    "id": "23-1",
+    "domId": "hizmet-bayan-23",
+    "name": "Maşa",
+    "price": ""
+   },
+   {
+    "id": "752-1",
+    "domId": "hizmet-bayan-752",
+    "name": "Örgü",
+    "price": ""
+   },
+   {
+    "id": "24-1",
+    "domId": "hizmet-bayan-24",
+    "name": "Saç Kesimi",
+    "price": ""
+   },
+   {
+    "id": "345953-1",
+    "domId": "hizmet-bayan-345953",
+    "name": "at kuyruğu",
+    "price": ""
+   },
+   {
+    "id": "575809-1",
+    "domId": "hizmet-bayan-575809",
+    "name": "İtalyan Dip Boyama",
+    "price": ""
+   },
+   {
+    "id": "329139-1",
+    "domId": "hizmet-bayan-329139",
+    "name": "authentic salon bakımı",
+    "price": ""
+   },
+   {
+    "id": "474011-1",
+    "domId": "hizmet-bayan-474011",
+    "name": "parlatma servisi",
+    "price": ""
+   },
+   {
+    "id": "372904-1",
+    "domId": "hizmet-bayan-372904",
+    "name": "Amonyaksız dip boyama",
+    "price": ""
+   },
+   {
+    "id": "376225-1",
+    "domId": "hizmet-bayan-376225",
+    "name": "igora dip boyama",
+    "price": ""
+   },
+   {
+    "id": "237974-1",
+    "domId": "hizmet-bayan-237974",
+    "name": "Cila saç",
+    "price": ""
+   },
+   {
+    "id": "25-1",
+    "domId": "hizmet-bayan-25",
+    "name": "Topuz",
+    "price": ""
+   },
+   {
+    "id": "232-1",
+    "domId": "hizmet-bayan-232",
+    "name": "Nişan Saçı",
+    "price": ""
+   },
+   {
+    "id": "30-1",
+    "domId": "hizmet-bayan-30",
+    "name": "Perma",
+    "price": ""
+   },
+   {
+    "id": "301248-1",
+    "domId": "hizmet-bayan-301248",
+    "name": "keratin botox sakinleştirici bakım",
+    "price": ""
+   },
+   {
+    "id": "26-1",
+    "domId": "hizmet-bayan-26",
+    "name": "Saç Boyama",
+    "price": ""
+   },
+   {
+    "id": "301244-1",
+    "domId": "hizmet-bayan-301244",
+    "name": "keratin düzleştirici bakım",
+    "price": ""
+   },
+   {
+    "id": "250659-1",
+    "domId": "hizmet-bayan-250659",
+    "name": "dip açma boyama",
+    "price": ""
+   },
+   {
+    "id": "28-1",
+    "domId": "hizmet-bayan-28",
+    "name": "Gelin Başı",
+    "price": ""
+   },
+   {
+    "id": "29-1",
+    "domId": "hizmet-bayan-29",
+    "name": "Röfle ve Gölge",
+    "price": ""
+   },
+   {
+    "id": "345954-1",
+    "domId": "hizmet-bayan-345954",
+    "name": "brushlight",
+    "price": ""
+   },
+   {
+    "id": "191804-1",
+    "domId": "hizmet-bayan-191804",
+    "name": "Sombre",
+    "price": ""
+   },
+   {
+    "id": "383324-1",
+    "domId": "hizmet-bayan-383324",
+    "name": "Air touch balyaj",
+    "price": ""
+   },
+   {
+    "id": "243987-1",
+    "domId": "hizmet-bayan-243987",
+    "name": "balyaj",
+    "price": ""
+   },
+   {
+    "id": "219-1",
+    "domId": "hizmet-bayan-219",
+    "name": "Ombre",
+    "price": ""
+   },
+   {
+    "id": "32-1",
+    "domId": "hizmet-bayan-32",
+    "name": "Saç Bakımı",
+    "price": ""
+   },
+   {
+    "id": "27-1",
+    "domId": "hizmet-bayan-27",
+    "name": "Saç Renk Değişimi",
+    "price": ""
+   },
+   {
+    "id": "43-1",
+    "domId": "hizmet-bayan-43",
+    "name": "Saç Dip Boyama",
+    "price": ""
+   },
+   {
+    "id": "169-1",
+    "domId": "hizmet-bayan-169",
+    "name": "Keratin Bakım",
+    "price": ""
+   },
+   {
+    "id": "45-1",
+    "domId": "hizmet-bayan-45",
+    "name": "Brezilya Fönü",
+    "price": ""
+   }
+  ]
+ },
+ {
+  "category": "Tırnak",
+  "services": [
+   {
+    "id": "69-1",
+    "domId": "hizmet-bayan-69",
+    "name": "Kalıcı Oje Çıkarma",
+    "price": ""
+   },
+   {
+    "id": "33-1",
+    "domId": "hizmet-bayan-33",
+    "name": "Manikür",
+    "price": ""
+   },
+   {
+    "id": "34-1",
+    "domId": "hizmet-bayan-34",
+    "name": "Pedikür",
+    "price": ""
+   },
+   {
+    "id": "67-1",
+    "domId": "hizmet-bayan-67",
+    "name": "Kalıcı Oje El",
+    "price": ""
+   },
+   {
+    "id": "68-1",
+    "domId": "hizmet-bayan-68",
+    "name": "Kalıcı Oje Ayak",
+    "price": ""
+   }
+  ]
+ },
+ {
+  "category": "Makyaj",
+  "services": [
+   {
+    "id": "66-1",
+    "domId": "hizmet-bayan-66",
+    "name": "Oje Uygulama",
+    "price": ""
+   },
+   {
+    "id": "38-1",
+    "domId": "hizmet-bayan-38",
+    "name": "Dudak Üstü",
+    "price": ""
+   },
+   {
+    "id": "175-1",
+    "domId": "hizmet-bayan-175",
+    "name": "Kaş Boyama",
+    "price": ""
+   },
+   {
+    "id": "35-1",
+    "domId": "hizmet-bayan-35",
+    "name": "Kaş Alma",
+    "price": ""
+   }
+  ]
+ },
+ {
+  "category": "Ağda",
+  "services": [
+   {
+    "id": "269814-1",
+    "domId": "hizmet-bayan-269814",
+    "name": "çene ağda",
+    "price": ""
+   },
+   {
+    "id": "571323-1",
+    "domId": "hizmet-bayan-571323",
+    "name": "Ağda (koltuk altı)",
+    "price": ""
+   },
+   {
+    "id": "571322-1",
+    "domId": "hizmet-bayan-571322",
+    "name": "Ağda (kol)",
+    "price": ""
+   },
+   {
+    "id": "571325-1",
+    "domId": "hizmet-bayan-571325",
+    "name": "Ağda (bacak )",
+    "price": ""
+   },
+   {
+    "id": "40-1",
+    "domId": "hizmet-bayan-40",
+    "name": "Ağda (Bölgesel)",
+    "price": ""
+   },
+   {
+    "id": "41-1",
+    "domId": "hizmet-bayan-41",
+    "name": "Ağda (Tüm Vücut)",
+    "price": ""
+   }
+  ]
+ }
+]

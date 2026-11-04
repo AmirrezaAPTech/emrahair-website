@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "title": "Emrahair — Air Touch Balayage, Colour & Cuts | Bahçeşehir, Istanbul",
+    "description": "Emrah Çabkur’s salon in Bahçeşehir: Air Touch balayage, colour, cuts, keratin, nails and waxing. Every price, and online booking.",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "primary": "Main menu",
+    "footer": "Footer menu",
+    "toTop": "Emrahair — back to top",
+    "language": "Language",
+    "languageOf": "{language}",
+    "book": "Book now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuLabel": "Menu",
+    "index": "Price list",
+    "menuIndex": "Price list",
+    "services": "Services & Prices",
+    "work": "Work",
+    "atelier": "Emrah",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "groups": {
+      "color": "Colour & Balayage",
+      "cut": "Cut & Blow-dry",
+      "care": "Keratin & Care",
+      "nails": "Nails",
+      "brows": "Brows & Face",
+      "wax": "Waxing"
+    }
+  },
+  "hours": {
+    "label": "Opening hours",
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday",
+    "sun": "Sunday",
+    "closed": "Closed"
+  },
+  "hero": {
+    "eyebrow": "Air Touch Balayage · Colour · Cuts — Bahçeşehir",
+    "titleLines": ["Colour that", "catches the "],
+    "titleAccent": "light.",
+    "cta": "Book an appointment",
+    "prices": "Price list",
+    "meta": "{count} ratings · Kolay Randevu",
+    "imageAlt": "A woman with long dark hair lifted by the wind, against a warm brown backdrop"
+  },
+  "philosophy": {
+    "eyebrow": "The salon",
+    "titleLines": ["More than an "],
+    "titleAccent": "appointment.",
+    "lede": "<brand>Emrahair</brand> sits inside Galeria Çarşı in Bahçeşehir. Colour, cuts and care are done here by one hand, to one standard.",
+    "plateAlt": "The Emrahair terrace: armchairs, full-length mirrors and product shelves",
+    "imageAlt": "A stylist smiling with his client as she looks at her curls in the mirror",
+    "caption": "The finish, at the mirror",
+    "galleryAlt": "Long caramel balayage, seen from behind",
+    "manifesto": "Every head of hair is listened to first: its structure, its history, the way you live. Only then is the formula built. The result is colour that stays with you for weeks after you leave the chair.",
+    "cta": "Meet Emrah"
+  },
+  "services": {
+    "eyebrow": "Disciplines",
+    "titleLines": ["Five disciplines.", "One "],
+    "titleAccent": "standard.",
+    "cta": "Book an appointment",
+    "from": "From {price}",
+    "color": {
+      "title": "Colour & Balayage",
+      "summary": "Air Touch, balayage, sombré and root colour: tones built on analysis, lifted without damage."
+    },
+    "cut": {
+      "title": "Cut & Blow-dry",
+      "summary": "Cuts shaped to your face and texture — forms that hold as they grow out."
+    },
+    "care": {
+      "title": "Keratin & Care",
+      "summary": "Keratin smoothing, keratin botox and salon treatments that bring back shine and softness."
+    },
+    "bridal": {
+      "title": "Bridal & Occasion",
+      "summary": "Bridal hair, engagement styles, updos and braids — planned ahead, in place all day."
+    },
+    "beauty": {
+      "title": "Nails · Brows · Wax",
+      "summary": "Manicure, pedicure, gel polish, brows and waxing — with Gizem’s care for detail."
+    }
+  },
+  "work": {
+    "eyebrow": "Work",
+    "titleLines": ["Work you "],
+    "titleAccent": "can see.",
+    "lede": "All of it shot in the Emrahair chair, with real guests. No filters, no stock photography.",
+    "cta": "See everything on Instagram",
+    "tiles": {
+      "airtouch": { "label": "Balayage", "alt": "Long honey-toned balayage with curtain bangs, from the front" },
+      "volume": { "label": "Volume blow-dry", "alt": "A voluminous, wavy blow-dry on long dark brown hair" },
+      "foils": { "label": "Foil work", "alt": "Colour being applied with foils" },
+      "length": { "label": "Balayage · back", "alt": "Long balayage lightening towards the ends, from behind" },
+      "waves": { "label": "Natural waves", "alt": "Natural waves in brunette hair, in the stylist’s hands" },
+      "blowout": { "label": "Blow-dry & styling", "alt": "Glossy, full dark hair after a blow-dry" },
+      "finish": { "label": "Balayage with bangs", "alt": "Light balayage finished with curtain bangs" },
+      "glow": { "label": "Brunette gloss", "alt": "Long brunette hair glowing after a treatment" }
+    }
+  },
+  "atelier": {
+    "eyebrow": "Expertise",
+    "titleLines": ["The craft of "],
+    "titleAccent": "colour.",
+    "bodyLines": [
+      "Emrahair was founded on Emrah Çabkur’s name and his hands. Today, as Echosline’s Türkiye Ambassador, he brings Italy’s colour culture to his chair in Bahçeşehir.",
+      "His specialism is Air Touch balayage and light tones: lifting without damage and putting light exactly where it belongs. The words his guests use most are care, trust and clear advice.",
+      "The team: Serdar Sezer for cuts and colour, Merve and Zeynep Aydemir for colour and blow-drys, and Gizem Değişener for nails, brows and waxing."
+    ],
+    "facts": [
+      { "value": "4.9", "label": "297 Kolay Randevu ratings" },
+      { "value": "6.6K", "label": "Instagram followers" },
+      { "value": "5", "label": "people on the team" }
+    ],
+    "cta": "Book an appointment",
+    "imageAlt": "Emrah Çabkur applying colour with foils in a brick-walled salon",
+    "team": {
+      "eyebrow": "The team",
+      "titleLines": ["Behind the "],
+      "titleAccent": "experience.",
+      "portraitAlt": "{name}, {role}",
+      "emrah": { "name": "Emrah Çabkur", "role": "Founder · Colourist · Echosline Ambassador" },
+      "serdar": { "name": "Serdar Sezer", "role": "Hairdresser · Cut & colour" },
+      "merve": { "name": "Merve Aydemir", "role": "Colour & blow-dry" },
+      "zeynep": { "name": "Zeynep Aydemir", "role": "Colour, blow-dry & updos" },
+      "gizem": { "name": "Gizem Değişener", "role": "Nails, brows & waxing" }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Guest reviews",
+    "titleLines": ["The salon guests ", "keep coming "],
+    "titleAccent": "back to.",
+    "countKr": "{count} Kolay Randevu ratings",
+    "countGoogle": "{score} on Google · {count} reviews",
+    "cta": "All {count} reviews on Kolay Randevu"
+  },
+  "reels": {
+    "label": "From Instagram",
+    "tileLabel": "Open this video on Instagram",
+    "cta": "{handle} on Instagram"
+  },
+  "invitation": {
+    "eyebrow": "Appointments",
+    "titleLines": ["The next chair "],
+    "titleAccent": "is yours.",
+    "cta": "Choose services & book",
+    "whatsapp": "Message us on WhatsApp"
+  },
+  "footer": {
+    "services": "Services",
+    "hours": "Opening hours",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "bookAppointment": "Book online",
+    "rights": "© {year} Emrahair · Bahçeşehir, Istanbul",
+    "kolayRandevu": "Kolay Randevu page",
+    "directions": "Directions"
+  },
+  "menu": {
+    "meta": {
+      "title": "Services and Prices — Emrahair Bahçeşehir",
+      "description": "Every Emrahair service and price: balayage, colour, cuts, keratin, nails, brows and waxing. Choose your services and confirm on Kolay Randevu."
+    },
+    "eyebrow": "Services & prices",
+    "titleLines": ["The whole menu, "],
+    "titleAccent": "priced in the open.",
+    "lede": "These are the prices the salon publishes on Kolay Randevu. Ranges depend on length and density; the exact price is given at the chair, before anything starts. Choose your services, pick your stylist, and confirm the date and time on Kolay Randevu.",
+    "label": "Price list",
+    "jump": "Categories",
+    "facts": {
+      "services": "services",
+      "rating": "{count} ratings",
+      "howValue": "3 steps",
+      "how": "choose · stylist · confirm"
+    },
+    "groups": {
+      "color": { "title": "Colour & Balayage", "note": "Air Touch, balayage and root colour. Every colour service starts with a consultation." },
+      "cut": { "title": "Cut, Blow-dry & Styling", "note": "From a cut to bridal hair. Cuts are with Emrah or Serdar." },
+      "care": { "title": "Keratin & Care", "note": "Keratin, keratin botox and salon treatments, plus extensions." },
+      "nails": { "title": "Nails", "note": "Manicure, pedicure and gel polish — with Gizem." },
+      "brows": { "title": "Brows & Face", "note": "Brow shaping, brow tint and upper lip." },
+      "wax": { "title": "Waxing", "note": "Single areas and full body." }
+    },
+    "addLabel": "Add {service}",
+    "source": "Source: the salon’s Kolay Randevu page, 4 November 2026. Prices are indicative; the salon confirms the current price.",
+    "clear": "Clear",
+    "continue": "Continue to booking"
+  },
+  "booking": {
+    "eyebrow": "Book online",
+    "close": "Close",
+    "progress": "Booking steps",
+    "titles": {
+      "services": "Choose services",
+      "staff": "Your stylist",
+      "summary": "Summary"
+    },
+    "stepNames": {
+      "services": "Services",
+      "staff": "Stylist",
+      "summary": "Summary",
+      "calendar": "Date & time"
+    },
+    "search": "Search services",
+    "searchPlaceholder": "Search — balayage, haircut, manicure…",
+    "groups": "Categories",
+    "signature": "Signature",
+    "noResults": "No service matches that search.",
+    "priceNote": "Ranges depend on the length and density of your hair.",
+    "onRequest": "Priced at the salon",
+    "staff": {
+      "lede": "Who would you like for your hair services?",
+      "emrah": "Founder · colour and balayage specialist",
+      "serdar": "Cuts, colour and care",
+      "anyTitle": "No preference",
+      "any": "First available stylist",
+      "gap": "Doesn’t offer: {services}",
+      "why": "Kolay Randevu can’t receive the stylist through a link, so you tick it once more on the next screen. We’ll remind you there."
+    },
+    "remove": "Remove {service}",
+    "estimate": {
+      "label": "Estimated total",
+      "onRequest": "Priced at the salon",
+      "unpriced": "{count, plural, one {# service is} other {# services are}} priced at the salon."
+    },
+    "handoff": {
+      "eyebrow": "What happens on Kolay Randevu",
+      "staffAny": "“Personel Seçimi” (stylist) arrives set to Fark Etmez — change it if you like.",
+      "staffPick": "For your hair services, under “Personel Seçimi” (stylist), choose <b>{name}</b>",
+      "calendar": "Pick the day and time that suit you.",
+      "confirm": "Confirm with your phone number; the booking is confirmed by SMS.",
+      "cta": "Choose date & time"
+    },
+    "count": "{count, plural, =0 {No services chosen yet} one {# service chosen} other {# services chosen}}",
+    "back": "Back",
+    "continue": "Continue",
+    "whatsapp": "Or message us on WhatsApp"
+  }
+}

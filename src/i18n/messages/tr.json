@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "title": "Emrahair — Air Touch Balyaj, Renk & Kesim | Bahçeşehir",
+    "description": "Emrah Çabkur’un Bahçeşehir’deki salonu: Air Touch balyaj, renk, kesim, keratin, tırnak ve ağda. Tüm fiyatlar ve online randevu.",
+    "skipToContent": "İçeriğe geç"
+  },
+  "nav": {
+    "primary": "Ana menü",
+    "footer": "Alt menü",
+    "toTop": "Emrahair — sayfanın başına",
+    "language": "Dil seçimi",
+    "languageOf": "{language}",
+    "book": "Randevu al",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "menuLabel": "Menü",
+    "index": "Fiyat listesi",
+    "menuIndex": "Fiyat listesi",
+    "services": "Hizmetler & Fiyatlar",
+    "work": "Çalışmalar",
+    "atelier": "Emrah",
+    "reviews": "Yorumlar",
+    "contact": "İletişim",
+    "groups": {
+      "color": "Renk & Balyaj",
+      "cut": "Kesim & Fön",
+      "care": "Keratin & Bakım",
+      "nails": "Tırnak",
+      "brows": "Kaş & Yüz",
+      "wax": "Ağda"
+    }
+  },
+  "hours": {
+    "label": "Çalışma saatleri",
+    "mon": "Pazartesi",
+    "tue": "Salı",
+    "wed": "Çarşamba",
+    "thu": "Perşembe",
+    "fri": "Cuma",
+    "sat": "Cumartesi",
+    "sun": "Pazar",
+    "closed": "Kapalı"
+  },
+  "hero": {
+    "eyebrow": "Air Touch Balyaj · Renk · Kesim — Bahçeşehir",
+    "titleLines": ["Saçınıza ışık", "katan "],
+    "titleAccent": "eller.",
+    "cta": "Randevu oluştur",
+    "prices": "Fiyat listesi",
+    "meta": "{count} değerlendirme · Kolay Randevu",
+    "imageAlt": "Koyu kahve bir fonun önünde, rüzgârda savrulan uzun koyu saçlı bir kadın"
+  },
+  "philosophy": {
+    "eyebrow": "Salon",
+    "titleLines": ["Bir randevudan "],
+    "titleAccent": "fazlası.",
+    "lede": "<brand>Emrahair</brand>, Bahçeşehir’de Galeria Çarşı’nın içinde. Renk, kesim ve bakım burada tek bir elden, aynı titizlikle yapılır.",
+    "plateAlt": "Emrahair’in terası: koltuklar, boy aynaları ve ürün rafları",
+    "imageAlt": "Kuaför, aynanın önünde bukleli saçlarına bakan müşterisiyle gülümsüyor",
+    "caption": "Bitiriş, aynanın önünde",
+    "galleryAlt": "Arkadan görünen uzun, karamel tonlu bir balyaj",
+    "manifesto": "Her saç önce dinlenir: yapısı, geçmişi, yaşam ritmi. Formül ondan sonra kurulur. Sonuç, salondan çıktıktan haftalar sonra bile sizinle kalan bir renk.",
+    "cta": "Emrah Bey’i tanıyın"
+  },
+  "services": {
+    "eyebrow": "Uzmanlıklar",
+    "titleLines": ["Beş uzmanlık.", "Tek "],
+    "titleAccent": "standart.",
+    "cta": "Randevu oluştur",
+    "from": "Başlangıç {price}",
+    "color": {
+      "title": "Renk & Balyaj",
+      "summary": "Air Touch, balyaj, sombre ve dip boyama: ton analiziyle kurulan, saçı yıpratmadan açan renkler."
+    },
+    "cut": {
+      "title": "Kesim & Fön",
+      "summary": "Yüz hatlarına ve saç dokusuna göre kesim; uzarken bile formunu koruyan şekiller."
+    },
+    "care": {
+      "title": "Keratin & Bakım",
+      "summary": "Keratin düzleştirme, botoks ve salon bakımları; parlaklığı ve yumuşaklığı geri getirir."
+    },
+    "bridal": {
+      "title": "Gelin & Özel Gün",
+      "summary": "Gelin başı, nişan saçı, topuz ve örgü; önceden planlanır, gün boyu yerinde kalır."
+    },
+    "beauty": {
+      "title": "Tırnak · Kaş · Ağda",
+      "summary": "Manikür, pedikür, kalıcı oje, kaş ve ağda — Gizem Hanım’ın titizliğiyle."
+    }
+  },
+  "work": {
+    "eyebrow": "Çalışmalar",
+    "titleLines": ["Ellerimizden "],
+    "titleAccent": "çıkanlar.",
+    "lede": "Hepsi Emrahair koltuğunda, gerçek misafirlerle çekildi. Filtre yok, stok fotoğraf yok.",
+    "cta": "Instagram’da tümünü gör",
+    "tiles": {
+      "airtouch": { "label": "Balyaj", "alt": "Kahküllü, bal tonlarında uzun balyaj, önden" },
+      "volume": { "label": "Hacimli fön", "alt": "Uzun, koyu kahve saçlarda hacimli dalgalı fön" },
+      "foils": { "label": "Folyo uygulaması", "alt": "Bir müşterinin saçına folyo ile renk uygulanırken" },
+      "length": { "label": "Balyaj · arkadan", "alt": "Arkadan görünen, uçlara doğru açılan uzun balyaj" },
+      "waves": { "label": "Doğal dalga", "alt": "Kuaförün elleri arasında doğal dalgalı esmer saçlar" },
+      "blowout": { "label": "Fön & şekillendirme", "alt": "Fön sonrası parlak, hacimli koyu saçlar" },
+      "finish": { "label": "Kahküllü balyaj", "alt": "Perdeli kahkülle tamamlanan açık tonlu balyaj" },
+      "glow": { "label": "Esmer parlaklık", "alt": "Bakım sonrası parlayan uzun esmer saçlar" }
+    }
+  },
+  "atelier": {
+    "eyebrow": "Uzmanlık",
+    "titleLines": ["Rengin "],
+    "titleAccent": "zanaatı.",
+    "bodyLines": [
+      "Emrahair, Emrah Çabkur’un adıyla ve elleriyle kuruldu. Bugün Echosline Türkiye Ambassador’ı olarak İtalyan renk dünyasını Bahçeşehir’deki koltuğuna taşıyor.",
+      "Uzmanlığı Air Touch balyaj ve açık tonlar: saçı yıpratmadan açmak, ışığı doğru yere koymak. Misafir yorumlarında en sık geçen kelimeler titizlik, güven ve bilgilendirme.",
+      "Ekipte kesim ve renkte Serdar Sezer, renk ve fönde Merve ve Zeynep Aydemir, tırnak, kaş ve ağdada Gizem Değişener var."
+    ],
+    "facts": [
+      { "value": "4,9", "label": "297 Kolay Randevu puanı" },
+      { "value": "6,6B", "label": "Instagram takipçisi" },
+      { "value": "5", "label": "kişilik ekip" }
+    ],
+    "cta": "Randevu oluştur",
+    "imageAlt": "Emrah Çabkur, tuğla duvarlı salonda bir müşterinin saçına folyo ile renk uyguluyor",
+    "team": {
+      "eyebrow": "Ekip",
+      "titleLines": ["Deneyimin "],
+      "titleAccent": "arkasındakiler.",
+      "portraitAlt": "{name}, {role}",
+      "emrah": { "name": "Emrah Çabkur", "role": "Kurucu · Renk uzmanı · Echosline Ambassador" },
+      "serdar": { "name": "Serdar Sezer", "role": "Kuaför · Kesim & renk" },
+      "merve": { "name": "Merve Aydemir", "role": "Renk & fön" },
+      "zeynep": { "name": "Zeynep Aydemir", "role": "Renk, fön & topuz" },
+      "gizem": { "name": "Gizem Değişener", "role": "Tırnak, kaş & ağda" }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Misafir yorumları",
+    "titleLines": ["Tekrar tekrar ", "gelinen "],
+    "titleAccent": "salon.",
+    "countKr": "{count} Kolay Randevu puanı",
+    "countGoogle": "Google’da {score} · {count} yorum",
+    "cta": "Kolay Randevu’daki {count} yorumun tümü"
+  },
+  "reels": {
+    "label": "Instagram’dan",
+    "tileLabel": "Bu videoyu Instagram’da aç",
+    "cta": "Instagram’da {handle}"
+  },
+  "invitation": {
+    "eyebrow": "Randevu",
+    "titleLines": ["Sıradaki koltuk "],
+    "titleAccent": "sizin.",
+    "cta": "Hizmet seç & randevu al",
+    "whatsapp": "WhatsApp’tan yazın"
+  },
+  "footer": {
+    "services": "Hizmetler",
+    "hours": "Çalışma saatleri",
+    "contact": "İletişim",
+    "whatsapp": "WhatsApp",
+    "bookAppointment": "Online randevu",
+    "rights": "© {year} Emrahair · Bahçeşehir, İstanbul",
+    "kolayRandevu": "Kolay Randevu sayfası",
+    "directions": "Yol tarifi"
+  },
+  "menu": {
+    "meta": {
+      "title": "Hizmetler ve Fiyatlar — Emrahair Bahçeşehir",
+      "description": "Emrahair’in tüm hizmetleri ve fiyatları: balyaj, renk, kesim, keratin, tırnak, kaş ve ağda. Hizmetlerinizi seçin, randevunuzu Kolay Randevu’da onaylayın."
+    },
+    "eyebrow": "Hizmetler & fiyatlar",
+    "titleLines": ["Tüm menü, "],
+    "titleAccent": "açık fiyatlarla.",
+    "lede": "Fiyatlar, salonun Kolay Randevu’da yayımladığı listedir. Aralıklı fiyatlar saçın uzunluğuna ve yoğunluğuna göre değişir; kesin fiyat işlemden önce, koltukta söylenir. Hizmetlerinizi seçin, uzmanınızı belirleyin, tarih ve saati Kolay Randevu’da onaylayın.",
+    "label": "Fiyat listesi",
+    "jump": "Kategoriler",
+    "facts": {
+      "services": "hizmet",
+      "rating": "{count} değerlendirme",
+      "howValue": "3 adım",
+      "how": "seç · uzman · onayla"
+    },
+    "groups": {
+      "color": { "title": "Renk & Balyaj", "note": "Air Touch, balyaj ve dip boyamalar. Her renk işlemi bir ön görüşmeyle başlar." },
+      "cut": { "title": "Kesim, Fön & Şekillendirme", "note": "Kesimden gelin başına. Kesim Emrah Bey ve Serdar Bey’de." },
+      "care": { "title": "Keratin & Bakım", "note": "Keratin, botoks ve salon bakımları; saç kaynağı dahil." },
+      "nails": { "title": "Tırnak", "note": "Manikür, pedikür ve kalıcı oje — Gizem Hanım." },
+      "brows": { "title": "Kaş & Yüz", "note": "Kaş alma, kaş boyama ve dudak üstü." },
+      "wax": { "title": "Ağda", "note": "Bölgesel ve tüm vücut ağda." }
+    },
+    "addLabel": "{service} ekle",
+    "source": "Kaynak: salonun Kolay Randevu sayfası, 4 Kasım 2026. Fiyatlar bilgi amaçlıdır; güncel fiyatı salon teyit eder.",
+    "clear": "Temizle",
+    "continue": "Randevuya devam"
+  },
+  "booking": {
+    "eyebrow": "Online randevu",
+    "close": "Kapat",
+    "progress": "Randevu adımları",
+    "titles": {
+      "services": "Hizmet seçin",
+      "staff": "Uzmanınız",
+      "summary": "Özet"
+    },
+    "stepNames": {
+      "services": "Hizmet",
+      "staff": "Uzman",
+      "summary": "Özet",
+      "calendar": "Tarih & saat"
+    },
+    "search": "Hizmet ara",
+    "searchPlaceholder": "Ara — balyaj, kesim, manikür…",
+    "groups": "Kategoriler",
+    "signature": "İmza",
+    "noResults": "Bu aramayla eşleşen hizmet yok.",
+    "priceNote": "Aralıklı fiyatlar saçın uzunluğuna ve yoğunluğuna göre değişir.",
+    "onRequest": "Fiyat salonda belirlenir",
+    "staff": {
+      "lede": "Saç hizmetlerinde kiminle çalışmak istersiniz?",
+      "emrah": "Kurucu · renk ve balyaj uzmanı",
+      "serdar": "Kesim, renk ve bakım",
+      "anyTitle": "Fark etmez",
+      "any": "İlk uygun uzman",
+      "gap": "Bu seçimde yapmadığı: {services}",
+      "why": "Kolay Randevu uzman tercihini bağlantıyla almıyor; bu seçimi bir sonraki ekranda bir kez daha işaretlemeniz yeterli. Size orada hatırlatacağız."
+    },
+    "remove": "{service} kaldır",
+    "estimate": {
+      "label": "Tahmini toplam",
+      "onRequest": "Fiyat salonda belirlenir",
+      "unpriced": "{count, plural, one {# hizmetin} other {# hizmetin}} fiyatı salonda belirlenir."
+    },
+    "handoff": {
+      "eyebrow": "Kolay Randevu’da sizi bekleyen",
+      "staffAny": "“Personel Seçimi” Fark Etmez olarak gelir; dilerseniz değiştirin.",
+      "staffPick": "Saç hizmetleriniz için “Personel Seçimi” listesinde şunu seçin: <b>{name}</b>",
+      "calendar": "Size uygun gün ve saati seçin.",
+      "confirm": "Telefon numaranızla onaylayın; randevunuz SMS ile kesinleşir.",
+      "cta": "Tarih & saat seç"
+    },
+    "count": "{count, plural, =0 {Henüz hizmet seçilmedi} one {# hizmet seçildi} other {# hizmet seçildi}}",
+    "back": "Geri",
+    "continue": "Devam",
+    "whatsapp": "Ya da WhatsApp’tan yazın"
+  }
+}

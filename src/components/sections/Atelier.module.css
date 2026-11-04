@@ -1,0 +1,399 @@
+/* PANFILI · Atelier
+   Two bands, two grounds: the founder on bone, the roster of artists on ink
+   under her. The only headlines on the site not set in Didot. */
+
+.founder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+
+  /* Uppercase grotesque runs far wider per character than Didot does, and the
+     three locales do not agree on how many characters a line holds. Each one
+     sets its own ceiling below. */
+  --atelier-title: clamp(2rem, 5.2vw, 5.25rem);
+}
+
+/* "Persönlichkeiten." is seventeen characters where "Individuals." is twelve. */
+:global(:root:lang(de)) .founder {
+  --atelier-title: clamp(1.7rem, 4.1vw, 4.15rem);
+}
+
+:global(:root:lang(ru)) .founder {
+  --atelier-title: clamp(1.9rem, 5.2vw, 5.25rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  /* One explicit row that takes the band's whole height, so the portrait
+     column has something definite to stretch into and reaches both floors. */
+  grid-template-rows: 1fr;
+  align-items: start;
+  flex: 1;
+}
+
+/* --- Left: the masthead ------------------------------------------------ */
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 2.6vh + 0.7vw, 2.5rem);
+  /* The masthead's own inset is what sets the band's height, and the portrait
+     beside it then runs the full measure of that, edge to edge. */
+  padding: var(--section-pad) clamp(2rem, 4vw, 4.5rem) var(--section-pad) var(--gutter);
+  max-width: 46rem;
+  width: 100%;
+}
+
+.text .title {
+  font-family: var(--font-sans);
+  font-size: var(--atelier-title);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+/* Didot italic against the grotesque caps. High-contrast strokes read as a
+   lighter tone at the same size, which is the whole contrast in the design. */
+.text .title em {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.body {
+  font-size: var(--t-body);
+  line-height: var(--leading-body);
+  color: var(--fg-muted);
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+/* --- Right: the portrait ----------------------------------------------- */
+
+.figure {
+  position: relative;
+  margin: 0;
+  align-self: stretch;
+  min-width: 0;
+  min-height: clamp(18rem, 46svh, 32rem);
+}
+
+/* Absolute rather than height:100%: the figure is stretched by its grid row
+   rather than given a height, which is not something a percentage can resolve
+   against — left to itself the image falls back to its own 2:3 and overshoots
+   the masthead beside it by a third of a screen. */
+.media {
+  position: absolute;
+  inset: 0;
+  /* One step down from the bone ground: the floor the portrait stands on
+     before it has loaded. */
+  background-color: var(--bone-tint);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Holds his face high in a frame that is cropped by both floors. */
+  object-position: 34% 12%;
+  /* Daylight-warm photography on a bone ground: lifted rather than sunk, so
+     the picture reads as one tone with the paper around it. */
+  filter: saturate(0.9) contrast(1.02) brightness(1.03);
+}
+
+/* The credit sits on the photograph rather than on the section's ground, so
+   it keeps the on-dark marks — the bright gold and the cream — whatever the
+   band around it is doing, and brings its own floor with it as a shadow. */
+.credit {
+  position: absolute;
+  left: clamp(1rem, 2.2vw, 2.5rem);
+  bottom: clamp(1rem, 2.2vw, 2.25rem);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  /* Held well short of the photograph's width. The founder's title is long
+     enough to wrap at mid widths, and a credit that runs the full plate reads
+     as a caption bar rather than as a signature in the corner. */
+  max-width: min(22rem, 66%);
+  text-align: left;
+  text-shadow: 0 1px 16px rgba(8, 8, 7, 0.9);
+}
+
+/* A link since her own page shipped. The mark is the site's drawn hairline
+   rather than a colour change: the role directly beneath it is already gold,
+   and a name that turns gold on hover would read as the two lines swapping
+   places. No underline at rest — the signature stays a signature. */
+.creditName {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--t-small);
+  font-weight: 600;
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  line-height: 1;
+}
+
+.creditName::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  /* Short of the tracking's trailing space, so the rule ends under the last
+     letter rather than a third of an em past it. */
+  right: var(--track-micro);
+  bottom: -0.3rem;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-base) var(--ease-editorial);
+}
+
+.creditName:hover::after,
+.creditName:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.creditRole {
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--gold);
+  /* Set for one line originally. Two lines of tracked-out caps need the leading
+     opened up or they touch. */
+  line-height: 1.5;
+}
+
+/* --- The roster --------------------------------------------------------- */
+
+.artists {
+  position: relative;
+  padding-block: var(--section-pad);
+  overflow: clip;
+}
+
+.artistsHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.75rem, 1.4vh + 0.4vw, 1.25rem);
+  margin-bottom: clamp(1.75rem, 3vh + 1vw, 3rem);
+}
+
+.artistsHead .artistsTitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.55rem, 0.9rem + 2.4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.artistsHead .artistsTitle em {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+/* Six across at a full desktop measure, and the same track width whatever the
+   roster holds — so one artist reads as one filled slot in a row rather than
+   as a photograph stretched across the page. */
+.roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: clamp(0.75rem, 1.4vw, 1.25rem);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cardFigure {
+  position: relative;
+  margin: 0 0 var(--space-xs);
+}
+
+.cardMedia {
+  aspect-ratio: 5 / 6;
+}
+
+.cardMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  filter: saturate(0.8) contrast(1.05) brightness(0.9);
+  transition: filter var(--dur-slow) var(--ease-editorial);
+}
+
+.card:hover .cardMedia img {
+  filter: saturate(0.95) contrast(1.02) brightness(1);
+}
+
+/* The plate a card shows until its photograph is shot. It holds the same 5:6
+   frame the portraits do, so a mixed row stays level, and it is the raised ink
+   the other inset panels use rather than a lighter grey — a card that goes
+   *pale* in a dark row reads as a gap in the row, and one that goes one step up
+   from the floor reads as a surface. The initial is the display face at the
+   size a card can carry, in the gold, dimmed enough that the row still reads
+   name-first and the photographed faces keep the eye. */
+.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--ink-raised);
+  box-shadow: inset 0 0 0 1px var(--rule-soft);
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.5rem + 2.4vw, 3.25rem);
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.62;
+  transition: opacity var(--dur-slow) var(--ease-editorial);
+}
+
+.card:hover .monogram {
+  opacity: 0.82;
+}
+
+.cardName {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg);
+  line-height: 1.2;
+  padding-bottom: var(--space-2xs);
+}
+
+/* No rule between the two: the name and the job title read as one caption on
+   the strength of being set close and cut differently. */
+.cardRole {
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  line-height: 1.3;
+}
+
+/* --- Phone and tablet ---------------------------------------------------
+   One column. The portrait still leaves the page at the floor, which is the
+   one thing about this composition worth carrying down. */
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: clamp(2.25rem, 7vw, 3rem);
+  }
+
+  .text {
+    padding: var(--section-pad) var(--gutter) 0;
+    max-width: none;
+  }
+
+  .text .title {
+    text-wrap: balance;
+  }
+
+  .figure {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    /* `align-self: stretch` comes down from the two-column layout, where the
+       grid row gives the figure its height. Stacked, the row has no height to
+       give — the figure's children are all absolutely positioned — and Safari
+       resolves the conflict between stretch and aspect-ratio the other way
+       round from Chrome: the figure collapses to nothing, the portrait inside
+       it disappears, and the credit, anchored to the figure's bottom, prints
+       itself over the copy above. Chrome happened to pick the aspect-ratio, so
+       emulation showed nothing wrong; a real iPhone did. */
+    align-self: start;
+  }
+}
+
+/* --- Phone and tablet: the roster becomes a rail ------------------------
+   One line the finger pushes, not a grid: nine cards wrapped two- or
+   three-up were four rows of phone scroll, and on an iPad the last row was
+   a ragged four under a full five. A rail is one row at every width below
+   the desktop grid, the same grammar as the reels band, native momentum
+   and snap. Full bleed, with the shell's gutter re-applied as padding so
+   the first card aligns with the heading above it.
+
+   `scroll-padding-inline` is what makes that alignment survive: the snapport
+   is the padding box, so mandatory snapping pulled the first card's start
+   edge onto the container's left edge and scrolled the gutter away — the
+   rail loaded at scrollLeft: 23 and the portraits sat flush against the
+   screen. Insetting the snapport by the same gutter puts the snap position
+   back where the padding already was, at both ends of the run. */
+
+@media (max-width: 1099px) {
+  .roster {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+  }
+
+  .roster::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Capped at the width a card holds in the desktop grid at the breakpoint,
+     so nothing changes size as the row turns into a rail — only the wrap. */
+  .roster > * {
+    flex: 0 0 min(44vw, 12rem);
+    scroll-snap-align: start;
+  }
+}
+
+/* --- Emrahair: the three numbers under the biography --------------------- */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-s);
+  padding-block: var(--space-s);
+  border-block: 1px solid var(--rule-soft);
+  max-width: 34rem;
+}
+
+.facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.factValue {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.1rem + 1.2vw, 2.4rem);
+  line-height: 1;
+  color: var(--emphasis);
+}
+
+.factLabel {
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  line-height: 1.4;
+}

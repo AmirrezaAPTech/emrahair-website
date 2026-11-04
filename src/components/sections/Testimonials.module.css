@@ -1,0 +1,206 @@
+/* PANFILI · Testimonials
+   The real aggregate over two slow rows of review cards, and the link into
+   the archive. Card grammar from the client's reference build: box, five
+   gold stars, quotation, author and date. */
+
+.wrap {
+  position: relative;
+  overflow: clip;
+  padding-block: var(--section-pad);
+  /* Its own ground: one step down from the bone the reels band below stands
+     on, and unmistakably not the ink the Atelier above ends in — the client
+     asked for the reviews to read as their own room. Same paper the arch
+     panel and the footer use. */
+  background-color: var(--bone-tint);
+
+  --card-w: clamp(17rem, 42vw, 24rem);
+  --card-gap: clamp(0.7rem, 1.2vw, 1.1rem);
+  /* A row is nine cards; half the doubled track crosses in this time, which
+     lands near thirty pixels a second — reading speed, not ticker speed. */
+  --run-a: 110s;
+  --run-b: 128s;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1rem, 2.4vw, 1.75rem);
+}
+
+.head .title {
+  justify-items: center;
+  text-align: center;
+}
+
+.aggregate {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.score {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  line-height: 1;
+  color: var(--red);
+}
+
+.cardSource {
+  margin-left: 0.6em;
+  color: var(--fg-muted);
+}
+
+.aggSep {
+  margin-inline: 0.5em;
+  color: var(--fg-faint);
+}
+
+.aggStars {
+  color: var(--gold);
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  letter-spacing: 0.25em;
+}
+
+.count {
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* --- The rows ------------------------------------------------------------ */
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  margin-block: clamp(2rem, 5vw, 3.25rem);
+  /* The rows emerge from soft edges rather than being cut off. */
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.row {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: cards-left var(--run-a) linear infinite;
+}
+
+.track[data-reverse] {
+  animation: cards-right var(--run-b) linear infinite;
+}
+
+.row:hover .track,
+.row:focus-within .track {
+  animation-play-state: paused;
+}
+
+@keyframes cards-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes cards-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.item {
+  flex: none;
+  width: var(--card-w);
+  margin-right: var(--card-gap);
+  display: flex;
+}
+
+/* --- The card ------------------------------------------------------------ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: clamp(1.1rem, 2vw, 1.4rem);
+  background: var(--cream-soft);
+  border: 1px solid var(--rule-soft);
+  border-radius: 1rem;
+}
+
+.cardStars {
+  display: inline-flex;
+  gap: 0.25rem;
+  /* The brand gold itself, not the darkened AA gold the light ground's
+     --accent resolves to: the stars are decorative marks, announced nowhere,
+     and the bright cut is what reads as five gold stars. */
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.cardStars svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.cardText {
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: var(--fg);
+  margin-bottom: 0.8rem;
+  /* Three lines at ribbon pace; the archive carries every word. */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardMeta {
+  margin-top: auto;
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+}
+
+.cardAuthor {
+  font-weight: 600;
+  /* On paper now, so the author takes the primary, same as the archive. */
+  color: var(--red);
+}
+
+
+.foot {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Reduced motion ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .rows {
+    mask-image: none;
+  }
+
+  .row {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .track {
+    animation: none !important;
+  }
+}

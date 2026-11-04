@@ -1,0 +1,239 @@
+/* One step below the bone the light sections stand on — the same relationship
+   `--ink-deep` had to `--ink` when this floor was dark. The page still ends on
+   a ground of its own rather than on the ground it has been walking on. */
+.foot {
+  position: relative;
+  background-color: var(--bone-tint);
+  /* A footer, not a section: it ends the page rather than being one more
+     chapter of it, so it takes about half the section pad. Most of what made
+     it long is simply gone — the map lives on /kontakt now, and the blurb
+     paragraph said what the landing page already says. */
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  overflow: clip;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+/* Two blocks in one row: the mark, then the three columns. */
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 2.6fr);
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: start;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+}
+
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: var(--space-2xs);
+  padding-block: 0.5rem;
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.social:hover,
+.social:focus-visible {
+  color: var(--accent);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-l) var(--col-gap);
+  align-content: start;
+}
+
+/* --- The map -------------------------------------------------------
+   Frame, plate and load control all moved to MapEmbed.module.css when the
+   embed went behind a click. The geometry is unchanged — squarish beside the
+   columns, a band when the grid stacks — it just lives with the component that
+   owns it now. Google's own plate is still left in its own colours once it
+   loads: a map that does not look like a map is no longer doing the job a map
+   is there to do. */
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+/* Padded to a comfortable tap target. The visual rhythm is held by the
+   reduced gap, so the list looks unchanged and is twice as easy to hit. */
+.link {
+  display: inline-block;
+  width: fit-content;
+  padding-block: 0.28rem;
+  font-size: var(--t-small);
+  line-height: 1.6;
+  text-align: left;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--accent);
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: var(--t-small);
+  color: var(--fg-muted);
+}
+
+
+.hours dd {
+  margin: 0;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Stands in for the hours table while the salon's real opening times are
+   unconfirmed. It is the operative fact in the whole column — how you actually
+   get seen — so it takes the primary rather than the body tint. See
+   HOURS_VERIFIED in lib/site.ts. */
+.byAppointment {
+  margin: 0;
+  font-size: var(--t-small);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--emphasis);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  padding-top: var(--space-m);
+  border-top: 1px solid var(--rule-soft);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.legal {
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.legalLinks .link {
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+}
+
+/* The signature sits below the fold of the footer and is cropped by the floor
+   of the page. It signs off; it does not shout. */
+.signature {
+  margin-top: clamp(2rem, 5vw, 4rem);
+  padding-inline: var(--gutter);
+  max-width: var(--page-max);
+  margin-inline: auto;
+  overflow: hidden;
+  height: clamp(3rem, 8vw, 8rem);
+  display: flex;
+  align-items: flex-start;
+}
+
+.signature span {
+  display: block;
+  width: 100%;
+  font-family: var(--font-wordmark);
+  font-weight: 400;
+  /* Sized to fit the gutters at every width: the signature is meant to be
+     cropped by the floor of the page, never by its sides. */
+  font-size: clamp(3.25rem, 13.2vw, 17rem);
+  line-height: 0.78;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: transparent;
+  /* Outlined in the gold rather than in a tint of the ink. At this size it is
+     the largest single mark on the page, and it costs nothing to make it the
+     secondary's — an outline has no mass, so it signs off without shouting. */
+  -webkit-text-stroke: 1px rgba(168, 133, 60, 0.45);
+  user-select: none;
+}
+
+@media (max-width: 1100px) {
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* The Services column comes off the phone footer. Its eight links are the
+     single tallest block left, and on a phone they are one tap away twice
+     over — the Services page in the header and the drawer's index. Hidden by
+     CSS rather than dropped from the markup, so wider screens keep the
+     column and crawlers keep the links. */
+  .cols > .col:first-child {
+    display: none;
+  }
+
+  /* Contact takes the full measure under the two link columns, and its lines
+     run as one wrapped row rather than a tower — the address, the phone and
+     the mail read left to right the way a letterhead sets them. */
+  .cols > .col:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .cols {
+    gap: var(--space-m) var(--col-gap);
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* --- Emrahair: hours as a two-column list ------------------------------- */
+.hoursRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 15rem;
+  font-size: var(--t-small);
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}

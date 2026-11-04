@@ -1,0 +1,119 @@
+.work {
+  padding-block: var(--section-pad);
+}
+
+.head {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-s);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  max-width: 18ch;
+}
+
+.lede {
+  max-width: 52ch;
+  font-size: var(--t-body);
+  line-height: var(--leading-body);
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+/* Five columns and two rows: the two tall plates take two cells each and
+   the six others fill the remaining six, so the grid closes square with no
+   holes. Dense packing does the placement. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: clamp(12rem, 7rem + 11vw, 20rem);
+  grid-auto-flow: dense;
+  gap: clamp(0.6rem, 1.2vw, 1.1rem);
+}
+
+.tile {
+  min-width: 0;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.figure {
+  position: relative;
+  height: 100%;
+  margin: 0;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.9rem;
+  background-color: var(--bone-tint);
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--grade-light);
+  transform: scale(1);
+  transition:
+    transform var(--dur-slow) var(--ease-editorial),
+    filter var(--dur-slow) var(--ease-editorial);
+}
+
+.tile:hover .media img {
+  transform: scale(1.04);
+  filter: var(--grade-salon-active);
+}
+
+/* The label sits on the photograph, so it keeps the on-dark marks. */
+.caption {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.85rem;
+  z-index: 2;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(13, 10, 9, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-l);
+}
+
+/* --- Phone and tablet: a swipe rail ------------------------------------ */
+@media (max-width: 899px) {
+  .grid {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tile,
+  .tall {
+    flex: 0 0 min(68vw, 18rem);
+    aspect-ratio: 4 / 5.4;
+    scroll-snap-align: start;
+  }
+}

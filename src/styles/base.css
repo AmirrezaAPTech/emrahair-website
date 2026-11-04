@@ -1,0 +1,608 @@
+/* ------------------------------------------------------------------
+   EMRAHAIR · Base layer
+   Reset, primitives, and the shared editorial vocabulary.
+   ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Native scrolling, nothing intercepting the wheel. Only in-page anchor jumps
+   glide; the wheel and trackpad behave exactly as the browser intends. */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: auto;
+}
+
+/* --- Scroll lock --------------------------------------------------
+   Set by lockScroll() while an overlay owns the screen. The padding is the
+   width the page's own scrollbar was occupying, measured on the way in — put
+   back so nothing moves at the moment the overlay opens. */
+html[data-scroll-locked] {
+  overflow: hidden;
+  padding-right: var(--scroll-gutter, 0px);
+}
+
+/* The header is fixed, so it is laid out against the viewport and never sees
+   the padding above. Its own centred bar would otherwise widen by a scrollbar
+   while the page beneath it did not. */
+html[data-scroll-locked] [data-nav] {
+  padding-right: var(--scroll-gutter, 0px);
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* --- Focus -------------------------------------------------------
+   Visible, on-brand, and never on mouse users. */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--space-s);
+  left: var(--space-s);
+  z-index: calc(var(--z-preloader) + 1);
+  padding: 0.85rem 1.5rem;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  transform: translateY(calc(-100% - var(--space-s) * 2));
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Layout primitives ------------------------------------------ */
+
+.shell {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-pad);
+}
+
+.section--dark {
+  background-color: var(--ink);
+}
+
+.section--deep {
+  background-color: var(--ink-deep);
+}
+
+.section--light {
+  background-color: var(--surface-light);
+}
+
+/* 12 columns is the frame every layout in this site is cut from. */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+}
+
+/* --- Editorial type vocabulary ---------------------------------- */
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.eyebrow--muted {
+  color: var(--fg-faint);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--track-display);
+  line-height: var(--leading-display);
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+.display--hero {
+  font-size: var(--t-hero);
+  line-height: var(--leading-hero);
+}
+.display--xl {
+  font-size: var(--t-display);
+}
+.display--l {
+  font-size: var(--t-title);
+  line-height: var(--leading-title);
+}
+.display--m {
+  font-size: var(--t-heading);
+  line-height: var(--leading-title);
+}
+.display--s {
+  font-size: var(--t-subhead);
+  line-height: 1.16;
+}
+
+/* The one word that carries the meaning. Never more than one per title, and
+   the one piece of type on the site that takes the primary — red on the light
+   sections, gold where the ground is too dark to carry it. */
+.display em,
+.accent-word {
+  font-style: italic;
+  color: var(--emphasis);
+}
+
+.lede {
+  font-family: var(--font-sans);
+  font-size: var(--t-body-lg);
+  line-height: 1.66;
+  color: var(--fg-muted);
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--leading-body);
+  color: var(--fg-muted);
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: var(--t-subhead);
+  font-style: italic;
+  line-height: 1.42;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+/* --- Rules ------------------------------------------------------- */
+
+.rule {
+  height: 1px;
+  width: 100%;
+  background: var(--rule);
+  border: 0;
+  margin: 0;
+}
+
+/* --- Links & buttons --------------------------------------------- */
+
+/* The signature link: label, then a rule that draws itself to a serif arrow. */
+.link-arrow {
+  --arrow-w: clamp(2.25rem, 4vw, 3.5rem);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-s);
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg);
+  line-height: 1;
+  padding-block: 0.4rem;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.link-arrow__line {
+  position: relative;
+  display: block;
+  width: var(--arrow-w);
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+  transform-origin: left center;
+  transition:
+    width var(--dur-base) var(--ease-editorial),
+    transform var(--dur-base) var(--ease-editorial),
+    opacity var(--dur-fast) var(--ease-out);
+}
+
+.link-arrow__line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translate(1px, -50%) rotate(45deg);
+}
+
+.link-arrow:hover .link-arrow__line,
+.link-arrow:focus-visible .link-arrow__line {
+  width: calc(var(--arrow-w) + 1.25rem);
+  opacity: 1;
+}
+
+.link-arrow:hover,
+.link-arrow:focus-visible {
+  color: var(--accent);
+}
+
+/* The same link where it is the only thing to press on the screen — the hero,
+   at both sizes. A label and a rule read as a caption when there is no body
+   copy around them to be a link *within*; a frame and a hit area read as a
+   control.
+
+   This is the booking action, so it now carries the primary the same way the
+   pill does: filled red, cream label on top of it. The note on --red says the
+   colour is a fill with cream over it or type on paper, and never a hairline on
+   a dark ground — a red *frame* on the hero floor would measure 1.5:1 and
+   simply not be there. So the red arrives as mass, not as an edge, and the
+   gold still rises from the floor on hover, which keeps the two brand colours
+   trading here exactly as they do on the pill.
+
+   The rule stops travelling: it has an edge to run into now, so it takes a
+   short step instead of growing past it. */
+.link-arrow--framed {
+  --arrow-w: clamp(1.75rem, 3vw, 2.5rem);
+  position: relative;
+  gap: var(--space-xs);
+  min-height: 3rem;
+  padding: 0.9rem 1.6rem;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--cream-soft);
+  background: var(--red);
+  transition:
+    color var(--dur-base) var(--ease-editorial),
+    background var(--dur-base) var(--ease-editorial);
+}
+
+.link-arrow--framed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform var(--dur-base) var(--ease-editorial);
+}
+
+.link-arrow--framed:hover,
+.link-arrow--framed:focus-visible {
+  color: var(--ink);
+}
+
+.link-arrow--framed:hover::before,
+.link-arrow--framed:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.link-arrow--framed:hover .link-arrow__line,
+.link-arrow--framed:focus-visible .link-arrow__line {
+  width: var(--arrow-w);
+  transform: translateX(0.35rem);
+  opacity: 1;
+}
+
+/* On a phone it takes the column. Nothing else is competing for the width, the
+   label is close to filling it anyway in German and Russian, and a control that
+   runs the measure is the one thing on a touch screen that cannot be mistaken
+   for a caption. The rule goes to the far edge rather than trailing the label. */
+@media (max-width: 767px) {
+  .link-arrow--framed {
+    width: 100%;
+    justify-content: space-between;
+    padding-inline: 1.15rem;
+  }
+
+  .link-arrow--framed .link-arrow__line {
+    flex: none;
+  }
+}
+
+/* The one filled pill on the site, used once per view, for booking only —
+   which is exactly why it is the thing that carries the red. No edge: the mass
+   of colour is the button, and the cream label on it at 11.7:1 is what gives
+   the shape its boundary on a dark ground. */
+.btn {
+  --btn-fg: var(--cream-soft);
+  --btn-bg: var(--red);
+  /* The fill that rises on hover, and the label it has to be read against.
+     Both are properties rather than rules so a section can trade the two brand
+     colours round without having to out-specify this block. */
+  --btn-fill: var(--gold);
+  --btn-fg-hover: var(--ink);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1.05rem 2.1rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--btn-fg);
+  background: var(--btn-bg);
+  border: 0;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--dur-base) var(--ease-editorial);
+}
+
+/* Hover takes the pill from the primary to the secondary — red to gold — and
+   the fill rises from the floor rather than fading in. Quieter, more physical,
+   and it is the one place on the site where the two brand colours trade. */
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--btn-fill);
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform var(--dur-base) var(--ease-editorial);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  color: var(--btn-fg-hover);
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: scaleY(1);
+}
+
+/* --- Numerals ---------------------------------------------------- */
+
+.numeral {
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 400;
+  letter-spacing: var(--track-micro);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* --- Media ------------------------------------------------------- */
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ink-raised);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Documentary salon photography, pulled into the night palette. */
+.media--graded img {
+  filter: var(--grade-salon);
+  transition: filter var(--dur-slow) var(--ease-editorial);
+}
+
+.media--graded:hover img,
+.media--graded:focus-within img {
+  filter: var(--grade-salon-active);
+}
+
+.media--ratio-portrait {
+  aspect-ratio: 3 / 4;
+}
+.media--ratio-landscape {
+  aspect-ratio: 3 / 2;
+}
+.media--ratio-square {
+  aspect-ratio: 1 / 1;
+}
+.media--ratio-tall {
+  aspect-ratio: 2 / 3;
+}
+
+/* --- Grain --------------------------------------------------------
+   A film grain, not a texture. Enough to take the digital edge off large
+   flat grounds; invisible if you look for it directly. */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: var(--grain-url);
+  background-size: 180px 180px;
+}
+
+/* No grain on touch devices. `overlay` blending over the hero video makes the
+   compositor re-blend the noise against every frame of footage for the whole
+   time the video plays, which on a phone is a permanent tax on scroll
+   smoothness — and at 16% opacity on a small bright screen the texture it buys
+   is close to invisible anyway. Removed rather than de-blended: unblended
+   noise at this opacity just reads as dirt. */
+@media (hover: none) and (pointer: coarse) {
+  .grain::after {
+    display: none;
+  }
+}
+
+/* --- Reduced motion ----------------------------------------------
+   Everything still arrives; it simply arrives already in place. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal],
+  [data-reveal-line],
+  [data-reveal-media] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+/* --- Masked display lines ----------------------------------------
+   Every headline on the site is built from these. Each line is its own
+   window; the inner span is what rises through it. Declared once here
+   because eight sections would otherwise redeclare it eight times. */
+
+/* Grid, so the line boxes are grid items and their margins cannot collapse
+   into each other. The bleed below is taken back out on both edges; with
+   collapsing, two adjacent -0.16em margins resolve to one, and every headline
+   on the site quietly gains a sixth of a line of leading it was never given. */
+.display--masked {
+  display: grid;
+}
+
+.display__line {
+  display: block;
+  overflow: hidden;
+  /* The window is the line box, and a display line box set below 1 is shorter
+     than the face's own ascent and descent — Didot's are 1.24em together. So
+     the mask was slicing the tails off the descenders and the italic accent,
+     and leaving the caps a pixel from the top edge at every size. The bleed is
+     what the glyphs overhang by; the negative margin takes it back out so the
+     type still sits on the leading it was given. */
+  padding-block: 0.16em;
+  margin-block: -0.16em;
+}
+
+.display__line > span {
+  display: block;
+}
+
+/* --- Section sizing ----------------------------------------------
+   The site's rule is that a section resolves in one screen on a desktop.
+   Sections opt in here rather than each inventing its own min-height. */
+
+.section--fit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .section--fit {
+    min-height: min(100svh, 60rem);
+  }
+}

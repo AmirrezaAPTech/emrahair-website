@@ -1,0 +1,611 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-nav);
+  color: var(--fg);
+  transition: transform var(--dur-base) var(--ease-editorial);
+  /* No will-change here. It promotes the header to a containing block for
+     fixed-position descendants, which collapses the full-screen menu inside
+     it down to the height of the bar. */
+}
+
+/* The bar retreats while reading downward and returns the moment the visitor
+   scrolls up, so the way out is always one gesture away without the header
+   ever sitting on top of the composition. */
+.nav[data-hidden='true'] {
+  transform: translateY(-102%);
+}
+
+/* A transform on the header makes it the containing block for every fixed
+   descendant it has — which is the menu. It would be laid out against the bar
+   instead of against the viewport, and a full-screen panel would collapse to
+   the height of the header. The retreat is suppressed
+   outright while the menu is open rather than merely reset, because a
+   *transition* back to `none` is still a matrix for the length of the
+   transition, and that is exactly the window the menu opens in. */
+.nav[data-menu-state='open'] {
+  transform: none;
+  transition: none;
+}
+
+.bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-m);
+  height: var(--nav-h);
+  padding-inline: var(--gutter);
+  max-width: var(--page-max);
+  margin-inline: auto;
+  z-index: 2;
+}
+
+/* A wash rather than a bar. Keeps the hero edge to edge while the type stays
+   legible over whatever scrolls beneath. */
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(var(--nav-h) + 2.5rem);
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 7, 0.72) 0%,
+    rgba(8, 8, 7, 0.42) 45%,
+    rgba(8, 8, 7, 0) 100%
+  );
+  transition: opacity var(--dur-base) var(--ease-out);
+  pointer-events: none;
+}
+
+.nav[data-solid='true']::before {
+  opacity: 0;
+}
+
+/* Once past the hero the bar condenses into a solid rail. */
+.nav[data-solid='true'] .bar {
+  background: rgba(13, 13, 13, 0.82);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.brand {
+  display: inline-flex;
+}
+
+.links {
+  justify-self: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 1.9vw, 2.25rem);
+}
+
+.link {
+  position: relative;
+  display: block;
+  padding-block: 0.5rem;
+  font-size: var(--t-eyebrow);
+  font-weight: 500;
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform var(--dur-base) var(--ease-editorial);
+}
+
+.link:hover,
+.link:focus-visible,
+.link[data-active='true'] {
+  color: var(--fg);
+}
+
+.link:hover::after,
+.link:focus-visible::after,
+.link[data-active='true']::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+/* --- Locale switch ------------------------------------------------ */
+
+.locales {
+  position: relative;
+}
+
+.localeTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.4rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.localeTrigger:hover,
+.localeTrigger:focus-visible,
+.localeTrigger[aria-expanded='true'] {
+  color: var(--fg);
+}
+
+.caret {
+  width: 9px;
+  height: 6px;
+  flex: none;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.caret[data-open='true'] {
+  transform: rotate(180deg);
+}
+
+/* Right-aligned to the trigger: it is the last control before the page edge
+   on a phone, and a menu that opens leftward never leaves the screen. */
+.localeMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 1;
+  min-width: 100%;
+  padding: 0.3rem;
+  background: rgba(13, 13, 13, 0.94);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid var(--rule);
+}
+
+.localeMenu[hidden] {
+  display: none;
+}
+
+.locale {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--fg-faint);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.locale[data-active='true'] {
+  color: var(--accent);
+}
+
+.locale:hover,
+.locale:focus-visible {
+  color: var(--fg);
+  background-color: var(--rule-soft);
+}
+
+/* Outlined, and sized to a control rather than to a section CTA. The tracking
+   comes down with it: 0.34em is an eyebrow's measure, and it was what made
+   this read long rather than large. The gold fill still rises on hover. */
+.book {
+  padding: 0.72rem 1.25rem;
+  letter-spacing: var(--track-micro);
+  white-space: nowrap;
+}
+
+.toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  margin-right: -0.6rem;
+}
+
+.bars {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 9px;
+}
+
+.bars span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transition: transform var(--dur-base) var(--ease-editorial);
+}
+
+.bars span:first-child {
+  top: 0;
+}
+.bars span:last-child {
+  bottom: 0;
+}
+
+.toggle[aria-expanded='true'] .bars span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+.toggle[aria-expanded='true'] .bars span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* --- Menu ----------------------------------------------------------
+   A full-screen takeover. Below 1181px this is the site's primary navigation,
+   not an accessory to it, so it gets the whole canvas and sets its own page. */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /* A light source coming in from the top right — the corner the panel enters
+     from and the corner the toggle sits in — so the ground is lit rather than
+     being one flat plate of ink across a whole screen. */
+  background:
+    radial-gradient(
+      120% 90% at 100% 0%,
+      rgba(201, 167, 76, 0.08) 0%,
+      rgba(201, 167, 76, 0) 58%
+    ),
+    var(--ink-deep);
+  padding: calc(var(--nav-h) + var(--space-l)) var(--gutter) var(--space-l);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* Only ever seen on a screen too short to hold the list, and drawn in the
+     site's own tints rather than in the platform's when it is. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+  /* No rest transform here. GSAP owns this element's transform, and a CSS one
+     underneath it is a value GSAP decomposes into pixels on the way in and
+     falls back to on the way out — which reads as a panel that opens to
+     nowhere, then disappears the instant the tween lands on identity. The
+     closed state is the `hidden` attribute and the line below. */
+  visibility: hidden;
+}
+
+.menu[hidden] {
+  display: none;
+}
+
+.menuInner {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.menuEyebrow {
+  color: var(--fg-faint);
+}
+
+.menuItem {
+  border-top: 1px solid var(--rule-soft);
+}
+
+.menuList .menuItem:last-child {
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+/* Three columns: the numeral, the label, and a rule that draws itself out to
+   the panel's edge on the item under the pointer. The row is the target, not
+   the word. */
+.menuLink {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: var(--space-s);
+  padding-block: clamp(0.8rem, 2.2vw, 1.15rem);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.menuIndex {
+  flex: none;
+  opacity: 0.7;
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-editorial);
+}
+
+.menuLabel {
+  transition:
+    transform var(--dur-base) var(--ease-editorial),
+    color var(--dur-fast) var(--ease-out);
+}
+
+/* Sits on the row's baseline with the type, so it reads as part of the line
+   rather than as an icon parked beside it. */
+.menuArrow {
+  align-self: center;
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
+  transform: translateX(-0.75rem);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-editorial);
+}
+
+.menuLink:hover .menuLabel,
+.menuLink:focus-visible .menuLabel,
+.menuLink[data-active='true'] .menuLabel {
+  transform: translateX(0.5rem);
+  color: var(--accent);
+}
+
+.menuLink:hover .menuIndex,
+.menuLink:focus-visible .menuIndex,
+.menuLink[data-active='true'] .menuIndex {
+  opacity: 1;
+}
+
+.menuLink:hover .menuArrow,
+.menuLink:focus-visible .menuArrow,
+.menuLink[data-active='true'] .menuArrow {
+  opacity: 0.6;
+  transform: translateX(0);
+  color: var(--accent);
+}
+
+/* --- The index -----------------------------------------------------
+   The site's pages, grouped, under the display list. Set in the sans at
+   reading size so it reads as an index and not as a second menu competing
+   with the one above it. No icon, no chevron, no disclosure: every group is
+   open, and the gold hairline is the only thing between them. */
+
+.index {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared between the group above and the group below rather than doubled, the
+   same way the hand-off blocks share theirs. */
+.indexGroup + .indexGroup {
+  margin-top: var(--space-s);
+  padding-top: var(--space-s);
+  border-top: 1px solid var(--rule);
+}
+
+.indexHeading {
+  margin-bottom: var(--space-2xs);
+}
+
+.indexList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.indexLink {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding-block: 0.42rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-small);
+  line-height: 1.4;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.indexLink:hover,
+.indexLink:focus-visible,
+.indexLink[data-active='true'] {
+  color: var(--accent);
+}
+
+/* Only where the bar has given the pill up. Between 768 and 1180 the menu is
+   open but the bar still carries it, and two of the same button on one screen
+   is one too many. */
+.menuBook {
+  display: none;
+}
+
+.menuBookBtn {
+  width: 100%;
+  padding-block: 1.15rem;
+}
+
+/* On a phone this sits under the list behind a hairline, supporting it. On a
+   canvas wide enough it moves into its own column — see the 768px block. */
+.menuFoot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  padding-top: var(--space-s);
+  border-top: 1px solid var(--rule-soft);
+}
+
+.menuBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.menuHours,
+.menuContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: var(--t-small);
+  color: var(--fg-muted);
+}
+
+.menuHoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-s);
+  max-width: 22rem;
+}
+
+.menuHours dd {
+  margin: 0;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+.menuContact a {
+  padding-block: 0.2rem;
+  width: fit-content;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.menuContact a:hover,
+.menuContact a:focus-visible {
+  color: var(--accent);
+}
+
+/* --- Menu, on a canvas ---------------------------------------------
+   A full screen is too much room for one column: four section names down the
+   left of a tablet with everything else stacked under them leaves the right
+   half empty. The list takes the larger column and the salon's details take
+   the smaller one, which is the same 12-column logic the sections use. The
+   booking pill is not here — above 767px the bar still carries it. */
+@media (min-width: 768px) {
+  .menuInner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    column-gap: var(--col-gap);
+    row-gap: var(--space-l);
+    align-items: start;
+  }
+
+  .menuEyebrow {
+    grid-column: 1 / -1;
+  }
+
+  /* The three display lines take the wide column; the index and the salon's
+     details stack down the narrow one. Placed explicitly rather than left to
+     flow: the booking pill between them is display:none at this width, and an
+     auto-placed grid would put the index under the list the moment that
+     changed. */
+  .menuList {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .index {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* The hairline was there to separate two stacked blocks. Side by side they
+     are separated by the column gap, and the rule would only draw a line under
+     half the screen. */
+  .menuFoot {
+    grid-column: 2;
+    grid-row: 3;
+    padding-top: 0;
+    border-top: 0;
+    gap: var(--space-l);
+  }
+}
+
+/* A short screen is the one place the contents can genuinely outrun the panel,
+   and a panel that scrolls is a panel with its own scrollbar — the thing this
+   was rebuilt to stop showing. The list keeps its size, because the display
+   type is the point of it; the margins around it give the room back. */
+@media (max-height: 700px) {
+  .menu {
+    padding-top: calc(var(--nav-h) + var(--space-2xs));
+    padding-bottom: var(--space-s);
+  }
+
+  .menuInner {
+    gap: var(--space-s);
+  }
+
+  .menuLink {
+    padding-block: 0.7rem;
+  }
+}
+
+/* --- Breakpoints ---------------------------------------------------
+   The inline nav survives only while every label fits without crowding. The
+   German and Russian labels are longer than the English ones, so the switch
+   happens earlier than it would for English alone. */
+@media (max-width: 1180px) {
+  .links {
+    display: none;
+  }
+
+  .toggle {
+    display: grid;
+  }
+
+  .bar {
+    grid-template-columns: auto 1fr;
+  }
+
+  .actions {
+    grid-column: 2;
+    justify-self: end;
+  }
+}
+
+/* The label stays whole; the padding around it is what gives way once the
+   inline nav is gone and the bar is carrying the mark, the language and the
+   toggle beside it. */
+@media (max-width: 900px) {
+  .book {
+    padding: 0.7rem 1rem;
+  }
+}
+
+/* --- Phone ---------------------------------------------------------
+   The pill leaves the bar. Three controls and a wordmark do not fit between a
+   phone's gutters — the language switch was landing on top of the mark — and
+   of the three the pill is the one with somewhere else to be: the hero's own
+   framed CTA is directly beneath it, and the menu carries booking too. What
+   stays is the mark, the language, and the way in. */
+@media (max-width: 767px) {
+  .book {
+    display: none;
+  }
+
+  .bar {
+    gap: var(--space-s);
+  }
+
+  .actions {
+    gap: var(--space-2xs);
+  }
+
+  .menuBook {
+    display: block;
+  }
+}

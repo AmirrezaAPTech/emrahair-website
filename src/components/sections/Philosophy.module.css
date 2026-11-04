@@ -1,0 +1,202 @@
+/* PANFILI · Vision (Philosophy)
+   A centred masthead, a triptych of the house's three rooms, and the
+   manifesto beneath — the whole house in one glance on desktop. Phone keeps
+   only the masthead, the lede, one full-bleed photograph and the manifesto:
+   no triptych, no discovery link. */
+
+.phil {
+  position: relative;
+  background-color: var(--surface-light);
+  overflow: clip;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: var(--section-pad) var(--gutter);
+}
+
+.eyebrow {
+  margin-bottom: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.title {
+  justify-items: center;
+  text-align: center;
+  max-width: 22ch;
+}
+
+.copy {
+  margin-top: clamp(1.1rem, 2.4vw, 1.75rem);
+}
+
+.note {
+  max-width: 56ch;
+  font-size: var(--t-body);
+  line-height: 1.72;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.brand {
+  font-style: italic;
+  color: var(--emphasis);
+}
+
+/* --- The triptych (desktop / tablet) ----------------------------------
+   Three frames, the centre one wider and taller than its neighbours — the
+   room the section's caption names gets the emphasis, the other two flank
+   it rather than compete with it. */
+
+.triptych {
+  display: grid;
+  grid-template-columns: 1fr 1.55fr 1fr;
+  align-items: stretch;
+  gap: clamp(0.85rem, 1.6vw, 1.5rem);
+  width: 100%;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.frame {
+  position: relative;
+  margin: 0;
+}
+
+.frameMedia {
+  position: relative;
+  height: 100%;
+  background-color: var(--bone-tint);
+}
+
+.frameRoom .frameMedia,
+.frameWall .frameMedia {
+  aspect-ratio: 3 / 4;
+}
+
+/* Every plate here is a portrait original, so the centre is near-square
+   rather than landscape, and the ritual photograph is anchored on his face. */
+.frameFloor .frameMedia {
+  aspect-ratio: 1 / 1.08;
+}
+
+.ritual img {
+  object-position: 50% 26%;
+}
+
+.caption {
+  position: absolute;
+  left: clamp(0.9rem, 1.4vw, 1.6rem);
+  bottom: clamp(1rem, 1.8vw, 1.75rem);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  text-shadow: 0 1px 14px rgba(8, 8, 7, 0.85);
+}
+
+.caption :global(.numeral) {
+  color: var(--gold);
+}
+
+/* Lit rather than sunk: the dark-ground grade elsewhere would flatten a
+   gallery wall meant to read as bright and present. */
+.frameMedia img {
+  filter: var(--grade-light);
+  transition: filter var(--dur-slow) var(--ease-editorial);
+}
+
+.frame:hover .frameMedia img {
+  filter: var(--grade-salon-active);
+}
+
+/* --- The manifesto ------------------------------------------------------ */
+
+.manifesto {
+  margin-top: clamp(2.25rem, 4.6vw, 3.75rem);
+  max-width: 62ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+  line-height: 1.7;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+/* Didot Bold carries Cyrillic but has no italic; a synthesised oblique
+   shears its hairlines into nothing. */
+:global(:root:lang(ru)) .manifesto {
+  font-style: normal;
+}
+
+.cta {
+  margin-top: clamp(1.75rem, 3.4vw, 2.5rem);
+}
+
+/* --- Phone's single plate ------------------------------------------------
+   Hidden above 899px, where the triptych stands in its place. */
+
+.phonePlate {
+  display: none;
+}
+
+/* --- Phone --------------------------------------------------------------
+   The triptych goes, one full-bleed photograph of the styling floor takes
+   its place, and the discovery link goes with it — the client asked for no
+   button here on phone. Everything else keeps the centred masthead grammar
+   it already has above 899px. */
+
+@media (max-width: 899px) {
+  .stage {
+    padding-inline: var(--gutter);
+  }
+
+  .title {
+    max-width: none;
+    text-wrap: balance;
+  }
+
+  .note {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .triptych {
+    display: none;
+  }
+
+  .phonePlate {
+    display: block;
+    width: calc(100% + var(--gutter) * 2);
+    margin: clamp(2rem, 8vw, 3rem) calc(var(--gutter) * -1) 0;
+  }
+
+  .phonePlateMedia {
+    aspect-ratio: 4 / 4.4;
+    background-color: var(--bone-tint);
+  }
+
+  .phonePlateMedia img {
+    filter: var(--grade-light);
+  }
+
+  .manifesto {
+    margin-top: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.2rem);
+    line-height: 1.78;
+  }
+
+  /* No discovery link on phone: the section ends on the manifesto. */
+  .cta {
+    display: none;
+  }
+}

@@ -1,0 +1,82 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.15em;
+}
+
+.crest {
+  display: grid;
+  place-items: center;
+  width: var(--crest-h, 1.9em);
+  height: var(--crest-h, 1.9em);
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  flex: none;
+}
+
+.crestLetter {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: calc(var(--crest-h, 1.9em) * 0.62);
+  line-height: 1;
+  /* The italic e sits low in its box; this centres it optically. */
+  transform: translate(-3%, -6%);
+  color: var(--accent);
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42em;
+}
+
+/* The wall signage sets PANFILI in a geometric sans, so the mark follows the
+   signage rather than the comp's serif: Didot's hairlines vanish at nav size.
+   Hanken Grotesk carries it — a grotesque close to the signage, and unlike the
+   NeoGram trial cut it replaced, there is no accented character it cannot set,
+   so the subline is safe in German too. */
+.name {
+  font-family: var(--font-wordmark);
+  font-weight: 500;
+  font-size: var(--name-size, 1rem);
+  letter-spacing: var(--track-wordmark);
+  text-transform: uppercase;
+  /* Tracking adds a trailing gap; pull it back so the mark optically centres. */
+  margin-right: calc(var(--track-wordmark) * -1);
+}
+
+.sub {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--sub-size, 0.5rem);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: -0.4em;
+}
+
+.sm {
+  --crest-h: 1.75rem;
+  --name-size: 0.9375rem;
+  --sub-size: 0.5rem;
+}
+
+.md {
+  --crest-h: 2.75rem;
+  --name-size: 1.375rem;
+  --sub-size: 0.625rem;
+}
+
+.lg {
+  --crest-h: clamp(3.5rem, 6vw, 5.5rem);
+  --name-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  --sub-size: clamp(0.625rem, 0.9vw, 0.75rem);
+}

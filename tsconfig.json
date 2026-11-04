@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "noUncheckedIndexedAccess": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "//": [
+    "The .next/dev/types entry in `include` is put there by `next dev` itself and",
+    "comes back every time the dev server starts, so it is excluded rather than",
+    "removed — `exclude` filters `include`, and Next only ever rewrites the latter.",
+    "",
+    "Why: `next dev` and `next build` each generate a routes.d.ts declaring the",
+    "same globals (Routes, ParamMap, LayoutProps). With both on the path they",
+    "collide, and the dev copy wins — it lists only the routes Turbopack has",
+    "compiled so far, often just '/'. That makes `npm run check` fail on the",
+    "[locale] layout with a `params: Promise<unknown>` mismatch that does not",
+    "exist: the build succeeds while tsc reports errors. The build-generated set",
+    "is the complete one and the one `next build` validates against, and nothing",
+    "in src/ references these globals, so dropping the dev copy is safe."
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-build/types/**/*.ts",
+    ".next-build/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "scripts",
+    ".next/dev/types"
+  ]
+}
