@@ -183,7 +183,7 @@
   /* Outlined in the gold rather than in a tint of the ink. At this size it is
      the largest single mark on the page, and it costs nothing to make it the
      secondary's — an outline has no mass, so it signs off without shouting. */
-  -webkit-text-stroke: 1px rgba(168, 133, 60, 0.45);
+  -webkit-text-stroke: 1px rgba(122, 90, 54, 0.45);
   user-select: none;
 }
 

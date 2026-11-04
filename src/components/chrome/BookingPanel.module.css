@@ -21,7 +21,7 @@
 .veil {
   position: absolute;
   inset: 0;
-  background: rgba(13, 10, 9, 0.72);
+  background: rgba(15, 16, 18, 0.72);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   opacity: 0;
@@ -273,7 +273,7 @@
 
 .row:hover,
 .row:focus-visible {
-  background: rgba(200, 146, 94, 0.05);
+  background: rgba(201, 162, 123, 0.05);
 }
 
 .check {

@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: { card: 'summary_large_image' },
     icons: { icon: '/favicon.svg' },
-    other: { 'theme-color': '#15110f' },
+    other: { 'theme-color': '#17181b' },
   };
 }
 

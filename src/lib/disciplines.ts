@@ -36,7 +36,7 @@ export const DISCIPLINES = [
   {
     key: 'beauty',
     group: 'nails',
-    clip: false,
+    clip: true,
     services: ['33-1', '34-1', '67-1', '68-1', '35-1', '175-1', '40-1', '41-1'],
   },
 ] as const satisfies readonly {

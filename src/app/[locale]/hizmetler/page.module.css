@@ -2,8 +2,8 @@
   position: relative;
   padding: calc(var(--nav-h) + var(--space-2xl)) 0 var(--space-xl);
   background:
-    radial-gradient(80% 120% at 85% 0%, rgba(143, 58, 34, 0.38), transparent 60%),
-    radial-gradient(60% 80% at 10% 100%, rgba(200, 146, 94, 0.12), transparent 60%),
+    radial-gradient(80% 120% at 85% 0%, rgba(168, 70, 28, 0.38), transparent 60%),
+    radial-gradient(60% 80% at 10% 100%, rgba(201, 162, 123, 0.12), transparent 60%),
     var(--ink-deep);
 }
 

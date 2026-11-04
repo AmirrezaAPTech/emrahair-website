@@ -196,9 +196,9 @@
   padding: 0.75rem 0.75rem 0.75rem 1.5rem;
   background: var(--ink);
   color: var(--text-on-dark);
-  border: 1px solid rgba(200, 146, 94, 0.3);
+  border: 1px solid rgba(201, 162, 123, 0.3);
   border-radius: 999px;
-  box-shadow: 0 18px 50px rgba(13, 10, 9, 0.28);
+  box-shadow: 0 18px 50px rgba(15, 16, 18, 0.28);
 }
 
 .barText {

@@ -263,8 +263,8 @@
   justify-items: center;
   gap: 0.9rem;
   background:
-    radial-gradient(120% 90% at 30% 20%, rgba(200, 146, 94, 0.22), transparent 60%),
-    linear-gradient(160deg, var(--red) 0%, #5e2414 100%);
+    radial-gradient(120% 90% at 30% 20%, rgba(201, 162, 123, 0.22), transparent 60%),
+    linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);
   transition: transform var(--dur-slow) var(--ease-editorial);
 }
 
@@ -285,5 +285,5 @@
   font-size: var(--t-micro);
   letter-spacing: var(--track-micro);
   text-transform: uppercase;
-  color: rgba(248, 241, 230, 0.82);
+  color: rgba(251, 250, 247, 0.82);
 }

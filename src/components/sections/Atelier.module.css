@@ -128,7 +128,7 @@
      as a caption bar rather than as a signature in the corner. */
   max-width: min(22rem, 66%);
   text-align: left;
-  text-shadow: 0 1px 16px rgba(8, 8, 7, 0.9);
+  text-shadow: 0 1px 16px rgba(15, 16, 18, 0.9);
 }
 
 /* A link since her own page shipped. The mark is the site's drawn hairline

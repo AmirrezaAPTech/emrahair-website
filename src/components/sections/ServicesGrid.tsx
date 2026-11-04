@@ -5,8 +5,13 @@ import { DISCIPLINES, disciplineFrom } from '@/lib/disciplines';
 import { formatTL } from '@/lib/site';
 import styles from './Services.module.css';
 
-/** `#t=0.001` makes the browser paint the opening frame from metadata alone. */
-const openingFrame = (key: string) => `/videos/services/${key}.mp4#t=0.001`;
+/**
+ * `#t=0.001` makes the browser paint the opening frame from metadata alone.
+ * `?v=` busts the year-long cache on /videos (next.config.ts): bump it
+ * whenever the clips are re-encoded, or returning visitors keep the old ones.
+ */
+const CLIP_VERSION = 2;
+const openingFrame = (key: string) => `/videos/services/${key}.mp4?v=${CLIP_VERSION}#t=0.001`;
 
 export async function ServicesGrid() {
   const t = await getTranslations('services');

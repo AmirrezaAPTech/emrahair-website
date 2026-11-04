@@ -35,3 +35,6 @@ media-src/*.jpg
 
 .next-build/
 .claude/
+media-src/maps/
+media-src/pfcheck/
+media-src/pfscan/

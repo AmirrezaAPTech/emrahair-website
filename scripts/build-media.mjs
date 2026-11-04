@@ -59,17 +59,20 @@ for (const n of [1, 2, 3, 4]) {
   poster(out(`src/assets/images/reels/${n}.jpg`), input, 1.5, 'scale=540:-2');
 }
 
-/* --- Service-card clips: 5s loops cut from the reels. -------------------- */
+/* --- Service-card clips: 5s loops. --------------------------------------
+   Four from the clips used on the Panfili site (media-src/panfili-clips/),
+   chosen by the client; "care" stays on Emrah's own reel because neither of
+   the remaining Panfili clips (a facial machine, make-up) is a service this
+   salon offers. */
 const clips = {
-  color: [3, 12], // finished Air Touch balayage, bangs
-  cut: [2, 13], // volume blow-out on long brunette hair
-  care: [4, 9], // soft waves after the treatment
-  bridal: [3, 21], // the back view: length and shine
+  color: [src('panfili-clips', 'hair.mp4'), 0.5],   // blow-dry on blonde hair
+  cut: [src('panfili-clips', 'hair.mp4'), 10],      // the finished cut, revealed
+  care: [src('reels', '4.mp4'), 9],                 // soft waves after treatment
+  bridal: [src('panfili-clips', 'bridal.mp4'), 4],  // bridal styling and the dress
+  beauty: [src('panfili-clips', 'nails.mp4'), 2],   // nail work
 };
-for (const [key, [n, t]] of Object.entries(clips)) {
-  const input = src('reels', `${n}.mp4`);
+for (const [key, [input, t]] of Object.entries(clips)) {
   video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', '5', '-i', input], 'scale=480:-2', 30);
-  poster(out(`src/assets/images/services/${key}.jpg`), input, t + 0.5, 'scale=720:-2');
 }
 
 /* --- Stills: the gallery, from the reels at full resolution. -------------- */
@@ -92,6 +95,12 @@ const photos = {
   'ritual.jpg': 'ritual.jpg', // Emrah at work against the brick wall
   'about-main.jpg': 'about-main.png', // the finish, at the mirror
   'salon-terrace.jpg': 'salon-google.jpg', // the terrace lounge
+  // The salon's Google Maps photographs (Inside / Exterior):
+  'salon/stations.jpg': 'maps-m07.jpg', // styling stations, oak and plants
+  'salon/terrace.jpg': 'maps-m13.jpg', // the terrace lounge under the pergola
+  'salon/product-wall.jpg': 'maps-m08.jpg', // the orange feature wall
+  'salon/panelled-wall.jpg': 'maps-m05.jpg', // white panelling, brass mirror
+  'salon/terrace-chairs.jpg': 'maps-m11.jpg', // terrace armchairs
 };
 for (const [to, from] of Object.entries(photos)) {
   const file = out('src/assets/images', to);

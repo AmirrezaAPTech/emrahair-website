@@ -2,36 +2,40 @@
    EMRAHAIR · Design tokens
    One source of truth. Nothing in a component invents a value.
 
-   The palette is read off the salon itself, not invented:
-     espresso   #15110F  the black aprons, frames and shelving
-     honey      #C8925E  warm bulb light on caramel balayage
-     cognac     #7A4A2A  the leather apron tag, deepened for contrast
-     terracotta #8F3A22  the brick wall and the orange feature walls
-     cream      #F4EDE3  plaster and sand tones across the floor
+   The palette is read off the salon's own Google Maps photographs and its
+   storefront sign — not borrowed from Panfili (warm black, cream, gold and
+   oxblood). Emrahair is a white room:
+     gallery white #F4F3EF  the panelled walls
+     charcoal      #17181B  black mirror frames, chairs and shelving
+     caramel oak   #C9A27B  the brush stroke on the "Emrahair" sign, the
+                            oak counters and the brass mirror rings
+     burnt orange  #A8461C  the orange feature walls behind the products
+     teal          #4F7470  the arched mirror and the plants
    Variable names keep the structure this system was built on (ink / gold /
    red / bone) so every section reads the same tokens.
    ------------------------------------------------------------------ */
 
 :root {
   /* --- Palette ------------------------------------------------- */
-  --ink: #15110f;
-  --ink-deep: #0d0a09;
-  --ink-raised: #201915;
-  /* The action colour: brick terracotta. A fill with cream on top (6.5:1),
-     or type on cream (6.5:1). Never a mark on espresso (2.5:1). */
-  --red: #8f3a22;
-  --red-hover: #a4452a;
-  /* Honey: every accent mark on a dark ground (6.9:1 on espresso). */
-  --gold: #c8925e;
-  --gold-deep: #a9703f;
-  /* Cognac: the same accent on a light ground, taken down until it clears
-     AA on cream (6.4:1). */
-  --gold-ink: #7a4a2a;
-  --cream: #efe4d4;
-  --cream-soft: #f8f1e6;
-  --bone: #f4ede3;
-  --bone-rgb: 244 237 227;
-  --bone-tint: #e9dccb;
+  --ink: #17181b;
+  --ink-deep: #0f1012;
+  --ink-raised: #222328;
+  /* The action colour: burnt orange. A fill with white on top (5.9:1), or
+     type on white (5.4:1). Never a mark on charcoal. */
+  --red: #a8461c;
+  --red-hover: #bf5424;
+  /* Caramel oak: every accent mark on a dark ground (7.4:1 on charcoal). */
+  --gold: #c9a27b;
+  --gold-deep: #a9825a;
+  /* Deep oak: the same accent on white, taken down to clear AA (5.7:1). */
+  --gold-ink: #7a5a36;
+  --teal: #4f7470;
+  --teal-deep: #2f4744;
+  --cream: #ece8e1;
+  --cream-soft: #fbfaf7;
+  --bone: #f4f3ef;
+  --bone-rgb: 244 243 239;
+  --bone-tint: #e9e5dd;
 
   /* --- Semantic surfaces -------------------------------------- */
   --surface-dark: var(--ink);
@@ -40,24 +44,24 @@
   /* Text on dark grounds.
      Both tints clear 4.5:1 against --ink. Hierarchy is carried by size,
      tracking and case; dimming text below legibility is not a design tool. */
-  --text-on-dark: #efe6da;
-  --text-on-dark-muted: rgba(239, 230, 218, 0.74);
-  --text-on-dark-faint: rgba(239, 230, 218, 0.58);
+  --text-on-dark: #eeece8;
+  --text-on-dark-muted: rgba(238, 236, 232, 0.74);
+  --text-on-dark-faint: rgba(238, 236, 232, 0.58);
   /* Every hairline in the site is drawn in the gold rather than in a neutral
      tint of the text colour. It is the cheapest surface the secondary can hold
      — column rules, card edges, the nav's underline, the panel borders — and
      it reads as warmth in the structure rather than as decoration on it. The
      alphas are set so each rule lands at the lightness its neutral version had;
      only the hue moves. */
-  --rule-on-dark: rgba(200, 146, 94, 0.26);
-  --rule-on-dark-soft: rgba(200, 146, 94, 0.14);
+  --rule-on-dark: rgba(201, 162, 123, 0.26);
+  --rule-on-dark-soft: rgba(201, 162, 123, 0.14);
 
   /* Text on light grounds */
-  --text-on-light: #1e1814;
-  --text-on-light-muted: rgba(30, 24, 20, 0.78);
-  --text-on-light-faint: rgba(30, 24, 20, 0.68);
-  --rule-on-light: rgba(169, 112, 63, 0.42);
-  --rule-on-light-soft: rgba(169, 112, 63, 0.24);
+  --text-on-light: #1a1b1e;
+  --text-on-light-muted: rgba(26, 27, 30, 0.78);
+  --text-on-light-faint: rgba(26, 27, 30, 0.68);
+  --rule-on-light: rgba(122, 90, 54, 0.38);
+  --rule-on-light-soft: rgba(122, 90, 54, 0.2);
 
   /* Contextual aliases — a section flips these once, children inherit.
 
@@ -154,11 +158,11 @@
   --z-preloader: 100;
 
   /* --- Art direction ------------------------------------------- */
-  /* The salon photography is warm phone footage; the site is a candle-lit
-     editorial. This grade reconciles the two without killing the caramel. */
-  --grade-salon: saturate(0.72) contrast(1.06) brightness(0.86) sepia(0.12);
-  --grade-salon-active: saturate(0.95) contrast(1.02) brightness(0.98) sepia(0.02);
-  --grade-light: saturate(0.8) contrast(1.02) brightness(1.03) sepia(0.06);
+  /* The salon is a bright white room, so the grade only steadies the phone
+     photography rather than sinking it into a night palette. */
+  --grade-salon: saturate(0.85) contrast(1.04) brightness(0.9);
+  --grade-salon-active: saturate(1) contrast(1.02) brightness(1);
+  --grade-light: saturate(0.92) contrast(1.02) brightness(1.02);
 
   /* Film grain, not a texture. Enough to take the digital edge off large
      flat grounds; invisible if you look for it directly. Inline, so it
