@@ -103,40 +103,40 @@
       "Work you "
     ],
     "titleAccent": "can see.",
-    "lede": "From the salon’s Google page: the colour that leaves the chair, the nails, and the room it all happens in.",
+    "lede": "What leaves the Emrahair chair: colour, cuts and results, on real guests.",
     "cta": "See everything on Instagram",
     "tiles": {
-      "emrah": {
-        "label": "Emrah, at the chair",
-        "alt": "Emrah Çabkur working on a guest’s hair in the salon"
+      "a1": {
+        "label": "Honey-blonde layers",
+        "alt": "Long layered hair in honey-blonde tones"
       },
-      "pinkWaves": {
-        "label": "Pink waves",
-        "alt": "Long wavy hair in pastel pink tones"
+      "a2": {
+        "label": "Volume blow-dry",
+        "alt": "Full, wavy brown hair in the stylist's hands"
       },
-      "nails": {
-        "label": "Nail art",
-        "alt": "Green patterned gel polish and nail art"
+      "a3": {
+        "label": "Curls",
+        "alt": "A guest looking at her curls in the mirror with her stylist"
       },
-      "night": {
-        "label": "Galeria Çarşı",
-        "alt": "The Emrahair sign and shopfront lit in the evening"
+      "b4": {
+        "label": "Platinum blonde",
+        "alt": "Platinum-blonde hair with face-framing layers"
       },
-      "copper": {
-        "label": "Copper",
-        "alt": "Long straight copper hair, in the mirror"
+      "b5": {
+        "label": "Long balayage",
+        "alt": "Long blonde balayage lightening towards the ends"
       },
-      "pinkBalayage": {
-        "label": "Pink balayage",
-        "alt": "Long wavy hair with pink balayage on the ends"
+      "c6": {
+        "label": "Wavy balayage",
+        "alt": "Wavy balayage on a guest in a denim jacket"
       },
-      "lounge": {
-        "label": "The terrace, evening",
-        "alt": "The terrace lounge lit with string lights"
+      "d7": {
+        "label": "Light blonde",
+        "alt": "Light-blonde hair with wavy ends, from behind"
       },
-      "arch": {
-        "label": "The orange wall",
-        "alt": "An arched mirror and product shelves against the orange wall"
+      "e8": {
+        "label": "Curtain bangs",
+        "alt": "Long blonde layers with curtain bangs"
       }
     }
   },

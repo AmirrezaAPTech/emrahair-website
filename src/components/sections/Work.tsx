@@ -1,34 +1,43 @@
-import Image, { type StaticImageData } from 'next/image';
+import Image, { getImageProps, type StaticImageData } from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
-import emrahClient from '@/assets/images/work/emrah-client.jpg';
-import pinkWaves from '@/assets/images/work/pink-waves.jpg';
-import nailArt from '@/assets/images/work/nail-art.jpg';
-import nightSign from '@/assets/images/work/night-sign.jpg';
-import copper from '@/assets/images/work/copper.jpg';
-import pinkBalayage from '@/assets/images/work/pink-balayage.jpg';
-import loungeLights from '@/assets/images/work/lounge-lights.jpg';
-import orangeArch from '@/assets/images/work/orange-arch.jpg';
+import a1 from '@/assets/images/work/01-A.jpg';
+import a2Poster from '@/assets/images/work/02-A-poster.jpg';
+import a3 from '@/assets/images/work/03-A.jpg';
+import b4 from '@/assets/images/work/04-B.jpg';
+import b5Poster from '@/assets/images/work/05-B-poster.jpg';
+import c6 from '@/assets/images/work/06-C.jpg';
+import d7Poster from '@/assets/images/work/07-D-poster.jpg';
+import e8 from '@/assets/images/work/08-E.jpg';
 import { contact } from '@/lib/site';
 import { Headline } from '@/components/ui/Headline';
 import styles from './Work.module.css';
 
 /**
- * Not in Panfili's repo build, but on its live site ("Craft you can see").
- * Every plate is from the salon's own Google Maps gallery: the work (colour,
- * nails, Emrah at the chair) and the room it is done in.
+ * The client's "Çalışmalar" files, in alphabetical order of their original
+ * names (see media-src/calismalar/README.md). Photos and loops are mixed, so
+ * the grid is uniform — four portrait plates by two rows — which keeps the
+ * order exactly as given; tall plates would make the grid reflow them.
  *
- * Desktop: five columns by two rows, two plates run tall. Phone: a swipe rail.
+ * Videos are silent loops that play only while on screen
+ * (motion/modules/service-video); each has a poster for the first paint.
+ * Bump VIDEO_VERSION when they are re-encoded (the /videos cache is a year).
  */
-const TILES: { key: string; src: StaticImageData; tall?: boolean; pos?: string }[] = [
-  { key: 'emrah', src: emrahClient, tall: true, pos: '62% 40%' },
-  { key: 'pinkWaves', src: pinkWaves, pos: '50% 40%' },
-  { key: 'nails', src: nailArt, pos: '45% 45%' },
-  { key: 'night', src: nightSign, tall: true, pos: '50% 55%' },
-  { key: 'copper', src: copper, pos: '50% 30%' },
-  { key: 'pinkBalayage', src: pinkBalayage, pos: '50% 35%' },
-  { key: 'lounge', src: loungeLights, pos: '50% 50%' },
-  { key: 'arch', src: orangeArch, pos: '50% 45%' },
+const VIDEO_VERSION = 1;
+
+type Tile =
+  | { key: string; kind: 'photo'; src: StaticImageData }
+  | { key: string; kind: 'video'; file: string; poster: StaticImageData };
+
+const TILES: Tile[] = [
+  { key: 'a1', kind: 'photo', src: a1 },
+  { key: 'a2', kind: 'video', file: '02-A', poster: a2Poster },
+  { key: 'a3', kind: 'photo', src: a3 },
+  { key: 'b4', kind: 'photo', src: b4 },
+  { key: 'b5', kind: 'video', file: '05-B', poster: b5Poster },
+  { key: 'c6', kind: 'photo', src: c6 },
+  { key: 'd7', kind: 'video', file: '07-D', poster: d7Poster },
+  { key: 'e8', kind: 'photo', src: e8 },
 ];
 
 export async function Work() {
@@ -54,16 +63,25 @@ export async function Work() {
 
         <ul className={styles.grid} data-drag-scroll>
           {TILES.map((tile) => (
-            <li className={`${styles.tile} ${tile.tall ? styles.tall : ''}`} key={tile.key}>
+            <li className={styles.tile} key={tile.key}>
               <figure className={styles.figure} data-reveal-media>
                 <div className={`media ${styles.media}`}>
-                  <Image
-                    src={tile.src}
-                    alt={t(`tiles.${tile.key}.alt`)}
-                    sizes="(max-width: 899px) 70vw, 22vw"
-                    quality={76}
-                    style={{ objectPosition: tile.pos }}
-                  />
+                  {tile.kind === 'photo' ? (
+                    <Image src={tile.src} alt={t(`tiles.${tile.key}.alt`)} sizes="(max-width: 899px) 70vw, 25vw" quality={76} />
+                  ) : (
+                    <video
+                      className={styles.video}
+                      data-svc-video
+                      src={`/videos/work/${tile.file}.mp4?v=${VIDEO_VERSION}#t=0.001`}
+                      poster={getImageProps({ src: tile.poster, alt: '', width: 720, quality: 72 }).props.src}
+                      preload="none"
+                      muted
+                      loop
+                      playsInline
+                      aria-hidden="true"
+                      tabIndex={-1}
+                    />
+                  )}
                 </div>
                 <figcaption className={styles.caption}>{t(`tiles.${tile.key}.label`)}</figcaption>
               </figure>

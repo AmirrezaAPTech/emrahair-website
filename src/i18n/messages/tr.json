@@ -103,40 +103,40 @@
       "Ellerimizden "
     ],
     "titleAccent": "çıkanlar.",
-    "lede": "Salonun Google sayfasından: koltuktan çıkan renkler, tırnaklar ve hepsinin yapıldığı salon.",
+    "lede": "Emrahair koltuğundan çıkanlar: renkler, kesimler ve sonuçlar, gerçek misafirlerle.",
     "cta": "Instagram’da tümünü gör",
     "tiles": {
-      "emrah": {
-        "label": "Emrah Bey, koltukta",
-        "alt": "Emrah Çabkur salonda bir misafirinin saçıyla çalışırken"
+      "a1": {
+        "label": "Bal sarısı katlar",
+        "alt": "Bal sarısı tonlarda, katlı kesimli uzun saç"
       },
-      "pinkWaves": {
-        "label": "Pembe dalgalar",
-        "alt": "Pastel pembe tonlarda dalgalı uzun saç"
+      "a2": {
+        "label": "Hacimli fön",
+        "alt": "Kuaförün elleri arasında hacimli, dalgalı kahve saç"
       },
-      "nails": {
-        "label": "Nail art",
-        "alt": "Yeşil desenli kalıcı oje ve nail art"
+      "a3": {
+        "label": "Bukleler",
+        "alt": "Aynada bukleli saçlarına bakan bir misafir ve kuaförü"
       },
-      "night": {
-        "label": "Galeria Çarşı",
-        "alt": "Akşam ışıklarıyla Emrahair tabelası ve salonun önü"
+      "b4": {
+        "label": "Platin sarı",
+        "alt": "Yüzü çevreleyen katlarla platin sarısı saç"
       },
-      "copper": {
-        "label": "Bakır ton",
-        "alt": "Bakır tonlarda uzun düz saç, aynada"
+      "b5": {
+        "label": "Uzun balyaj",
+        "alt": "Uçlara doğru açılan uzun sarı balyaj"
       },
-      "pinkBalayage": {
-        "label": "Pembe balyaj",
-        "alt": "Uçlarda pembe balyajlı uzun dalgalı saç"
+      "c6": {
+        "label": "Dalgalı balyaj",
+        "alt": "Kot ceketli bir misafirde dalgalı balyaj"
       },
-      "lounge": {
-        "label": "Teras, akşam",
-        "alt": "Işık zincirleriyle aydınlatılmış teras bekleme alanı"
+      "d7": {
+        "label": "Açık sarı",
+        "alt": "Arkadan görünen, uçları dalgalı açık sarı saç"
       },
-      "arch": {
-        "label": "Turuncu duvar",
-        "alt": "Turuncu duvarlı kemer ayna ve ürün rafları"
+      "e8": {
+        "label": "Perdeli kahkül",
+        "alt": "Perdeli kahkül ve sarı katlarla uzun saç"
       }
     }
   },

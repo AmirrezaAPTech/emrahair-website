@@ -39,3 +39,6 @@ media-src/maps/
 media-src/pfcheck/
 media-src/pfscan/
 media-src/pexthumbs/
+media-src/calismalar/*.heic
+media-src/calismalar/*.mov
+media-src/calismalar/preview/

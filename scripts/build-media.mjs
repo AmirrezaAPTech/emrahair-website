@@ -83,13 +83,28 @@ for (const [key, [file, t, d]] of Object.entries(clips)) {
   video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', String(d), '-i', src('stock', file)], 'scale=540:-2,fps=30', 27);
 }
 
-/* --- Çalışmalar: the salon's own Google Maps photos. ---------------------- */
-for (const name of ['pink-waves', 'emrah-client', 'copper', 'nail-art', 'pink-balayage', 'night-sign', 'lounge-lights', 'orange-arch']) {
-  const file = out(`src/assets/images/work/${name}.jpg`);
-  mk(file);
-  await sharp(src('photos', 'work', `${name}.jpg`)).rotate().resize({ width: 1200, height: 1600, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toFile(file);
+/* --- Çalışmalar: the client's files, "Çalışmalar*" in Downloads, in
+   alphabetical order. The HEIC photos are converted to JPEG with Windows'
+   own decoder first (sharp's build has no HEVC), see media-src/calismalar/
+   README.md; the .heic and .mov originals are git-ignored. -------------- */
+const WORK = [
+  ['01-A', 'photo'], ['02-A', 'video'], ['03-A', 'photo'], ['04-B', 'photo'],
+  ['05-B', 'video'], ['06-C', 'photo'], ['07-D', 'video'], ['08-E', 'photo'],
+];
+for (const [name, kind] of WORK) {
+  if (kind === 'photo') {
+    const from = fs.existsSync(src('calismalar', `${name}.jpg`)) ? `${name}.jpg` : `${name}.png`;
+    const file = out(`src/assets/images/work/${name}.jpg`);
+    mk(file);
+    await sharp(src('calismalar', from)).rotate().resize({ width: 1200, height: 1600, fit: 'cover', position: 'attention' }).jpeg({ quality: 82, mozjpeg: true }).toFile(file);
+  } else {
+    const input = src('calismalar', `${name}.mov`);
+    // ffmpeg applies the phone's rotation itself; 10s is plenty for a loop.
+    video(out(`public/videos/work/${name}.mp4`), ['-t', '10', '-i', input], 'scale=720:-2,fps=30', 25);
+    poster(out(`src/assets/images/work/${name}-poster.jpg`), input, 0.5, 'scale=720:-2');
+  }
 }
-console.log('work photos done');
+console.log('work media done');
 
 /* --- The salon's photographs. -------------------------------------------- */
 const photos = {

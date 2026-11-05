@@ -58,8 +58,9 @@ fills those in by itself.
 - Reels and gallery stills: cut from @emrahair's own reels.
 - Service-card clips (Pexels, free licence): colour 37306468, cut 6502872,
   care 5109926, bridal 8935487, nails 3997849. Originals in `media-src/stock/`.
-- Second section and Çalışmalar: the salon's Google Maps gallery
-  (`media-src/photos/maps-*.jpg`, `media-src/photos/work/`).
+- Second section: the salon's Google Maps gallery (`media-src/photos/maps-*.jpg`).
+- Çalışmalar: the client's `Çalışmalar*` files from Downloads, in alphabetical
+  order (five photos, three loops). See `media-src/calismalar/README.md`.
 - Reels: @emrahair's own, served at their source 720p quality (not re-encoded).
 - `ritual.jpg` (Emrah at the brick wall) and `about-main.png`: supplied photos.
 

@@ -22,23 +22,17 @@
   text-wrap: pretty;
 }
 
-/* Five columns and two rows: the two tall plates take two cells each and
-   the six others fill the remaining six, so the grid closes square with no
-   holes. Dense packing does the placement. */
+/* Four portrait plates by two rows, all the same size, so the eight items
+   read in exactly the order they were given (no reflowing tall plates). */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-auto-rows: clamp(12rem, 7rem + 11vw, 20rem);
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(0.6rem, 1.2vw, 1.1rem);
 }
 
 .tile {
   min-width: 0;
-}
-
-.tall {
-  grid-row: span 2;
+  aspect-ratio: 3 / 4;
 }
 
 .figure {
@@ -55,7 +49,8 @@
   overflow: hidden;
 }
 
-.media img {
+.media img,
+.video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -66,7 +61,8 @@
     filter var(--dur-slow) var(--ease-editorial);
 }
 
-.tile:hover .media img {
+.tile:hover .media img,
+.tile:hover .video {
   transform: scale(1.04);
   filter: var(--grade-salon-active);
 }
@@ -116,10 +112,9 @@
     display: none;
   }
 
-  .tile,
-  .tall {
+  .tile {
     flex: 0 0 min(68vw, 18rem);
-    aspect-ratio: 4 / 5.4;
+    aspect-ratio: 3 / 4;
     scroll-snap-align: start;
   }
 }
