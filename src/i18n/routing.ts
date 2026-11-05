@@ -30,9 +30,19 @@ export const pathnames = {
   /* A person's name: the same slug in both languages. */
   '/emrah-cabkur': '/emrah-cabkur',
   '/iletisim': { tr: '/iletisim', en: '/contact' },
+  '/sss': { tr: '/sss', en: '/faq' },
+  '/gizlilik': { tr: '/gizlilik', en: '/privacy' },
+  /* The journal. Post slugs are per locale (content/journal/<locale>/<slug>.json),
+     paired by each article's `key`; see lib/journal.ts. */
+  '/blog': '/blog',
+  '/blog/[slug]': '/blog/[slug]',
 } as const;
 
-export type RouteKey = keyof typeof pathnames;
+/** Every static route. The one dynamic route, a journal post, is addressed with params. */
+export type RouteKey = Exclude<keyof typeof pathnames, '/blog/[slug]'>;
+export const STATIC_ROUTES = (Object.keys(pathnames) as (keyof typeof pathnames)[]).filter(
+  (r): r is RouteKey => !r.includes('['),
+);
 
 export const routing = defineRouting({
   locales,
@@ -41,6 +51,9 @@ export const routing = defineRouting({
   /* Off on purpose: a Turkish salon's address is Turkish for everyone. Many
      Turkish phones run an English UI, and detection would send them to /en. */
   localeDetection: false,
+  /* With detection off the cookie decides nothing, and a Set-Cookie on every
+     HTML response keeps CDNs from caching it. The site sets no cookies at all. */
+  localeCookie: false,
   pathnames,
 });
 

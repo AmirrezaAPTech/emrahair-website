@@ -7,7 +7,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { routing, htmlLang, type Locale } from '@/i18n/routing';
 import { site } from '@/lib/site';
-import { salonSchema } from '@/lib/schema';
+import { salonSchema, websiteSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/ui/JsonLd';
 import '@/styles/tokens.css';
 import '@/styles/base.css';
@@ -39,7 +39,7 @@ export function generateStaticParams() {
 export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(site.url),
-    icons: { icon: '/favicon.svg' },
+    icons: { icon: '/favicon.svg', apple: '/apple-touch-icon.png' },
     other: { 'theme-color': '#17181b' },
     formatDetection: { telephone: false },
   };
@@ -61,7 +61,7 @@ export default async function LocaleLayout({
   const all = (await import(`@/i18n/messages/${locale}.json`)).default as Record<string, unknown>;
   const clientMessages = Object.fromEntries(['nav', 'hours', 'booking', 'menu'].map((ns) => [ns, all[ns]]));
 
-  const schema = salonSchema(locale as Locale, t('description'));
+  const schema = [websiteSchema(locale as Locale), salonSchema(locale as Locale, t('description'))];
 
   return (
     <html lang={htmlLang[locale as Locale]} className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>

@@ -180,3 +180,66 @@ export function webPageSchema(locale: Locale, route: RouteKey, name: string, des
     about: { '@id': SALON_ID },
   };
 }
+
+/** The site itself, once, in the layout: name, language, publisher. */
+export const WEBSITE_ID = `${site.url}/#website`;
+
+export function websiteSchema(locale: Locale) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    name: site.legalName,
+    url: urlOf('/', locale),
+    inLanguage: routing.locales.map((l) => htmlLang[l]),
+    publisher: { '@id': SALON_ID },
+  };
+}
+
+export function blogSchema(locale: Locale, name: string, description: string, posts: { url: string; headline: string; datePublished: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${urlOf('/blog', locale)}#blog`,
+    name,
+    description,
+    url: urlOf('/blog', locale),
+    inLanguage: htmlLang[locale],
+    publisher: { '@id': SALON_ID },
+    isPartOf: { '@id': WEBSITE_ID },
+    blogPost: posts.map((p) => ({ '@type': 'BlogPosting', '@id': `${p.url}#post`, url: p.url, headline: p.headline, datePublished: p.datePublished })),
+  };
+}
+
+export function blogPostingSchema(p: {
+  url: string;
+  locale: Locale;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  wordCount: number;
+  image: { url: string; width: number; height: number } | null;
+  keywords: string[];
+  about: RouteKey[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${p.url}#post`,
+    headline: p.headline,
+    description: p.description,
+    url: p.url,
+    mainEntityOfPage: p.url,
+    inLanguage: htmlLang[p.locale],
+    datePublished: p.datePublished,
+    dateModified: p.dateModified,
+    wordCount: p.wordCount,
+    keywords: p.keywords.join(', '),
+    ...(p.image ? { image: { '@type': 'ImageObject', url: p.image.url, width: p.image.width, height: p.image.height } } : {}),
+    author: { '@id': FOUNDER_ID },
+    publisher: { '@id': SALON_ID },
+    isPartOf: { '@id': `${urlOf('/blog', p.locale)}#blog` },
+    mentions: p.about.map((r) => ({ '@type': 'WebPage', url: urlOf(r, p.locale) })),
+  };
+}

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link, getPathname, usePathname } from '@/i18n/navigation';
 import { routing, localeLabel, localeShort, type Locale, type RouteKey } from '@/i18n/routing';
 import { SECTIONS, contact, hours } from '@/lib/site';
 import { HEADER_NAV, MENU_PAGES } from '@/lib/nav';
@@ -27,7 +27,8 @@ const FOCUSABLE =
  * translation rather than on the index. A locale missing from the map falls
  * back to '/blog' — its Journal exists even when a translation does not.
  */
-export type LanguageTarget = RouteKey;
+export type PostTarget = { pathname: '/blog/[slug]'; params: { slug: string } };
+export type LanguageTarget = RouteKey | Partial<Record<Locale, PostTarget>>;
 
 export function SiteNav({
   languageHref,
@@ -411,6 +412,21 @@ export function SiteNav({
                 ))}
               </ul>
             </div>
+            <div className={styles.indexGroup}>
+              <h2 className={`eyebrow eyebrow--muted ${styles.indexHeading}`}>{t('journal')}</h2>
+              <ul className={styles.indexList}>
+                <li>
+                  <Link className={styles.indexLink} href="/blog" onClick={close}>
+                    {t('journal')}
+                  </Link>
+                </li>
+                <li>
+                  <Link className={styles.indexLink} href="/sss" onClick={close}>
+                    {t('faq')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           {/* The pill leaves the bar on a phone (see the 767px block in the
@@ -481,7 +497,8 @@ function LocaleSwitch({
 }) {
   /* The map's fallback is the Journal index: a locale with no entry has no
      translation of this article, but its Journal always exists. */
-  const hrefFor = (_l: Locale) => target;
+  const hrefFor = (l: Locale): RouteKey | PostTarget =>
+    typeof target === 'string' ? target : (target[l] ?? '/blog');
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
 
@@ -528,10 +545,12 @@ function LocaleSwitch({
       <ul className={styles.localeMenu} hidden={!open}>
         {routing.locales.map((l) => (
           <li key={l}>
-            <Link
+            {/* A plain anchor on the final URL: next-intl's Link writes the
+                default locale as /tr/..., which answers with a 307 to the bare
+                path, and every crawl of every page would log that redirect. */}
+            <a
               className={styles.locale}
-              href={hrefFor(l)}
-              locale={l}
+              href={getPathname({ href: hrefFor(l), locale: l })}
               hrefLang={l}
               /* Read by AnalyticsRuntime's delegated listener for the
                  `language_switch` event. It marks the switch explicitly rather
@@ -544,7 +563,7 @@ function LocaleSwitch({
               onClick={() => setOpen(false)}
             >
               {localeShort[l]}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

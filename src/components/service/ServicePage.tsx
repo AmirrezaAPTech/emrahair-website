@@ -20,6 +20,9 @@ import { serviceById } from '@/lib/services';
 import { contact, formatTL, priceLabel, team } from '@/lib/site';
 import { pageMetadata } from '@/lib/seo';
 import { breadcrumbSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import { postsFor } from '@/lib/journal';
+import { PostCard } from '@/components/journal/PostCard';
+import j from '@/components/journal/Journal.module.css';
 
 import color from '@/assets/images/services/color.jpg';
 import dye from '@/assets/images/services/dye.jpg';
@@ -79,7 +82,7 @@ export function servicePageRoute(key: ServicePageKey) {
     const { locale } = await params;
     if (!hasLocale(routing.locales, locale)) return {};
     const copy = await load(key, locale);
-    return pageMetadata({ locale, route: page.route, title: copy.meta.title, description: copy.meta.description });
+    return pageMetadata({ locale, route: page.route, title: copy.meta.title, description: copy.meta.description, image: `/og/${key}.jpg` });
   }
 
   async function Page({ params }: Params) {
@@ -93,6 +96,9 @@ export function servicePageRoute(key: ServicePageKey) {
     const tNav = await getTranslations('nav');
     const tPages = await getTranslations('pages');
     const tSvc = await getTranslations('services');
+    const tJournal = await getTranslations('journal');
+    const onRequestLabel = (await getTranslations('booking'))('onRequest');
+    const articles = postsFor(locale, page.route).slice(0, 3);
 
     const crumbs = [
       { name: t('home'), route: '/' as const },
@@ -301,6 +307,28 @@ export function servicePageRoute(key: ServicePageKey) {
               </ul>
             </div>
           </section>
+
+          {articles.length > 0 && (
+            <section className={`${styles.related} section--light on-light`} aria-labelledby="journal-title">
+              <div className="shell">
+                <h2 id="journal-title" className={`eyebrow ${styles.relatedTitle}`}>
+                  {tJournal('fromJournal')}
+                </h2>
+                <div className={j.list}>
+                  {articles.map((p) => (
+                    <PostCard
+                      key={p.slug}
+                      post={p}
+                      locale={locale}
+                      onRequest={onRequestLabel}
+                      headingLevel="h3"
+                      readingLabel={(minutes) => tJournal('readingTime', { minutes })}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           <Invitation />
         </main>

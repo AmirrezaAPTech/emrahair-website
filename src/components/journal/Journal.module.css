@@ -1,0 +1,178 @@
+/* The journal: an index of plates and an article set at reading measure. */
+
+.index {
+  padding-block: var(--section-pad);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem) var(--col-gap);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.cardMedia {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: var(--space-2xs);
+}
+
+.cardMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-editorial);
+}
+
+.card:hover .cardMedia img,
+.card:focus-within .cardMedia img {
+  transform: scale(1.04);
+}
+
+.cardMeta {
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.cardTitle {
+  line-height: 1.2;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.cardLink {
+  color: inherit;
+}
+
+.cardLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover .cardTitle,
+.card:focus-within .cardTitle {
+  color: var(--accent);
+}
+
+.cardSummary {
+  font-size: var(--t-small);
+  line-height: 1.66;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+@media (max-width: 1023px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cardMedia {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+/* --- Article ------------------------------------------------------------ */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  font-size: var(--t-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  max-width: 68ch;
+}
+
+.prose section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.prose h2 {
+  line-height: var(--leading-title);
+}
+
+.prose p,
+.prose li {
+  font-size: var(--t-body-lg);
+  line-height: 1.75;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.prose ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.prose li::marker {
+  color: var(--accent);
+}
+
+.inlineLink {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.inlineLink:hover,
+.inlineLink:focus-visible {
+  color: var(--accent);
+}
+
+.lede {
+  font-size: var(--t-body-lg);
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+  margin-top: var(--space-xl);
+  padding: var(--space-l);
+  border: 1px solid var(--rule-soft);
+}
+
+.cta p {
+  max-width: 56ch;
+  font-size: var(--t-body);
+  line-height: var(--leading-body);
+  color: var(--fg-muted);
+}
+
+.relatedRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}

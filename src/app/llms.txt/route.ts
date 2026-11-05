@@ -3,6 +3,7 @@ import { SERVICE_PAGES, pageFrom } from '@/lib/service-pages';
 import { urlOf } from '@/lib/seo';
 import { formatTL } from '@/lib/site';
 import trPages from '@/i18n/pages/tr/balyaj.json';
+import { postsIn, postUrl, translationsOf } from '@/lib/journal';
 
 /**
  * llms.txt: a plain summary for AI assistants, in Turkish (the salon's
@@ -22,6 +23,11 @@ export async function GET() {
     }),
   );
 
+  const journal = postsIn('tr').map((p) => {
+    const en = translationsOf(p.key).en;
+    return `- [${p.title}](${postUrl('tr', p.slug)})${en ? ` · [English](${postUrl('en', en)})` : ''}`;
+  });
+
   const body = `# Emrahair — Bahçeşehir Kuaför
 
 > Bahçeşehir 1. Kısım’da (Başakşehir, İstanbul) bayan kuaförü. Kurucu ${founder.name}, ${founder.title}. Air Touch balyaj, saç boyama, saç kesimi, keratin bakım, gelin saçı, manikür-pedikür, kaş ve ağda. Online randevu Kolay Randevu üzerinden.
@@ -37,10 +43,15 @@ export async function GET() {
 
 ${cards.join('\n')}
 
+## Blog
+
+${journal.join('\n')}
+
 ## Sayfalar
 
 - [Fiyat listesi 2026](${urlOf('/hizmetler', 'tr')}) · [Price list](${urlOf('/hizmetler', 'en')})
 - [Emrah Çabkur](${urlOf('/emrah-cabkur', 'tr')})
+- [Sık sorulan sorular](${urlOf('/sss', 'tr')}) · [FAQ](${urlOf('/sss', 'en')})
 - [İletişim ve yol tarifi](${urlOf('/iletisim', 'tr')}) · [Contact](${urlOf('/iletisim', 'en')})
 `;
 

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: 'menu.meta' });
-  return pageMetadata({ locale, route: '/hizmetler', title: t('title'), description: t('description') });
+  return pageMetadata({ locale, route: '/hizmetler', title: t('title'), description: t('description'), image: '/og/hizmetler.jpg' });
 }
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {

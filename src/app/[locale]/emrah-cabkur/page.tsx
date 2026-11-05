@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: 'pages' });
   const c = t.raw('emrah-cabkur') as Copy;
-  return pageMetadata({ locale, route: '/emrah-cabkur', title: c.meta.title, description: c.meta.description });
+  return pageMetadata({ locale, route: '/emrah-cabkur', title: c.meta.title, description: c.meta.description, image: '/og/emrah-cabkur.jpg' });
 }
 
 export default async function FounderPage({ params }: Params) {

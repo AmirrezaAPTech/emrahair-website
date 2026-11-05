@@ -103,6 +103,21 @@ export async function SiteFooter({ onHome = true }: { onHome?: boolean } = {}) {
               </Link>
             </li>
             <li>
+              <Link className={styles.link} href="/blog">
+                {tNav('journal')}
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/sss">
+                {tNav('faq')}
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/gizlilik">
+                {tNav('privacy')}
+              </Link>
+            </li>
+            <li>
               <a className={styles.link} href={booking.salonPage} target="_blank" rel="noreferrer noopener">
                 {t('kolayRandevu')}
               </a>

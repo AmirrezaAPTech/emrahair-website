@@ -38,7 +38,10 @@
       "gelin-saci": "Bridal Hair & Updos",
       "manikur-pedikur": "Manicure & Pedicure",
       "kas-agda": "Brows & Waxing"
-    }
+    },
+    "journal": "Journal",
+    "faq": "FAQ",
+    "privacy": "Privacy"
   },
   "hours": {
     "label": "Opening hours",
@@ -328,5 +331,130 @@
     "founderLink": "About Emrah Çabkur",
     "priceFrom": "Starting at",
     "where": "Salon"
+  },
+  "journal": {
+    "meta": {
+      "title": "Hair Color & Care Journal | Emrahair Bahçeşehir",
+      "description": "The Emrahair journal: balayage, sombré, ombré, keratin botox, root color, bridal hair and 2026 salon prices, answered plainly from our salon in Bahçeşehir."
+    },
+    "breadcrumb": "Journal",
+    "eyebrow": "Emrahair Journal",
+    "titleLines": [
+      "Notes on hair color"
+    ],
+    "titleAccent": "and care",
+    "lede": "Answers to the questions guests ask most: balayage vs. ombré, ash tones, keratin botox, root color, prices and bridal hair.",
+    "readingTime": "{minutes} min read",
+    "published": "Published",
+    "updated": "Updated",
+    "by": "Emrahair · Emrah Çabkur",
+    "related": "Related services",
+    "more": "More articles",
+    "faqHeading": "Frequently asked questions",
+    "cta": "Book an appointment",
+    "readMore": "Read the article",
+    "fromJournal": "From the journal",
+    "ctaHeading": "Let’s talk it through at the salon",
+    "ctaBody": "We’ll decide on the right treatment for your hair at the consultation. Choose your service, then confirm the date and time on Kolay Randevu.",
+    "alts": {
+      "ombre-sombre": "A guest at Emrahair with honey-blond, face-framing waves",
+      "kullu-kumral": "Long wavy hair with a soft balayage from brown roots to blond ends",
+      "keratin-botoks": "A guest with smooth, glossy blond hair below the shoulders",
+      "amonyaksiz-boya": "Emrah Çabkur applying color with foils to a guest’s hair in the brick-walled salon",
+      "fiyatlar-2026": "Emrahair’s row of styling stations with wooden counters and mirrors",
+      "gelin-basi": "A soft, low bridal updo seen in profile"
+    }
+  },
+  "faqPage": {
+    "meta": {
+      "title": "Frequently Asked Questions | Emrahair Bahçeşehir",
+      "description": "Frequently asked questions about Emrahair: address, opening hours, booking, choosing your stylist, prices and services. Bahçeşehir 1. Kısım, Istanbul."
+    },
+    "breadcrumb": "FAQ",
+    "eyebrow": "FAQ",
+    "titleLines": [
+      "Frequently asked"
+    ],
+    "titleAccent": "questions",
+    "lede": "The questions we hear most about the salon, booking and prices. Service-specific questions are also answered on each service page.",
+    "generalHeading": "The salon and booking",
+    "servicesHeading": "Questions by service",
+    "toService": "Service page",
+    "items": [
+      {
+        "q": "Where is Emrahair?",
+        "a": "We are at Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir, Istanbul. The map and directions are on the [contact page](/iletisim)."
+      },
+      {
+        "q": "What are your opening hours?",
+        "a": "We are open Monday, Wednesday, Thursday, Friday and Saturday 09:00–19:00, and Sunday 10:00–19:00. We are closed on Tuesdays. Hours follow the salon’s booking calendar and may change on public holidays."
+      },
+      {
+        "q": "How do I book an appointment?",
+        "a": "Use the “Book” button on the site to choose your service, then confirm the date and time on Kolay Randevu. You can also call (0212) 909 15 69 or message 0546 604 51 52 on WhatsApp."
+      },
+      {
+        "q": "Can I choose my stylist?",
+        "a": "For hair services, Kolay Randevu lets you choose Emrah Çabkur, Serdar Sezer or “No preference”. Nails, brows and waxing are done by Gizem Değişener."
+      },
+      {
+        "q": "Who does Air Touch balayage?",
+        "a": "Air Touch balayage is done by the salon’s founder, [Emrah Çabkur](/emrah-cabkur). For classic balayage, sombré and ombré you can also book with Serdar Sezer."
+      },
+      {
+        "q": "Why are prices given as a range?",
+        "a": "For color, balayage and keratin the price depends on your hair’s length, density and previous treatments. The final price is confirmed at the chair before we start. The [price list](/hizmetler) is the one the salon publishes on Kolay Randevu."
+      },
+      {
+        "q": "What services do you offer?",
+        "a": "Balayage and hair color, haircuts and blowouts, keratin and hair treatments, bridal and engagement hair, manicures and pedicures, brows and waxing. Each service has its own page and prices."
+      },
+      {
+        "q": "How is Emrahair rated?",
+        "a": "Emrahair is rated 4.9 from 297 reviews on Kolay Randevu and 4.8 from 43 reviews on Google."
+      }
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy & Cookies | Emrahair",
+      "description": "What the Emrahair website does with your data: no cookies, no forms, no analytics. Booking happens on Kolay Randevu, and the map loads only when you click it."
+    },
+    "breadcrumb": "Privacy",
+    "eyebrow": "Privacy",
+    "titleLines": [
+      "Privacy and"
+    ],
+    "titleAccent": "cookies",
+    "lede": "This page explains in plain language what the Emrahair website does with information about its visitors.",
+    "updated": "Last updated: November 5, 2026",
+    "sections": [
+      {
+        "heading": "What data does this site collect?",
+        "body": [
+          "This site has no contact form, no accounts and no visitor analytics, and it never asks for personal details such as your name, phone number or email.",
+          "Appointments are booked on Kolay Randevu, the booking system the salon uses. When you continue to booking, the services you selected are passed to Kolay Randevu; anything you share there is covered by Kolay Randevu’s own privacy terms."
+        ]
+      },
+      {
+        "heading": "Cookies and browser storage",
+        "body": [
+          "The site uses no cookies. The services you select on the price list are kept only in your browser’s session storage so they stay selected between pages. This is never sent to us and is deleted when you close the tab."
+        ]
+      },
+      {
+        "heading": "Third-party services",
+        "body": [
+          "The Google Map on the contact page loads only when you press “Show map”; at that point your browser connects to Google, which may set its own cookies.",
+          "Links to WhatsApp, Instagram and Kolay Randevu take you to those services’ own sites. The site is hosted on Vercel, whose servers may briefly keep technical logs such as IP addresses for security and operations."
+        ]
+      },
+      {
+        "heading": "Your rights and contact",
+        "body": [
+          "For questions or requests under Türkiye’s Personal Data Protection Law (KVKK, No. 6698), contact the salon at (0212) 909 15 69 or at Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir, Istanbul."
+        ]
+      }
+    ]
   }
 }

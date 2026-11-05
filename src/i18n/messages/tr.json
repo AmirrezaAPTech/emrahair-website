@@ -38,7 +38,10 @@
       "gelin-saci": "Gelin Saçı & Topuz",
       "manikur-pedikur": "Manikür & Pedikür",
       "kas-agda": "Kaş & Ağda"
-    }
+    },
+    "journal": "Blog",
+    "faq": "SSS",
+    "privacy": "Gizlilik"
   },
   "hours": {
     "label": "Çalışma saatleri",
@@ -328,5 +331,130 @@
     "founderLink": "Emrah Çabkur hakkında",
     "priceFrom": "Başlangıç fiyatı",
     "where": "Salon"
+  },
+  "journal": {
+    "meta": {
+      "title": "Saç Rengi ve Bakımı Blogu | Emrahair Bahçeşehir",
+      "description": "Emrahair blogu: balyaj, sombre, ombre, keratin botoks, dip boya, gelin saçı ve 2026 kuaför fiyatları üzerine Bahçeşehir’den açık ve anlaşılır yanıtlar."
+    },
+    "breadcrumb": "Blog",
+    "eyebrow": "Emrahair Blog",
+    "titleLines": [
+      "Saç rengi ve bakımı"
+    ],
+    "titleAccent": "üzerine notlar",
+    "lede": "Salonda en sık sorulan soruların yanıtları: balyaj ile ombre farkı, küllü tonlar, keratin botoks, dip boya, fiyatlar ve gelin saçı.",
+    "readingTime": "{minutes} dk okuma",
+    "published": "Yayın",
+    "updated": "Güncelleme",
+    "by": "Emrahair · Emrah Çabkur",
+    "related": "İlgili hizmetler",
+    "more": "Diğer yazılar",
+    "faqHeading": "Sık sorulan sorular",
+    "cta": "Randevu oluştur",
+    "readMore": "Yazıyı oku",
+    "fromJournal": "Blogdan",
+    "ctaHeading": "Bu konuyu salonda konuşalım",
+    "ctaBody": "Saçınıza en uygun işlemi ön görüşmede birlikte belirleyelim; hizmetinizi seçip tarih ve saati Kolay Randevu’da onaylayın.",
+    "alts": {
+      "ombre-sombre": "Bal sarısı, yüz çevresi açılmış dalgalı saçlarıyla Emrahair’de bir misafir",
+      "kullu-kumral": "Kumral diplerden sarı uçlara yumuşak geçişli balyajlı uzun dalgalı saçlar",
+      "keratin-botoks": "Pürüzsüz ve parlak, omuz altı sarı saçlarıyla bir misafir",
+      "amonyaksiz-boya": "Emrah Çabkur, tuğla duvarlı salonda bir misafirin saçına folyoyla renk uygularken",
+      "fiyatlar-2026": "Emrahair’in ahşap tezgâhlı, aynalı koltuk sırası",
+      "gelin-basi": "Yandan görünen yumuşak, düşük bir gelin topuzu"
+    }
+  },
+  "faqPage": {
+    "meta": {
+      "title": "Sık Sorulan Sorular | Emrahair Bahçeşehir Kuaför",
+      "description": "Emrahair hakkında sık sorulan sorular: adres, çalışma saatleri, randevu, uzman seçimi, fiyatlar ve hizmetler. Bahçeşehir 1. Kısım, Galeria Çarşı."
+    },
+    "breadcrumb": "Sık sorulan sorular",
+    "eyebrow": "SSS",
+    "titleLines": [
+      "Sık sorulan"
+    ],
+    "titleAccent": "sorular",
+    "lede": "Salon, randevu ve fiyatlarla ilgili en çok sorulanlar. Hizmete özel sorular, her hizmetin kendi sayfasında da yanıtlı.",
+    "generalHeading": "Salon ve randevu",
+    "servicesHeading": "Hizmetlere göre sorular",
+    "toService": "Hizmet sayfası",
+    "items": [
+      {
+        "q": "Emrahair nerede?",
+        "a": "Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir/İstanbul adresindeyiz. Harita ve yol tarifi [iletişim sayfasında](/iletisim)."
+      },
+      {
+        "q": "Çalışma saatleri nedir?",
+        "a": "Pazartesi, çarşamba, perşembe, cuma ve cumartesi 09:00–19:00, pazar 10:00–19:00 açığız; salı günleri kapalıyız. Saatler, salonun randevu sistemindeki takvimdir; resmî tatillerde değişebilir."
+      },
+      {
+        "q": "Nasıl randevu alabilirim?",
+        "a": "Sitedeki “Randevu al” düğmesiyle hizmetinizi seçip tarih ve saati Kolay Randevu’da onaylayabilirsiniz. Dilerseniz (0212) 909 15 69’u arayabilir ya da 0546 604 51 52 numarasından WhatsApp’tan yazabilirsiniz."
+      },
+      {
+        "q": "Uzmanımı seçebilir miyim?",
+        "a": "Saç hizmetlerinde Kolay Randevu’da Emrah Çabkur, Serdar Sezer ya da “Fark Etmez” seçeneklerinden birini seçersiniz. Tırnak, kaş ve ağda hizmetlerini Gizem Değişener yapar."
+      },
+      {
+        "q": "Air Touch balyajı kim yapıyor?",
+        "a": "Air Touch balyajı salonun kurucusu [Emrah Çabkur](/emrah-cabkur) yapar. Klasik balyaj, sombre ve ombre için Serdar Sezer’den de randevu alabilirsiniz."
+      },
+      {
+        "q": "Fiyatlar neden aralık olarak verilmiş?",
+        "a": "Renk, balyaj ve keratin gibi işlemlerde fiyat saçın uzunluğuna, yoğunluğuna ve önceki işlemlere göre değişir. Kesin fiyat işlemden önce, koltukta söylenir. [Fiyat listesi](/hizmetler), salonun Kolay Randevu’da yayımladığı listedir."
+      },
+      {
+        "q": "Hangi hizmetler var?",
+        "a": "Balyaj ve saç boyama, saç kesimi ve fön, keratin ve saç bakımı, gelin ve nişan saçı, manikür ve pedikür, kaş ve ağda. Her hizmetin kendi sayfası ve fiyatları var."
+      },
+      {
+        "q": "Emrahair’in değerlendirmeleri nasıl?",
+        "a": "Emrahair, Kolay Randevu’da 297 değerlendirmeden 4,9 ve Google’da 43 yorumdan 4,8 puana sahip."
+      }
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Gizlilik ve Çerez Bilgilendirmesi | Emrahair",
+      "description": "Emrahair web sitesi hangi verileri işler: çerez yok, form yok, analiz yok. Randevu Kolay Randevu’da alınır; harita yalnızca tıklayınca yüklenir."
+    },
+    "breadcrumb": "Gizlilik",
+    "eyebrow": "Gizlilik",
+    "titleLines": [
+      "Gizlilik ve"
+    ],
+    "titleAccent": "çerezler",
+    "lede": "Bu sayfa, Emrahair web sitesinin ziyaretçilerle ilgili hangi bilgileri işlediğini sade bir dille anlatır.",
+    "updated": "Son güncelleme: 5 Kasım 2026",
+    "sections": [
+      {
+        "heading": "Bu site hangi verileri topluyor?",
+        "body": [
+          "Bu site bir iletişim formu, üyelik sistemi ya da ziyaretçi analizi aracı içermez ve sizden ad, telefon veya e-posta gibi kişisel bilgi istemez.",
+          "Randevular, salonun kullandığı Kolay Randevu sisteminde alınır. “Randevuya devam” dediğinizde seçtiğiniz hizmetler Kolay Randevu’ya iletilir; orada paylaştığınız bilgiler Kolay Randevu’nun kendi gizlilik koşullarına tabidir."
+        ]
+      },
+      {
+        "heading": "Çerezler ve tarayıcıda saklananlar",
+        "body": [
+          "Site çerez kullanmaz. Fiyat listesinde seçtiğiniz hizmetler, sayfalar arasında kaybolmasın diye yalnızca tarayıcınızın oturum belleğinde (sessionStorage) tutulur. Bu bilgi bize gönderilmez ve sekmeyi kapattığınızda silinir."
+        ]
+      },
+      {
+        "heading": "Üçüncü taraf hizmetler",
+        "body": [
+          "İletişim sayfasındaki Google Haritası yalnızca “Haritayı göster” düğmesine bastığınızda yüklenir; bu durumda Google’a bağlanılır ve Google kendi çerezlerini kullanabilir.",
+          "WhatsApp, Instagram ve Kolay Randevu bağlantıları sizi bu hizmetlerin kendi sitelerine götürür. Site, Vercel altyapısında barındırılır; sunucu, güvenlik ve işletim amacıyla IP adresi gibi teknik kayıtları kısa süreli tutabilir."
+        ]
+      },
+      {
+        "heading": "Haklarınız ve iletişim",
+        "body": [
+          "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki soru ve talepleriniz için salonla (0212) 909 15 69 numarasından ya da Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir/İstanbul adresinden iletişime geçebilirsiniz."
+        ]
+      }
+    ]
   }
 }
