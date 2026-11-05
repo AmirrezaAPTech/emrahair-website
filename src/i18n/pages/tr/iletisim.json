@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "İletişim ve Adres — Emrahair Bahçeşehir Kuaför",
+    "description": "Emrahair adres: Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir/İstanbul. Telefon, WhatsApp, çalışma saatleri ve yol tarifi."
+  },
+  "breadcrumb": "İletişim",
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["İletişim ve"],
+  "titleAccent": "yol tarifi",
+  "lede": "Emrahair, Bahçeşehir 1. Kısım’da Kemal Sunal Caddesi üzerindeki Galeria Çarşı’da. Randevu için online sistemi kullanabilir, arayabilir ya da WhatsApp’tan yazabilirsiniz.",
+  "addressHeading": "Adres",
+  "phoneHeading": "Telefon ve WhatsApp",
+  "hoursHeading": "Çalışma saatleri",
+  "hoursNote": "Saatler, salonun randevu sistemindeki takvimdir. Resmî tatillerde saatler değişebilir.",
+  "mapHeading": "Harita",
+  "mapLoad": "Haritayı göster",
+  "mapNote": "Harita Google Maps’ten yüklenir; tıkladığınızda Google’a bağlanılır.",
+  "directions": "Google Maps’te yol tarifi al",
+  "areaHeading": "Bahçeşehir ve çevresi",
+  "areaBody": "Salon, Bahçeşehir 1. ve 2. Kısım’dan yürüme mesafesinde; Başakşehir ve Esenyurt’tan da kısa bir sürüşle ulaşılır.",
+  "bookHeading": "Online randevu",
+  "bookBody": "Hizmetinizi seçin, uzmanınızı belirleyin; tarih ve saati Kolay Randevu’da onaylayın."
+}

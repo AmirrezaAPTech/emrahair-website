@@ -401,3 +401,10 @@
   color: var(--fg-muted);
   line-height: 1.4;
 }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-s) var(--space-l);
+}

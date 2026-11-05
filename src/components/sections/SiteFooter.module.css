@@ -145,7 +145,8 @@
 
 .legalLinks {
   display: flex;
-  gap: var(--space-m);
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-m);
 }
 
 .legalLinks .link {

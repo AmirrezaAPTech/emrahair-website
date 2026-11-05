@@ -3,8 +3,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 
-import { routing, htmlLang } from '@/i18n/routing';
-import { getPathname } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/ui/JsonLd';
 import { SiteNav } from '@/components/chrome/SiteNav';
 import { BookingPanel } from '@/components/chrome/BookingPanel';
 import { MotionRoot } from '@/components/chrome/MotionRoot';
@@ -19,14 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: 'menu.meta' });
-  return {
-    title: t('title'),
-    description: t('description'),
-    alternates: {
-      canonical: getPathname({ href: '/hizmetler', locale }),
-      languages: Object.fromEntries(routing.locales.map((l) => [htmlLang[l], getPathname({ href: '/hizmetler', locale: l })])),
-    },
-  };
+  return pageMetadata({ locale, route: '/hizmetler', title: t('title'), description: t('description') });
 }
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -35,6 +30,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   setRequestLocale(locale);
   const t = await getTranslations('menu');
   const tMeta = await getTranslations('meta');
+  const tService = await getTranslations('service');
+  const tNav = await getTranslations('nav');
 
   return (
     <>
@@ -60,7 +57,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               </li>
               <li>
                 <span className={styles.factValue}>
-                  {ratings.kolayRandevu.score.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-GB')}
+                  {ratings.kolayRandevu.score.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-US')}
                 </span>
                 <span className={styles.factLabel}>{t('facts.rating', { count: ratings.kolayRandevu.count })}</span>
               </li>
@@ -82,6 +79,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <SiteFooter onHome={false} />
       <BookingPanel />
       <MotionRoot />
+      <JsonLd data={breadcrumbSchema([{ name: tService('home'), route: '/' }, { name: tNav('services'), route: '/hizmetler' }], locale)} />
     </>
   );
 }

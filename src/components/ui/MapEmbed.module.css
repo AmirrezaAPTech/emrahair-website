@@ -1,0 +1,35 @@
+.map {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 30% 20%, rgba(201, 162, 123, 0.22), transparent 60%),
+    linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-s);
+  padding: var(--space-m);
+  text-align: center;
+}
+
+.note {
+  max-width: 36ch;
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: rgba(251, 250, 247, 0.82);
+}

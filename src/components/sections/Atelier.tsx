@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 
 import ritual from '@/assets/images/ritual.jpg';
 import { team } from '@/lib/site';
+import { Link } from '@/i18n/navigation';
 import { Headline } from '@/components/ui/Headline';
 import { ArrowButton } from '@/components/ui/LinkArrow';
 import styles from './Atelier.module.css';
@@ -43,7 +44,13 @@ export async function Atelier() {
             </div>
 
 
-            <ArrowButton>{t('cta')}</ArrowButton>
+            <div className={styles.links}>
+              <ArrowButton>{t('cta')}</ArrowButton>
+              <Link href="/emrah-cabkur" className="link-arrow" data-reveal>
+                <span>{t('more')}</span>
+                <span className="link-arrow__line" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
 
           <figure className={styles.figure} data-reveal-media>

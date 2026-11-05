@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Balayage in Bahçeşehir — Air Touch & Sombré | Emrahair",
+    "description": "Balayage in Bahçeşehir: Air Touch, sombré and ombré by Echosline Türkiye Ambassador Emrah Çabkur, lightening without damage. 2026 prices, online booking."
+  },
+  "breadcrumb": "Balayage",
+  "card": {
+    "title": "Balayage & Air Touch",
+    "summary": "Air Touch, sombré and ombré: soft, natural balayage that lightens without damaging the hair."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Balayage in Bahçeşehir"],
+  "titleAccent": "and Air Touch",
+  "lede": "Balayage is the service guests choose most at Emrahair. Emrah Çabkur uses the Air Touch technique to lighten hair without damaging it, for color that blends softly from root to tip and looks natural for months.",
+  "mediaAlt": "Woman showing her long, wavy blonde balayage",
+  "sections": [
+    {
+      "heading": "What is balayage?",
+      "body": [
+        "Balayage is a coloring technique that lightens selected strands rather than the whole head, creating a natural, sun-kissed blend. The roots stay close to your natural color, and the brightness builds from the mid-lengths to the ends. As your roots grow out, no harsh line appears, so you don’t need to refresh the color often.",
+        "At Emrahair, balayage always starts with a consultation: we talk through your hair’s texture, any previous color, your skin’s undertone and the shade you want to reach. The formula is built around that, and the lightener and care products are chosen to suit how resilient your hair is."
+      ]
+    },
+    {
+      "heading": "What is Air Touch balayage, and what does it do?",
+      "body": [
+        "Air Touch is a balayage technique in which each section is blown with a hair dryer to separate out the short and broken strands. Lightener goes only on the longer strands that remain. The result is a soft blend with no brush marks, as if the hair had lightened on its own.",
+        "Air Touch suits you if you want natural-looking blonde and caramel tones, color that still looks polished as the roots grow out, or brightness that camouflages gray hair. It is also the work Emrah Çabkur shares most often on Instagram."
+      ]
+    },
+    {
+      "heading": "Sombré, ombré and brushlight: the difference",
+      "body": [
+        "Ombré is a pronounced transition from dark roots to light ends. Sombré (soft ombré) is the same idea, made much softer, with less contrast between shades. Brushlight places light freehand with a brush, around the face and between the layers.",
+        "Which one suits you depends on your hair color, length and lifestyle. We decide together at the consultation, using reference photos."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Balayage prices 2026",
+    "intro": "Prices are the current list the salon publishes on Kolay Randevu. The range depends on your hair’s length, density and previous color; the exact price is given in the chair, before the service begins."
+  },
+  "steps": {
+    "heading": "What to expect at your balayage appointment",
+    "items": [
+      { "title": "Consultation", "body": "We look at your hair, the shade you want and any previous services, and agree on price and timing." },
+      { "title": "Lightening and toning", "body": "Your hair is lightened with Air Touch or the technique you chose, then toned to the shade you want." },
+      { "title": "Care and cut", "body": "A protective treatment suited to your hair follows; if needed, the ends are trimmed and your hair is blow-dried into shape." },
+      { "title": "Home care advice", "body": "You get shampoo and care recommendations to keep your color vibrant for longer." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about balayage",
+    "items": [
+      { "q": "How much does balayage cost in Bahçeşehir?", "a": "At Emrahair, Air Touch balayage is [[383324-1]], balayage [[243987-1]], sombré [[191804-1]] and ombré [[219-1]]. Hair length and density determine the price; the exact price is given at the consultation." },
+      { "q": "How long does balayage take?", "a": "It usually takes between 3 and 6 hours, depending on your hair’s length and starting color. Air Touch can take a little longer than classic balayage because the sections are separated one by one." },
+      { "q": "Does Air Touch balayage damage your hair?", "a": "Any lightening puts some stress on the hair; the technique is what makes the difference. At Emrahair, lightener goes only on the selected strands, and the service is supported by a protective treatment suited to your hair’s condition. For hair that has been heavily processed before, the target shade is adjusted accordingly at the consultation." },
+      { "q": "Who does balayage suit?", "a": "Balayage works on almost any hair color and length, as long as the shades are chosen to match your skin’s undertone. Caramel and honey tones are popular on dark hair, and cool or beige blondes on lighter hair." },
+      { "q": "How long does balayage last, and when should it be refreshed?", "a": "Because the roots stay close to your natural color, balayage is usually refreshed every 3–6 months. In between, a toner or gloss can keep the shade vibrant." },
+      { "q": "How do I book a balayage appointment?", "a": "Choose the service on this page and pick your stylist, then confirm the date and time through Kolay Randevu. Air Touch balayage is done by Emrah Çabkur." }
+    ]
+  }
+}

@@ -47,34 +47,31 @@
 
 /* --- The row ----------------------------------------------------------- */
 
-/* Five across, one row, equal. At 1280 a fifth of the measure is roughly
-   210px and at 1680 about 280px — a photograph, not a thumbnail. Below 1180 a
-   fifth stops being a photograph and the pyramid takes over. */
+/* Six cards, one per service page: three across and two rows on a desktop,
+   so each plate is a third of the measure — a photograph, not a thumbnail.
+   The vertical hairline runs between columns only; the second row takes a
+   rule above it, so the grid reads as one sheet rather than a cage. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: var(--card-gap);
+  row-gap: clamp(2rem, 4vw, 3.5rem);
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* Title, summary and price are one caption under the plate, so they are set
-     close. The plate is what carries the space in this row. */
   gap: clamp(0.4rem, 0.6vh + 0.15vw, 0.6rem);
   min-width: 0;
 }
 
-/* The plate keeps the wider gap the caption gave up. */
 .cardMedia + .cardTitle {
   margin-top: clamp(0.35rem, 0.6vh + 0.2vw, 0.6rem);
 }
 
-/* Drawn down the middle of the gap rather than on a column's edge, so the
-   photographs stay equal and both outer ones still line up with the headline
-   above them. Padding would have bought the rule at the plates' expense. */
-.card + .card::before {
+/* Drawn down the middle of the gap, on every card that is not first in its row. */
+.card:not(:nth-child(3n + 1))::before {
   content: '';
   position: absolute;
   top: 0;
@@ -84,16 +81,22 @@
   background: var(--rule);
 }
 
+.card:nth-child(n + 4) {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--rule);
+  margin-top: calc(clamp(2rem, 4vw, 3.5rem) * -1);
+}
+
+.card:nth-child(n + 4)::before {
+  top: 0;
+}
+
 .cardMedia {
   display: block;
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
 }
 
-/* The plate itself now, not a layer over one. Left at full colour: these are
-   the only moving images on the page and the grade that sinks the stills into
-   the night palette takes the life out of them. Hover pushes in slightly
-   instead — motion answered with motion rather than with a colour change. */
 .cardVideo {
   position: absolute;
   inset: 0;
@@ -105,8 +108,6 @@
   transition: transform var(--dur-slow) var(--ease-editorial);
 }
 
-/* Small enough to register as a push rather than a jump: the frame is already
-   moving, so it does not take much to read. */
 .card:hover .cardVideo,
 .card:focus-within .cardVideo {
   transform: scale(1.05);
@@ -115,14 +116,6 @@
 .cardTitle {
   font-size: clamp(1.15rem, 0.9rem + 0.55vw, 1.55rem);
   line-height: 1.15;
-  /* One line's worth, and it used to be two. The floor was there because
-     "Make-up & Lashes" wrapped where "Hair" did not, and the summaries below
-     would otherwise have sat at four heights. Splitting that card left five
-     single words — the longest is "Wimpernverlängerung"'s label, „Wimpern" —
-     so nothing wraps at any width and the reserved second line was a blank
-     one under every title. Restore the 2.3em if a longer name ever lands here. */
-  /* Two lines reserved: "Tırnak · Kaş · Ağda" wraps where "Kesim & Fön" does not. */
-  min-height: 2.3em;
   transition: color var(--dur-base) var(--ease-out);
 }
 
@@ -140,10 +133,7 @@
   inset: 0;
 }
 
-/* The way on, in the site's own grammar: a gold hairline run out from the
-   leading edge along the card's floor. The same move as .link-arrow__line and
-   as the hand-off blocks — no lift, no shadow, no arrow, no border. Above
-   900px there is no resting rule here, so it draws itself out of nothing. */
+/* The way on: a gold hairline run out along the card's floor. */
 .card::after {
   content: '';
   position: absolute;
@@ -176,8 +166,7 @@
 }
 
 .cardFrom {
-  /* Pushed to the floor of the tallest card, so the four prices line up
-     however long the descriptions above them run. */
+  /* Pushed to the floor of the tallest card, so the prices line up. */
   margin-top: auto;
   padding-top: var(--space-3xs);
   font-size: var(--t-eyebrow);
@@ -193,63 +182,32 @@
   color: var(--fg);
 }
 
-/* --- The pyramid --------------------------------------------------------
-   Below 1180 a fifth of the measure is a thumbnail, and five into two or four
-   columns leaves a card alone on the last row. So the row stops being a row:
-   two plates across the top, three beneath them, on a six-column grid that
-   2 + 3 fills exactly. Nothing is stranded at any width in this band.
-
-   The pair takes a landscape plate rather than the square. Half the measure
-   at 1179 is a 517px column, and 517px square is a plate twice the height of
-   anything else in the row — at 4/3 the pair stands about 390px against the
-   trio's 330, which is a hierarchy rather than a cliff.
-
-   The vertical hairlines belong to the single row. A rule down the gap of a
-   grid that wraps is a cage, so the cards take a rule above them instead. */
-@media (max-width: 1179px) {
+/* Two across on a tablet: three rows of two, rules above instead of beside. */
+@media (max-width: 1023px) {
   .grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: clamp(1.25rem, 3vw, 2.5rem);
     row-gap: clamp(1.75rem, 4vw, 2.75rem);
   }
 
-  .card:nth-child(-n + 2) {
-    grid-column: span 3;
-  }
-
-  .card:nth-child(n + 3) {
-    grid-column: span 2;
-  }
-
-  .card:nth-child(-n + 2) .cardMedia {
-    aspect-ratio: 4 / 3;
-  }
-
-  .card + .card::before {
+  .card:not(:nth-child(3n + 1))::before {
     display: none;
   }
 
-  .card {
+  .card,
+  .card:nth-child(n + 4) {
+    margin-top: 0;
     padding-top: clamp(1rem, 2.4vw, 1.5rem);
     border-top: 1px solid var(--rule);
   }
 }
 
-/* One column, and the spans have to be undone with it: `span 3` against a
-   single track does not clamp, it invents two more columns. */
 @media (max-width: 639px) {
   .grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .card:nth-child(-n + 2),
-  .card:nth-child(n + 3) {
-    grid-column: auto;
-  }
-
-  /* A full-measure square five times over is a scroll, not a section. */
-  .cardMedia,
-  .card:nth-child(-n + 2) .cardMedia {
+  .cardMedia {
     aspect-ratio: 16 / 10;
   }
 }

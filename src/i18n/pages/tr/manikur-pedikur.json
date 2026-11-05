@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Manikür Pedikür Bahçeşehir — Kalıcı Oje | Emrahair",
+    "description": "Bahçeşehir’de manikür, pedikür ve kalıcı oje. Gizem Değişener’in titiz, hijyenik tırnak bakımı; Galeria Çarşı’da. 2026 fiyatları ve online randevu."
+  },
+  "breadcrumb": "Manikür & pedikür",
+  "card": {
+    "title": "Manikür & Pedikür",
+    "summary": "Manikür, pedikür ve kalıcı oje; Gizem Hanım’ın titiz ve hijyenik tırnak bakımı."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de"],
+  "titleAccent": "manikür ve pedikür",
+  "lede": "Saçınız hazırlanırken tırnaklarınız da hazır olsun. Emrahair’de manikür, pedikür ve kalıcı oje Gizem Değişener tarafından titizlikle ve hijyen kurallarına uyularak yapılır.",
+  "mediaAlt": "Tırnaklara kırmızı oje uygulanırken, yakın plan",
+  "sections": [
+    {
+      "heading": "Manikür ve pedikür",
+      "body": [
+        "Manikürde tırnaklar şekillendirilir, eti temizlenir ve eller bakımla nemlendirilir. Pedikürde ayaklar yumuşatılır, sertleşmiş deri temizlenir ve tırnaklar düzenlenir. İkisi de saç randevunuzla aynı gün planlanabilir.",
+        "Misafir yorumlarında en sık geçen kelimeler özen, temizlik ve titizlik. “Gizem Hanım yine müthiş iş çıkarttı” diyen misafirlerimiz, Kolay Randevu ve Google yorumlarında bunu anlatıyor."
+      ]
+    },
+    {
+      "heading": "Kalıcı oje",
+      "body": [
+        "Kalıcı oje, normal ojeye göre çok daha uzun süre parlaklığını ve rengini korur, kolay kolay çizilmez. El ve ayak için ayrı uygulanabilir. Çıkarma işlemi de tırnağı yıpratmadan salonda yapılır."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Manikür pedikür fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir."
+  },
+  "steps": {
+    "heading": "Randevunuz nasıl geçer?",
+    "items": [
+      { "title": "Hazırlık", "body": "Varsa eski kalıcı oje çıkarılır, tırnaklar temizlenir." },
+      { "title": "Bakım", "body": "Tırnaklar şekillendirilir, et temizliği ve bakım yapılır." },
+      { "title": "Oje", "body": "Normal ya da kalıcı oje uygulanır." }
+    ]
+  },
+  "faq": {
+    "heading": "Manikür ve pedikür hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de manikür pedikür fiyatları ne kadar?", "a": "Emrahair’de manikür [[33-1]], pedikür [[34-1]], el için kalıcı oje [[67-1]], ayak için kalıcı oje [[68-1]] ve kalıcı oje çıkarma [[69-1]]." },
+      { "q": "Kalıcı oje ne kadar dayanır?", "a": "Tırnak yapısına ve günlük kullanıma göre genellikle 2–3 hafta parlaklığını korur." },
+      { "q": "Manikür ve pedikür ne kadar sürer?", "a": "Manikür genellikle 45 dakika, pedikür yaklaşık 1 saat sürer; kalıcı oje eklendiğinde süre biraz uzar." },
+      { "q": "Saç randevumla aynı gün manikür yaptırabilir miyim?", "a": "Evet. Randevu oluştururken saç hizmetinizin yanına manikür ya da pedikürü de ekleyebilirsiniz." }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Hair Color in Bahçeşehir — Roots & Highlights | Emrahair",
+    "description": "Hair color in Bahçeşehir: all-over color, root touch-ups, ammonia-free color, highlights, color changes, based on tone analysis. 2026 prices and booking."
+  },
+  "breadcrumb": "Hair color",
+  "card": {
+    "title": "Hair Color & Roots",
+    "summary": "All-over color, root touch-ups, highlights and color changes: lasting color built on a tone analysis."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Hair color in Bahçeşehir"],
+  "titleAccent": "and root touch-ups",
+  "lede": "From covering grays to a completely new shade: at Emrahair, hair color is done with a formula built on a tone analysis and designed with your hair’s health in mind.",
+  "mediaAlt": "Hairdresser applying color with foils to a client’s hair",
+  "sections": [
+    {
+      "heading": "Which hair color service is right for you?",
+      "body": [
+        "All-over color changes or refreshes your color in a single shade from root to tip. A root touch-up matches grown-out roots or grays to your current color. Highlights and lowlights use fine strands to add depth and light, while a color change is a planned move from dark to light or from light to dark.",
+        "Which one suits you depends on your current color, how much gray you have and the shade you are aiming for. Every color service at Emrahair starts with a consultation."
+      ]
+    },
+    {
+      "heading": "Root color options: Italian, ammonia-free, Igora",
+      "body": [
+        "Italian root color blends the color at the roots softly into the lengths, so there is no hard line. Ammonia-free root color is the choice for sensitive scalps and anyone sensitive to smell. Igora root color is used to cover grays with high coverage.",
+        "Root lightening means lifting dark regrowth in light blonde hair and toning it again; it is the service blondes need most often to maintain their color."
+      ]
+    },
+    {
+      "heading": "Keeping your color vibrant for longer",
+      "body": [
+        "Not washing your hair for the first two days after coloring, using a sulfate-free, color-protecting shampoo and applying heat protectant before hot tools all help your color last longer. After the service, you’ll get care recommendations suited to your hair."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Hair color prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu. Hair length and the amount of color used determine the price; the exact price is given before the service."
+  },
+  "steps": {
+    "heading": "What to expect at your color appointment",
+    "items": [
+      { "title": "Tone analysis", "body": "Your current color, amount of gray and target shade are assessed, and the right color and timing are chosen." },
+      { "title": "Application", "body": "Color is applied to the roots or all over, and the processing time is adjusted to your hair type." },
+      { "title": "Care and blow-dry", "body": "The color is sealed, a treatment is applied and your hair is blow-dried into shape." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about hair color",
+    "items": [
+      { "q": "How much does hair color cost in Bahçeşehir?", "a": "At Emrahair, all-over color is [[26-1]], Italian root color [[575809-1]], ammonia-free root color [[372904-1]], and highlights and lowlights [[29-1]]. The price of a color change is set at the consultation." },
+      { "q": "How often should I get my roots done?", "a": "Usually every 4–6 weeks, depending on how fast your hair grows and how much gray you have. With fewer grays, you can often go longer." },
+      { "q": "Does ammonia-free hair color cover gray?", "a": "It covers light to moderate gray well. If you have a lot of gray, a high-coverage color such as Igora may be recommended; that is decided at the consultation." },
+      { "q": "Can I go from dark hair to light in one session?", "a": "It depends on your hair’s history. For dark hair that has been colored before, the change may be split over several sessions to protect the hair’s health." },
+      { "q": "How long does hair coloring take?", "a": "A root touch-up usually takes 1.5–2 hours; all-over color and color changes take 2–4 hours, depending on hair length." }
+    ]
+  }
+}

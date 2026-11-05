@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Saç Boyama Bahçeşehir — Dip Boya, Röfle | Emrahair",
+    "description": "Bahçeşehir’de saç boyama: tüm saç boyama, dip boya, amonyaksız boya, röfle ve renk değişimi. Ton analiziyle kişiye özel renk. 2026 fiyatları, online randevu."
+  },
+  "breadcrumb": "Saç boyama",
+  "card": {
+    "title": "Saç Boyama & Dip Boya",
+    "summary": "Tüm saç boyama, dip boya, röfle ve renk değişimi; ton analiziyle kurulan kalıcı renk."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de saç boyama"],
+  "titleAccent": "ve dip boya",
+  "lede": "Beyaz kapatmadan tamamen yeni bir renge kadar: Emrahair’de saç boyama, ton analiziyle kurulan ve saçın sağlığını gözeten bir formülle yapılır.",
+  "mediaAlt": "Kuaförün bir müşterinin saçına folyoyla renk uygulaması",
+  "sections": [
+    {
+      "heading": "Size uygun saç boyama hangisi?",
+      "body": [
+        "Tüm saç boyama, rengi diplerden uçlara tek tonda değiştirir ya da canlandırır. Dip boya, uzayan diplerin veya beyazların mevcut renginize eşitlenmesidir. Röfle ve gölge, renge derinlik ve ışık katan ince tutamlarla çalışır; saç renk değişimi ise koyudan açığa veya açıktan koyuya planlı bir geçiştir.",
+        "Hangisinin size uygun olduğunu saçınızın şu anki rengi, beyaz oranı ve hedeflediğiniz ton belirler. Emrahair’de her renk işlemi bir ön görüşmeyle başlar."
+      ]
+    },
+    {
+      "heading": "Dip boya seçenekleri: İtalyan, amonyaksız, Igora",
+      "body": [
+        "İtalyan dip boyama, diplerdeki rengi uç tarafla yumuşakça birleştirerek keskin bir sınır bırakmaz. Amonyaksız dip boyama hassas saç derisi ve kokuya duyarlı olanlar için tercih edilir. Igora dip boyama ise beyazları yüksek örtücülükle kapatmak için kullanılır.",
+        "Dip açma boyama, açık sarı tonlarda uzayan koyu dipleri açıp yeniden tonlamaktır; sarı saçların bakımında en sık ihtiyaç duyulan işlemdir."
+      ]
+    },
+    {
+      "heading": "Rengin uzun süre canlı kalması için",
+      "body": [
+        "Boyadan sonraki ilk iki gün saçı yıkamamak, sülfatsız ve renk koruyucu şampuan kullanmak ve sıcak aletlerden önce ısı koruyucu sürmek rengin ömrünü uzatır. İşlem sonrası size saçınıza uygun bakım önerisi verilir."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Saç boyama fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir. Saçın uzunluğu ve kullanılan boya miktarı fiyatı belirler; kesin fiyat işlemden önce söylenir."
+  },
+  "steps": {
+    "heading": "Saç boyama randevunuz nasıl geçer?",
+    "items": [
+      { "title": "Ton analizi", "body": "Mevcut renk, beyaz oranı ve hedef ton değerlendirilir; uygun boya ve süre belirlenir." },
+      { "title": "Uygulama", "body": "Dipten ya da tüm saça boya uygulanır, saç tipine göre bekleme süresi ayarlanır." },
+      { "title": "Bakım ve fön", "body": "Renk sabitlenir, bakım yapılır ve saça fönle şekil verilir." }
+    ]
+  },
+  "faq": {
+    "heading": "Saç boyama hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de saç boyama fiyatları ne kadar?", "a": "Emrahair’de tüm saç boyama [[26-1]], İtalyan dip boyama [[575809-1]], amonyaksız dip boyama [[372904-1]], röfle ve gölge [[29-1]] aralığındadır. Renk değişimi için fiyat ön görüşmede belirlenir." },
+      { "q": "Dip boya ne sıklıkla yapılmalı?", "a": "Saçınızın uzama hızına ve beyaz oranına göre genellikle 4–6 haftada bir. Beyazı az olanlarda bu süre uzayabilir." },
+      { "q": "Amonyaksız boya beyazları kapatır mı?", "a": "Az ve orta yoğunluktaki beyazları iyi kapatır. Beyaz oranı yüksekse Igora gibi yüksek örtücülüklü bir boya önerilebilir; karar ön görüşmede verilir." },
+      { "q": "Koyu saçtan açık renge tek seansta geçilir mi?", "a": "Saçın geçmişine bağlıdır. Daha önce boyanmış koyu saçlarda sağlığı korumak için renk değişimi birkaç seansa bölünebilir." },
+      { "q": "Saç boyama ne kadar sürer?", "a": "Dip boya genellikle 1,5–2 saat, tüm saç boyama ve renk değişimi saç uzunluğuna göre 2–4 saat sürer." }
+    ]
+  }
+}

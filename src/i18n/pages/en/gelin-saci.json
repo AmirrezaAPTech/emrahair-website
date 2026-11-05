@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Bridal Hair in Bahçeşehir — Engagement & Updos | Emrahair",
+    "description": "Bridal hair in Bahçeşehir: wedding and engagement hair, updos, braids and ponytails, planned ahead, in place all day. 2026 prices and online booking."
+  },
+  "breadcrumb": "Bridal hair",
+  "card": {
+    "title": "Bridal Hair & Updos",
+    "summary": "Bridal hair, engagement hair, updos and braids: planned in advance and in place all day long."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bridal hair in Bahçeşehir"],
+  "titleAccent": "and engagement hair",
+  "lede": "Wedding, engagement or henna night: on the day, your hair needs to look the same in the photos as it does at the end of the night. At Emrahair, bridal hair is designed around your dress, your accessories and the plan for your day.",
+  "mediaAlt": "Bridal hair in a soft updo, side view",
+  "sections": [
+    {
+      "heading": "Bridal hairstyles",
+      "body": [
+        "Updos give a classic, elegant look; a low bun pairs well with simple gowns, while a high bun works well with a veil and tiara. Half-up styles and loose waves are the choice of brides who want a romantic, natural look. Braided styles and a sleek ponytail keep you comfortable through long, lively nights such as a henna night or an engagement party.",
+        "When choosing a style, we consider the neckline of your dress, the length and density of your hair, the veil or tiara you’ll wear and how long the day will last."
+      ]
+    },
+    {
+      "heading": "How to prepare your hair for the wedding",
+      "body": [
+        "If you are planning color or balayage, having it done a few weeks before the wedding leaves time for the shade to settle and for any corrections. It is also safer not to leave treatments such as keratin until the final week.",
+        "Avoiding heavy, oil-based treatments the day before helps your hair hold the style better. We can plan your preparation timeline together during your appointment."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Bridal hair and updo prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu. The complexity of the style, the length of your hair and the use of accessories determine the price."
+  },
+  "steps": {
+    "heading": "How to plan your bridal hair appointment",
+    "items": [
+      { "title": "Book early", "body": "Book as soon as your wedding date is set; special dates fill up quickly." },
+      { "title": "Style and preparation", "body": "The style is chosen using your dress, your accessories and photos of styles you like." },
+      { "title": "Wedding day", "body": "Your hair is prepared with setting products so it stays in place all day." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about bridal hair",
+    "items": [
+      { "q": "How much does bridal hair cost in Bahçeşehir?", "a": "At Emrahair, bridal hair is [[28-1]], engagement hair [[232-1]], an updo [[25-1]] and braids [[752-1]]." },
+      { "q": "How far in advance should I book bridal hair?", "a": "Especially for summer and weekend weddings, we recommend booking a few weeks ahead. On Kolay Randevu you can see the available times and book right away." },
+      { "q": "How long does bridal hair take?", "a": "It usually takes 1–2 hours, depending on the complexity of the style. When planning your wedding-day schedule, allow for this along with your makeup time." },
+      { "q": "Can I have a bridal updo with short hair?", "a": "Low buns and half-up styles can also be done on shoulder-length hair; for very short hair, styles supported with accessories are recommended." },
+      { "q": "What is the difference between engagement hair and bridal hair?", "a": "Engagement hair is usually a simpler, looser style; bridal hair is prepared more intensively, for accessories such as a veil and tiara and to last all day." }
+    ]
+  }
+}

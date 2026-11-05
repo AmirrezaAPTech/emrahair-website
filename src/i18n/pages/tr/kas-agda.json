@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Ağda ve Kaş Alma Bahçeşehir — Kaş Boyama | Emrahair",
+    "description": "Bahçeşehir’de ağda, kaş alma, kaş boyama ve dudak üstü: bölgesel ve tüm vücut ağda, Gizem Değişener’den. 2026 fiyatları ve online randevu."
+  },
+  "breadcrumb": "Kaş & ağda",
+  "card": {
+    "title": "Kaş & Ağda",
+    "summary": "Kaş alma, kaş boyama, dudak üstü ve bölgesel ya da tüm vücut ağda."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de ağda"],
+  "titleAccent": "ve kaş alma",
+  "lede": "Kaş alma, kaş boyama ve ağda, Emrahair’de Gizem Değişener tarafından hijyen ve özenle yapılır. Saç randevunuzun öncesine ya da sonrasına kolayca eklenir.",
+  "mediaAlt": "",
+  "sections": [
+    {
+      "heading": "Kaş alma ve kaş boyama",
+      "body": [
+        "Kaş alma, kaşın doğal formunu yüz hatlarınıza göre düzenler. Kaş boyama ise açık renkli ya da seyrek kaşlara renk ve dolgunluk katar. İkisi birlikte uygulandığında kaşlar daha belirgin ve bakımlı görünür. Dudak üstü ve çene bölgesi de aynı randevuda yapılabilir."
+      ]
+    },
+    {
+      "heading": "Bölgesel ve tüm vücut ağda",
+      "body": [
+        "Koltuk altı, kol ve bacak gibi bölgeler ayrı ayrı ya da tüm vücut ağda olarak tek seansta yapılabilir. Uygulamadan önce cildin temiz ve kuru olması, sonrasında birkaç gün sıcak duş, güneş ve havuzdan kaçınılması cildin rahatlamasına yardımcı olur."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Ağda ve kaş fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir."
+  },
+  "steps": {
+    "heading": "Randevunuz nasıl geçer?",
+    "items": [
+      { "title": "Bölge seçimi", "body": "Hangi bölgelerin yapılacağı ve kaş formu konuşulur." },
+      { "title": "Uygulama", "body": "Cilt temizlenir, ağda ya da kaş işlemi yapılır." },
+      { "title": "Sonrası", "body": "Cildi rahatlatan bakım yapılır, evde dikkat edilecekler anlatılır." }
+    ]
+  },
+  "faq": {
+    "heading": "Ağda ve kaş hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de ağda fiyatları ne kadar?", "a": "Emrahair’de koltuk altı ağda [[571323-1]], kol [[571322-1]], bacak [[571325-1]], bölgesel ağda [[40-1]] ve tüm vücut ağda [[41-1]]." },
+      { "q": "Kaş alma ve kaş boyama fiyatı ne kadar?", "a": "Kaş alma [[35-1]], kaş boyama [[175-1]] ve dudak üstü [[38-1]]." },
+      { "q": "Ağda için tüyler ne kadar uzun olmalı?", "a": "En iyi sonuç için tüylerin yaklaşık 0,5 cm uzunlukta olması önerilir." },
+      { "q": "Kaş boyası ne kadar kalıcıdır?", "a": "Kaş yapısına ve bakımınıza göre genellikle 2–4 hafta." }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "Contact & Directions — Emrahair Hair Salon Bahçeşehir",
+    "description": "Emrahair address: Bahçeşehir 1. Kısım Mah., Kemal Sunal Cd., Galeria Çarşı No: 19/21, Başakşehir/Istanbul. Phone, WhatsApp, opening hours and directions."
+  },
+  "breadcrumb": "Contact",
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Contact and"],
+  "titleAccent": "directions",
+  "lede": "Emrahair is in Galeria Çarşı on Kemal Sunal Cd. in Bahçeşehir 1. Kısım. To book, you can use the online system, give us a call or message us on WhatsApp.",
+  "addressHeading": "Address",
+  "phoneHeading": "Phone and WhatsApp",
+  "hoursHeading": "Opening hours",
+  "hoursNote": "Hours follow the calendar in the salon’s booking system. They may change on public holidays.",
+  "mapHeading": "Map",
+  "mapLoad": "Show map",
+  "mapNote": "The map loads from Google Maps; clicking it connects you to Google.",
+  "directions": "Get directions in Google Maps",
+  "areaHeading": "Bahçeşehir and nearby",
+  "areaBody": "The salon is within walking distance of Bahçeşehir 1. and 2. Kısım, and a short drive from Başakşehir and Esenyurt.",
+  "bookHeading": "Online booking",
+  "bookBody": "Choose your service and your stylist, then confirm the date and time on Kolay Randevu."
+}

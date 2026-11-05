@@ -1,13 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 
+import { Link } from '@/i18n/navigation';
 import { Headline } from '@/components/ui/Headline';
 import { ServicesGrid } from './ServicesGrid';
 import styles from './Services.module.css';
 
 /**
  * The landing page's services section: the masthead across the full measure,
- * and the six discipline cards beneath it. The cards themselves live in
- * ServicesGrid.tsx, shared verbatim with the /leistungen index page.
+ * and the six service cards beneath it, each a link to its own page.
  */
 export async function Services() {
   const t = await getTranslations('services');
@@ -35,9 +35,9 @@ export async function Services() {
             />
           </div>
 
-          <button className={`btn ${styles.cta}`} type="button" data-book-open data-reveal>
+          <Link className={`btn ${styles.cta}`} href="/hizmetler" data-reveal>
             {t('cta')}
-          </button>
+          </Link>
         </header>
 
         <ServicesGrid />

@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Saç Kesimi Bahçeşehir — Kadın Kesim & Fön | Emrahair",
+    "description": "Bahçeşehir’de kadın saç kesimi: katlı kesim, küt kesim, kahkül ve fön. Yüz hatlarınıza ve saç dokunuza göre tasarlanan kesim. 2026 fiyatları ve online randevu."
+  },
+  "breadcrumb": "Saç kesimi",
+  "card": {
+    "title": "Saç Kesimi & Fön",
+    "summary": "Katlı, küt ya da perdeli kahkül: yüzünüze göre kesim, ardından kalıcı bir fön."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de"],
+  "titleAccent": "kadın saç kesimi",
+  "lede": "İyi bir kesim, saç uzarken bile formunu korur. Emrahair’de kesim, yüz hatlarınız, saç dokunuz ve sabah saçınıza ayırdığınız zaman konuşularak tasarlanır.",
+  "mediaAlt": "Makasla açık renk saçın uçlarını alan kuaför, yakın plan",
+  "sections": [
+    {
+      "heading": "Size uygun kesim modeli",
+      "body": [
+        "Katlı saç kesimi hacim ve hareket ister ince ve düz saçlara can verir; küt kesim keskin ve modern bir çizgi oluşturur; perdeli kahkül yüzü yumuşatır ve uzun saçta katlarla birleşince doğal bir çerçeve oluşturur. Dalgalı ve kabarık saçlarda kesim, bukleyi bozmadan şekli dengeler.",
+        "Kesimden önce saçınızın doğal düşüşüne, girdaplarına ve günlük şekillendirme alışkanlığınıza bakılır. Böylece salondan çıktığınız görünümü evde de yakalayabilirsiniz."
+      ]
+    },
+    {
+      "heading": "Fön, kırık fön, maşa ve Brezilya fönü",
+      "body": [
+        "Klasik fön düz ve parlak bir bitiş verir; kırık fön uçlarda hafif dalga ve hacim bırakır. Maşa ile kalıcı ve belirgin bukleler oluşturulur. Brezilya fönü ise kabarmayı azaltan, saçı haftalarca daha kolay şekillenir hale getiren bir bakım fönüdür.",
+        "Özel günler için fön ve maşa, gelin ve nişan saçı hazırlıklarıyla birlikte de planlanabilir."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Saç kesimi ve fön fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir. Saç uzunluğu fiyatı belirler; kesin fiyat işlemden önce söylenir."
+  },
+  "steps": {
+    "heading": "Kesim randevunuz nasıl geçer?",
+    "items": [
+      { "title": "Konuşma", "body": "Beğendiğiniz modeller, yüz hatlarınız ve günlük şekillendirme alışkanlığınız konuşulur." },
+      { "title": "Yıkama ve kesim", "body": "Saç yıkanır, doğal düşüşüne göre kesilir." },
+      { "title": "Fön ve şekillendirme", "body": "Fönle şekil verilir; evde nasıl şekillendireceğiniz gösterilir." }
+    ]
+  },
+  "faq": {
+    "heading": "Saç kesimi hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de kadın saç kesimi fiyatı ne kadar?", "a": "Emrahair’de saç kesimi [[24-1]], fön [[22-1]], kırık fön [[221-1]] ve maşa [[23-1]] aralığındadır." },
+      { "q": "Saç kesimi ne kadar sürer?", "a": "Yıkama, kesim ve fön dahil genellikle 45 dakika ile 1 saat arasında sürer." },
+      { "q": "Hangi saç kesimi bana yakışır?", "a": "Yüz şekliniz, saç dokunuz ve şekillendirmeye ayırdığınız zaman belirler. Örnek fotoğrafla gelirseniz kesimden önce birlikte uyarlarız." },
+      { "q": "Saç kesimini kim yapar?", "a": "Saç kesimini Emrah Çabkur ve Serdar Sezer yapar. Randevu alırken uzmanınızı seçebilirsiniz." },
+      { "q": "Brezilya fönü zararlı mı?", "a": "Brezilya fönü kabarmayı azaltan bir bakım uygulamasıdır. Kullanılan ürünü ve içeriğini randevudan önce sorabilirsiniz; uygulama saçın durumuna göre önerilir." }
+    ]
+  }
+}

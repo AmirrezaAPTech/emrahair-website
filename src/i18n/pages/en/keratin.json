@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "Keratin Treatment in Bahçeşehir — Keratin Botox | Emrahair",
+    "description": "Keratin treatment and keratin botox in Bahçeşehir: less frizz, smoother and shinier hair. Who it suits, how long it takes. 2026 prices and online booking."
+  },
+  "breadcrumb": "Keratin treatment",
+  "card": {
+    "title": "Keratin & Hair Care",
+    "summary": "Keratin smoothing, keratin botox and salon treatments that bring back shine and softness."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Keratin treatment"],
+  "titleAccent": "in Bahçeşehir",
+  "lede": "For hair that frizzes, turns staticky or is worn out from chemical services: keratin treatment and keratin botox leave hair smoother, shinier and easier to style.",
+  "mediaAlt": "Smooth, glossy straight brown hair after a keratin treatment, seen from behind",
+  "sections": [
+    {
+      "heading": "What is a keratin treatment, and what does it do?",
+      "body": [
+        "Keratin is a protein found naturally in hair. In a keratin treatment, a keratin-based product is applied to the hair and sealed into each strand with heat. The result is hair with less frizz that looks straighter, softer and shinier, and your morning styling time gets shorter too.",
+        "A keratin smoothing treatment aims for a noticeable straightening. Keratin botox focuses more on nourishing dry, damaged hair and adding shine, and keeps more of the hair’s natural movement."
+      ]
+    },
+    {
+      "heading": "Who is it for?",
+      "body": [
+        "Frizzy, wavy or staticky hair, hair worn out by coloring and lightening, and hair that loses its shape in humidity benefit most from a keratin treatment.",
+        "If you are pregnant or breastfeeding, or have a sensitive scalp, we recommend letting the salon know before the treatment. The right type of treatment is chosen together at the consultation."
+      ]
+    },
+    {
+      "heading": "Other treatments: gloss, hair glaze, Authentic salon treatment",
+      "body": [
+        "The gloss service and hair glaze revive the color in colored hair and add shine to the surface. The Authentic salon treatment is an intensive repair treatment chosen for what your hair needs. Perms and hair extensions are also among these services."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Keratin treatment prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu. Hair length and density determine the price; the exact price is given before the service."
+  },
+  "steps": {
+    "heading": "What to expect at your keratin appointment",
+    "items": [
+      { "title": "Hair analysis", "body": "Keratin smoothing or keratin botox is chosen based on your hair’s structure and your goal." },
+      { "title": "Wash and application", "body": "Your hair is washed with a clarifying shampoo, and the product is applied strand by strand." },
+      { "title": "Heat sealing", "body": "The product is sealed into the hair with a blow-dryer and flat iron." },
+      { "title": "Home care", "body": "You are told what to watch for in the first few days and which shampoo to use, so the results last longer." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about keratin treatment",
+    "items": [
+      { "q": "How much does a keratin treatment cost in Bahçeşehir?", "a": "At Emrahair, a keratin smoothing treatment is [[301244-1]], a keratin botox treatment [[301248-1]], the gloss service [[474011-1]] and hair glaze [[237974-1]]." },
+      { "q": "How long does a keratin treatment take?", "a": "It usually takes 2–4 hours, depending on hair length. The results last a few months, depending on your hair type and how you care for it at home." },
+      { "q": "Is keratin treatment bad for your hair?", "a": "With the right product and application, a keratin treatment protects and nourishes the hair. You can ask about the product used and its ingredients before your appointment; if you have any sensitivities, mention them at the consultation." },
+      { "q": "What is the difference between keratin and keratin botox?", "a": "A keratin smoothing treatment straightens the hair noticeably; keratin botox nourishes and adds shine more than it straightens, and keeps more of the hair’s natural movement." },
+      { "q": "When can I wash my hair after a keratin treatment?", "a": "It depends on the product used; after the treatment, you’ll be told how many days to wait and which shampoo to use." }
+    ]
+  }
+}

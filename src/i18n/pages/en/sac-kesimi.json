@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Women’s Haircut in Bahçeşehir — Cut & Blowout | Emrahair",
+    "description": "Women’s haircuts in Bahçeşehir: layered cuts, blunt cuts, bangs and blowouts, designed around your face and hair texture. 2026 prices and online booking."
+  },
+  "breadcrumb": "Haircut",
+  "card": {
+    "title": "Haircut & Blowout",
+    "summary": "Layered, blunt or curtain bangs: a cut designed for your face, finished with a lasting blowout."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Women’s haircut"],
+  "titleAccent": "in Bahçeşehir",
+  "lede": "A good cut keeps its shape even as it grows out. At Emrahair, your cut is designed after talking through your features, your hair’s texture and how much time you spend on your hair in the morning.",
+  "mediaAlt": "Close-up of a hairdresser trimming the ends of light-colored hair with scissors",
+  "sections": [
+    {
+      "heading": "The right cut for you",
+      "body": [
+        "A layered cut brings life to fine, straight hair that needs volume and movement; a blunt cut creates a sharp, modern line; curtain bangs soften the face and, combined with layers in long hair, frame it naturally. For wavy and frizz-prone hair, the cut balances the shape without breaking up the curl.",
+        "Before cutting, we look at how your hair falls naturally, its cowlicks and how you style it day to day. That way you can recreate the look you leave the salon with at home."
+      ]
+    },
+    {
+      "heading": "Blowouts, wavy blowouts, curling iron and Brazilian blowout",
+      "body": [
+        "A classic blowout gives a smooth, glossy finish; a wavy blowout leaves a soft wave and volume at the ends. A curling iron creates defined curls that hold. A Brazilian blowout is a smoothing treatment that reduces frizz and makes hair easier to style for weeks.",
+        "Blowouts and curls for special occasions can also be planned together with bridal and engagement hair."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Haircut and blowout prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu. Hair length determines the price; the exact price is given before the service."
+  },
+  "steps": {
+    "heading": "What to expect at your haircut appointment",
+    "items": [
+      { "title": "Consultation", "body": "We talk about styles you like, your features and how you style your hair day to day." },
+      { "title": "Wash and cut", "body": "Your hair is washed and cut to follow its natural fall." },
+      { "title": "Blow-dry and styling", "body": "Your hair is blow-dried into shape, and you are shown how to style it at home." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about haircuts",
+    "items": [
+      { "q": "How much is a women’s haircut in Bahçeşehir?", "a": "At Emrahair, a haircut is [[24-1]], a blowout [[22-1]], a wavy blowout [[221-1]] and curling-iron styling [[23-1]]." },
+      { "q": "How long does a haircut take?", "a": "Including the wash, cut and blow-dry, it usually takes between 45 minutes and 1 hour." },
+      { "q": "What haircut would suit me?", "a": "That depends on your face shape, your hair texture and how much time you spend styling. If you bring a reference photo, we’ll adapt it together before cutting." },
+      { "q": "Who does the haircuts?", "a": "Haircuts are done by Emrah Çabkur and Serdar Sezer. You can choose your stylist when you book." },
+      { "q": "Is a Brazilian blowout bad for your hair?", "a": "A Brazilian blowout is a treatment that reduces frizz. You can ask about the product used and its ingredients before your appointment; the treatment is recommended based on your hair’s condition." }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "Keratin Bakım Bahçeşehir — Keratin Botoks | Emrahair",
+    "description": "Bahçeşehir’de keratin bakım ve keratin botoks: kabarmayı azaltır, saçı pürüzsüz ve parlak gösterir. Kimlere uygun, ne kadar sürer? 2026 fiyatları ve randevu."
+  },
+  "breadcrumb": "Keratin bakım",
+  "card": {
+    "title": "Keratin & Saç Bakımı",
+    "summary": "Keratin düzleştirme, keratin botoks ve salon bakımları: parlaklık ve yumuşaklık geri gelir."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de"],
+  "titleAccent": "keratin bakım",
+  "lede": "Kabaran, elektriklenen ya da işlemlerden yorulan saçlar için: keratin bakım ve keratin botoks, saçı daha pürüzsüz, parlak ve kolay şekillenir hale getirir.",
+  "mediaAlt": "Keratin bakım sonrası pürüzsüz ve parlak düz kahve saç, arkadan",
+  "sections": [
+    {
+      "heading": "Keratin bakım nedir, ne işe yarar?",
+      "body": [
+        "Keratin, saçın doğal yapısında bulunan bir proteindir. Keratin bakımda saça keratin içerikli bir ürün uygulanır ve ısıyla saç teline sabitlenir. Sonuç, kabarmanın azaldığı, daha düz, yumuşak ve parlak görünen saçtır; sabah şekillendirme süresi de kısalır.",
+        "Keratin düzleştirici bakım belirgin bir düzleşme hedefler. Keratin botoks ise daha çok yıpranmış ve kuru saçı besleyip parlatmaya odaklanır; saçın doğal hareketini daha fazla korur."
+      ]
+    },
+    {
+      "heading": "Kimler için uygun?",
+      "body": [
+        "Kabarık, dalgalı ya da elektriklenen saçlar, boya ve açma işlemlerinden sonra yorulmuş saçlar ve nem aldığında şeklini kaybeden saçlar keratin bakımdan en çok faydalananlardır.",
+        "Hamilelik ve emzirme döneminde, ayrıca hassas saç derisinde uygulamadan önce durumunuzu salonla paylaşmanızı öneririz. Uygun bakım türü ön görüşmede birlikte seçilir."
+      ]
+    },
+    {
+      "heading": "Diğer bakımlar: parlatma, saç cilası, Authentic salon bakımı",
+      "body": [
+        "Parlatma servisi ve saç cilası, boyalı saçta rengi canlandırıp yüzeye parlaklık verir. Authentic salon bakımı, saçın ihtiyacına göre seçilen yoğun bir onarım bakımıdır. Perma ve saç kaynağı da bu hizmetler arasında yer alır."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Keratin bakım fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir. Saçın uzunluğu ve yoğunluğu fiyatı belirler; kesin fiyat işlemden önce söylenir."
+  },
+  "steps": {
+    "heading": "Keratin bakım randevunuz nasıl geçer?",
+    "items": [
+      { "title": "Saç analizi", "body": "Saçınızın yapısına ve hedefinize göre keratin düzleştirici ya da keratin botoks seçilir." },
+      { "title": "Yıkama ve uygulama", "body": "Saç arındırıcı şampuanla yıkanır, ürün tel tel uygulanır." },
+      { "title": "Isıyla sabitleme", "body": "Ürün fön ve düzleştiriciyle saça sabitlenir." },
+      { "title": "Evde bakım", "body": "Etkinin uzun sürmesi için ilk günlerde dikkat edilecekler ve uygun şampuan anlatılır." }
+    ]
+  },
+  "faq": {
+    "heading": "Keratin bakım hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de keratin bakım fiyatları ne kadar?", "a": "Emrahair’de keratin düzleştirici bakım [[301244-1]], keratin botoks bakımı [[301248-1]], parlatma servisi [[474011-1]] ve saç cilası [[237974-1]] aralığındadır." },
+      { "q": "Keratin bakım ne kadar sürer?", "a": "Saç uzunluğuna göre genellikle 2–4 saat sürer. Etkisi saç tipine ve evdeki bakıma bağlı olarak birkaç ay devam eder." },
+      { "q": "Keratin bakım zararlı mı?", "a": "Doğru ürün ve uygulamayla keratin bakım saçı korur ve besler. Kullanılan ürünü ve içeriğini randevudan önce sorabilirsiniz; hassasiyetiniz varsa ön görüşmede belirtin." },
+      { "q": "Keratin ile keratin botoks arasındaki fark nedir?", "a": "Keratin düzleştirici bakım saçı belirgin şekilde düzleştirir; keratin botoks ise düzleştirmekten çok besleyip parlatır ve saçın doğal hareketini daha fazla korur." },
+      { "q": "Keratin bakımdan sonra saç ne zaman yıkanır?", "a": "Kullanılan ürüne göre değişir; uygulama sonrası size kaç gün beklemeniz gerektiği ve hangi şampuanı kullanmanız gerektiği söylenir." }
+    ]
+  }
+}

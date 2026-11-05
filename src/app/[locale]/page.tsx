@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 
 import { routing } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { SiteNav } from '@/components/chrome/SiteNav';
 import { BookingPanel } from '@/components/chrome/BookingPanel';
 import { MotionRoot } from '@/components/chrome/MotionRoot';
@@ -18,10 +20,17 @@ import { SiteFooter } from '@/components/sections/SiteFooter';
 
 /**
  * Panfili's running order, with one section added: Work, between the
- * disciplines and the founder, because for a colourist the work is the
+ * service cards and the founder, because for a colorist the work is the
  * argument. Every section is a server component; the nav, the booking
  * panel and MotionRoot are the only client islands.
  */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) return {};
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  return pageMetadata({ locale, route: '/', title: t('title'), description: t('description') });
+}
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();

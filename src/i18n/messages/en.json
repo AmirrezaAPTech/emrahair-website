@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Emrahair — Air Touch Balayage, Colour & Cuts | Bahçeşehir, Istanbul",
-    "description": "Emrah Çabkur’s salon in Bahçeşehir: Air Touch balayage, colour, cuts, keratin, nails and waxing. Every price, and online booking.",
+    "title": "Hair Salon in Bahçeşehir — Air Touch Balayage | Emrahair",
+    "description": "Women’s hair salon in Bahçeşehir 1. Kısım, Istanbul: Air Touch balayage, hair color, cuts, keratin, bridal hair and nails. 2026 prices, online booking.",
     "skipToContent": "Skip to content"
   },
   "nav": {
@@ -14,20 +14,30 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "menuLabel": "Menu",
-    "index": "Price list",
-    "menuIndex": "Price list",
-    "services": "Services & Prices",
-    "work": "Work",
-    "atelier": "Emrah",
+    "index": "Services",
+    "menuIndex": "Services",
+    "services": "Services",
+    "work": "Our work",
+    "atelier": "Emrah Çabkur",
     "reviews": "Reviews",
     "contact": "Contact",
     "groups": {
-      "color": "Colour & Balayage",
+      "color": "Color & Balayage",
       "cut": "Cut & Blow-dry",
       "care": "Keratin & Care",
       "nails": "Nails",
       "brows": "Brows & Face",
       "wax": "Waxing"
+    },
+    "prices": "Prices",
+    "pages": {
+      "balyaj": "Balayage & Air Touch",
+      "sac-boyama": "Hair Color & Roots",
+      "sac-kesimi": "Haircut & Blowout",
+      "keratin": "Keratin & Hair Care",
+      "gelin-saci": "Bridal Hair & Updos",
+      "manikur-pedikur": "Manicure & Pedicure",
+      "kas-agda": "Brows & Waxing"
     }
   },
   "hours": {
@@ -42,12 +52,12 @@
     "closed": "Closed"
   },
   "hero": {
-    "eyebrow": "Air Touch Balayage · Colour · Cuts — Bahçeşehir",
+    "eyebrow": "Women's hair salon · Bahçeşehir 1. Kısım",
     "titleLines": [
-      "Colour that",
-      "catches the "
+      "Hair color and balayage",
+      "in "
     ],
-    "titleAccent": "light.",
+    "titleAccent": "Bahçeşehir.",
     "cta": "Book an appointment",
     "prices": "Price list",
     "meta": "{count} ratings · Kolay Randevu",
@@ -59,52 +69,32 @@
       "More than an "
     ],
     "titleAccent": "appointment.",
-    "lede": "<brand>Emrahair</brand> sits inside Galeria Çarşı in Bahçeşehir. Colour, cuts and care are done here by one hand, to one standard.",
+    "lede": "<brand>Emrahair</brand> is a women's hair salon in Galeria Çarşı on Kemal Sunal Caddesi, Bahçeşehir 1. Kısım. Balayage, hair color, cuts, keratin and nails are all done here, under one roof and with the same care.",
     "plateAlt": "The Emrahair styling stations: oak counters, black-framed mirrors and plants",
     "imageAlt": "The Emrahair terrace under its pergola: armchairs, tall mirrors and product shelves",
     "caption": "The terrace, Galeria Çarşı",
     "galleryAlt": "Product shelves against the orange feature wall, and the salon beyond",
-    "manifesto": "Every head of hair is listened to first: its structure, its history, the way you live. Only then is the formula built. The result is colour that stays with you for weeks after you leave the chair.",
-    "cta": "Meet Emrah"
+    "manifesto": "We start by listening to your hair: its texture, its history, your daily routine. Only then do we mix the formula. The result is color that still looks right weeks after you leave the chair.",
+    "cta": "Meet Emrah Çabkur"
   },
   "services": {
-    "eyebrow": "Disciplines",
+    "eyebrow": "Our services",
     "titleLines": [
-      "Five disciplines.",
-      "One "
+      "From balayage to manicures, "
     ],
-    "titleAccent": "standard.",
-    "cta": "Book an appointment",
+    "titleAccent": "in one salon.",
+    "cta": "All prices",
     "from": "From {price}",
-    "color": {
-      "title": "Colour & Balayage",
-      "summary": "Air Touch, balayage, sombré and root colour: tones built on analysis, lifted without damage."
-    },
-    "cut": {
-      "title": "Cut & Blow-dry",
-      "summary": "Cuts shaped to your face and texture — forms that hold as they grow out."
-    },
-    "care": {
-      "title": "Keratin & Care",
-      "summary": "Keratin smoothing, keratin botox and salon treatments that bring back shine and softness."
-    },
-    "bridal": {
-      "title": "Bridal & Occasion",
-      "summary": "Bridal hair, engagement styles, updos and braids — planned ahead, in place all day."
-    },
-    "beauty": {
-      "title": "Nails · Brows · Wax",
-      "summary": "Manicure, pedicure, gel polish, brows and waxing — with Gizem’s care for detail."
-    }
+    "more": "Learn more"
   },
   "work": {
-    "eyebrow": "Work",
+    "eyebrow": "Our work",
     "titleLines": [
-      "Work you "
+      "Fresh from "
     ],
-    "titleAccent": "can see.",
-    "lede": "What leaves the Emrahair chair: colour, cuts and results, on real guests.",
-    "cta": "See everything on Instagram",
+    "titleAccent": "our chairs.",
+    "lede": "Real guests, photographed at Emrahair: balayage, color and cuts.",
+    "cta": "See more on Instagram",
     "tiles": {
       "a1": {
         "label": "Honey-blonde layers",
@@ -141,54 +131,54 @@
     }
   },
   "atelier": {
-    "eyebrow": "Expertise",
+    "eyebrow": "Founder",
     "titleLines": [
-      "The art of "
+      "Emrah "
     ],
-    "titleAccent": "expertise.",
+    "titleAccent": "Çabkur.",
     "bodyLines": [
-      "Emrahair is shaped by the expertise of Emrah Çabkur, a hairdresser and colourist who has given his career to colour and cutting, and who is today recognised as Echosline’s Türkiye Ambassador.",
-      "His journey began with cutting; over time he put reading hair — its structure, its colour, its light — at the centre of his work. Today he is known above all for Air Touch balayage and for tones lifted without damage. At his salon in Bahçeşehir, colour, cuts, keratin treatments, nails and waxing come together under one roof.",
-      "At Emrahair, expertise means more than technical skill. It is the combination of experience, precision, artistry and an understanding of what makes every guest unique."
+      "Emrah Çabkur, who founded Emrahair, is a hairdresser who specializes in hair color and cutting. Today he is the Türkiye Ambassador for Echosline, the Italian professional hair brand.",
+      "His specialty is Air Touch balayage and blonde tones lifted without damage. The words guests use most often in their reviews are clear advice, trust and care.",
+      "At his salon in Bahçeşehir, a team of five covers color, cuts, keratin treatments, bridal hair, nails and waxing under one roof."
     ],
-    "cta": "Request your specialist",
-    "imageAlt": "Emrah Çabkur applying colour with foils in a brick-walled salon",
+    "cta": "Book an appointment",
+    "imageAlt": "Emrah Çabkur applying color with foils in a brick-walled salon",
     "team": {
       "eyebrow": "The team",
       "titleLines": [
-        "Behind the "
+        "The Emrahair "
       ],
-      "titleAccent": "experience.",
+      "titleAccent": "team.",
       "portraitAlt": "{name}, {role}",
       "emrah": {
         "name": "Emrah Çabkur",
-        "role": "Founder · Colourist · Echosline Ambassador"
+        "role": "Founder · Colorist · Echosline Ambassador"
       },
       "serdar": {
         "name": "Serdar Sezer",
-        "role": "Hairdresser · Cut & colour"
+        "role": "Hairdresser · Cut & color"
       },
       "merve": {
         "name": "Merve Aydemir",
-        "role": "Colour & blow-dry"
+        "role": "Color & blow-dry"
       },
       "zeynep": {
         "name": "Zeynep Aydemir",
-        "role": "Colour, blow-dry & updos"
+        "role": "Color, blow-dry & updos"
       },
       "gizem": {
         "name": "Gizem Değişener",
         "role": "Nails, brows & waxing"
       }
-    }
+    },
+    "more": "About Emrah Çabkur"
   },
   "testimonials": {
     "eyebrow": "Guest reviews",
     "titleLines": [
-      "The salon guests ",
-      "keep coming "
+      "What our guests "
     ],
-    "titleAccent": "back to.",
+    "titleAccent": "say.",
     "countKr": "{count} Kolay Randevu ratings",
     "countGoogle": "{score} on Google · {count} reviews",
     "cta": "All {count} reviews on Kolay Randevu"
@@ -199,12 +189,12 @@
     "cta": "{handle} on Instagram"
   },
   "invitation": {
-    "eyebrow": "Appointments",
+    "eyebrow": "Book online",
     "titleLines": [
-      "The next chair "
+      "Your new look is "
     ],
-    "titleAccent": "is yours.",
-    "cta": "Choose services & book",
+    "titleAccent": "a click away.",
+    "cta": "Choose services and book",
     "whatsapp": "Message us on WhatsApp"
   },
   "footer": {
@@ -215,18 +205,22 @@
     "bookAppointment": "Book online",
     "rights": "© {year} Emrahair · Bahçeşehir, Istanbul",
     "kolayRandevu": "Kolay Randevu page",
-    "directions": "Directions"
+    "directions": "Directions",
+    "salon": "Salon",
+    "priceList": "2026 price list",
+    "founder": "Emrah Çabkur",
+    "contactPage": "Contact & directions"
   },
   "menu": {
     "meta": {
-      "title": "Services and Prices — Emrahair Bahçeşehir",
-      "description": "Every Emrahair service and price: balayage, colour, cuts, keratin, nails, brows and waxing. Choose your services and confirm on Kolay Randevu."
+      "title": "Hair Salon Prices 2026 in Bahçeşehir — Emrahair",
+      "description": "Emrahair's 2026 price list: balayage, hair color, haircuts, keratin, bridal hair, manicure, brows and waxing. 48 services with clear prices; book online."
     },
-    "eyebrow": "Services & prices",
+    "eyebrow": "2026 price list",
     "titleLines": [
-      "The whole menu, "
+      "Hair salon prices in Bahçeşehir, "
     ],
-    "titleAccent": "priced in the open.",
+    "titleAccent": "2026.",
     "lede": "These are the prices the salon publishes on Kolay Randevu. Ranges depend on length and density; the exact price is given at the chair, before anything starts. Choose your services, pick your stylist, and confirm the date and time on Kolay Randevu.",
     "label": "Price list",
     "jump": "Categories",
@@ -238,8 +232,8 @@
     },
     "groups": {
       "color": {
-        "title": "Colour & Balayage",
-        "note": "Air Touch, balayage and root colour. Every colour service starts with a consultation."
+        "title": "Color & Balayage",
+        "note": "Air Touch, balayage and root color. Every color service starts with a consultation."
       },
       "cut": {
         "title": "Cut, Blow-dry & Styling",
@@ -265,7 +259,8 @@
     "addLabel": "Add {service}",
     "source": "Source: the salon’s Kolay Randevu page, 4 November 2026. Prices are indicative; the salon confirms the current price.",
     "clear": "Clear",
-    "continue": "Continue to booking"
+    "continue": "Continue to booking",
+    "groupPage": "Service page"
   },
   "booking": {
     "eyebrow": "Book online",
@@ -291,8 +286,8 @@
     "onRequest": "Priced at the salon",
     "staff": {
       "lede": "Who would you like for your hair services?",
-      "emrah": "Founder · colour and balayage specialist",
-      "serdar": "Cuts, colour and care",
+      "emrah": "Founder · color and balayage specialist",
+      "serdar": "Cuts, color and care",
       "anyTitle": "No preference",
       "any": "First available stylist",
       "gap": "Doesn’t offer: {services}",
@@ -316,5 +311,22 @@
     "back": "Back",
     "continue": "Continue",
     "whatsapp": "Or message us on WhatsApp"
+  },
+  "service": {
+    "home": "Home",
+    "breadcrumbLabel": "Breadcrumb",
+    "book": "Book an appointment",
+    "seePrices": "Prices",
+    "allPrices": "Full price list",
+    "staff": "Stylist",
+    "add": "Select",
+    "added": "Selected",
+    "related": "Other services",
+    "relatedMore": "Learn more",
+    "stepsLabel": "Step",
+    "contactLine": "Bahçeşehir 1. Kısım, Galeria Çarşı · {phone}",
+    "founderLink": "About Emrah Çabkur",
+    "priceFrom": "Starting at",
+    "where": "Salon"
   }
 }

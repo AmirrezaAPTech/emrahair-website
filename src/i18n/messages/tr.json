@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Emrahair — Air Touch Balyaj, Renk & Kesim | Bahçeşehir",
-    "description": "Emrah Çabkur’un Bahçeşehir’deki salonu: Air Touch balyaj, renk, kesim, keratin, tırnak ve ağda. Tüm fiyatlar ve online randevu.",
+    "title": "Bahçeşehir Kuaför — Air Touch Balyaj & Saç Kesimi | Emrahair",
+    "description": "Bahçeşehir 1. Kısım’da bayan kuaförü Emrahair: Air Touch balyaj, saç boyama, kesim, keratin, gelin saçı ve manikür. 2026 fiyatları ve online randevu.",
     "skipToContent": "İçeriğe geç"
   },
   "nav": {
@@ -14,11 +14,11 @@
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
     "menuLabel": "Menü",
-    "index": "Fiyat listesi",
-    "menuIndex": "Fiyat listesi",
-    "services": "Hizmetler & Fiyatlar",
+    "index": "Hizmetler",
+    "menuIndex": "Hizmetler",
+    "services": "Hizmetler",
     "work": "Çalışmalar",
-    "atelier": "Emrah",
+    "atelier": "Emrah Çabkur",
     "reviews": "Yorumlar",
     "contact": "İletişim",
     "groups": {
@@ -28,6 +28,16 @@
       "nails": "Tırnak",
       "brows": "Kaş & Yüz",
       "wax": "Ağda"
+    },
+    "prices": "Fiyatlar",
+    "pages": {
+      "balyaj": "Balyaj & Air Touch",
+      "sac-boyama": "Saç Boyama & Dip Boya",
+      "sac-kesimi": "Saç Kesimi & Fön",
+      "keratin": "Keratin & Saç Bakımı",
+      "gelin-saci": "Gelin Saçı & Topuz",
+      "manikur-pedikur": "Manikür & Pedikür",
+      "kas-agda": "Kaş & Ağda"
     }
   },
   "hours": {
@@ -42,10 +52,10 @@
     "closed": "Kapalı"
   },
   "hero": {
-    "eyebrow": "Air Touch Balyaj · Renk · Kesim — Bahçeşehir",
+    "eyebrow": "Bayan kuaförü · Bahçeşehir 1. Kısım",
     "titleLines": [
-      "Saçınıza ışık",
-      "katan "
+      "Bahçeşehir’de",
+      "saçınıza ışık katan "
     ],
     "titleAccent": "eller.",
     "cta": "Randevu oluştur",
@@ -59,52 +69,32 @@
       "Bir randevudan "
     ],
     "titleAccent": "fazlası.",
-    "lede": "<brand>Emrahair</brand>, Bahçeşehir’de Galeria Çarşı’nın içinde. Renk, kesim ve bakım burada tek bir elden, aynı titizlikle yapılır.",
+    "lede": "<brand>Emrahair</brand>, Bahçeşehir 1. Kısım’da Kemal Sunal Caddesi’ndeki Galeria Çarşı’da bir bayan kuaförü. Balyaj, saç boyama, kesim, keratin ve tırnak bakımı burada aynı titizlikle, tek çatı altında yapılır.",
     "plateAlt": "Emrahair’in koltukları: meşe tezgâhlar, siyah çerçeveli aynalar ve bitkiler",
     "imageAlt": "Emrahair’in pergolalı terası: koltuklar, boy aynaları ve ürün rafları",
     "caption": "Teras, Galeria Çarşı",
     "galleryAlt": "Turuncu duvarın önünde ürün rafları ve salonun içi",
-    "manifesto": "Her saç önce dinlenir: yapısı, geçmişi, yaşam ritmi. Formül ondan sonra kurulur. Sonuç, salondan çıktıktan haftalar sonra bile sizinle kalan bir renk.",
-    "cta": "Emrah Bey’i tanıyın"
+    "manifesto": "Her saç önce dinlenir: yapısı, geçmişi, günlük düzeniniz. Formül ondan sonra kurulur. Sonuç, salondan çıktıktan haftalar sonra bile sizinle kalan bir renk.",
+    "cta": "Emrah Çabkur’u tanıyın"
   },
   "services": {
-    "eyebrow": "Uzmanlıklar",
+    "eyebrow": "Hizmetlerimiz",
     "titleLines": [
-      "Beş uzmanlık.",
-      "Tek "
+      "Balyajdan maniküre, "
     ],
-    "titleAccent": "standart.",
-    "cta": "Randevu oluştur",
-    "from": "Başlangıç {price}",
-    "color": {
-      "title": "Renk & Balyaj",
-      "summary": "Air Touch, balyaj, sombre ve dip boyama: ton analiziyle kurulan, saçı yıpratmadan açan renkler."
-    },
-    "cut": {
-      "title": "Kesim & Fön",
-      "summary": "Yüz hatlarına ve saç dokusuna göre kesim; uzarken bile formunu koruyan şekiller."
-    },
-    "care": {
-      "title": "Keratin & Bakım",
-      "summary": "Keratin düzleştirme, botoks ve salon bakımları; parlaklığı ve yumuşaklığı geri getirir."
-    },
-    "bridal": {
-      "title": "Gelin & Özel Gün",
-      "summary": "Gelin başı, nişan saçı, topuz ve örgü; önceden planlanır, gün boyu yerinde kalır."
-    },
-    "beauty": {
-      "title": "Tırnak · Kaş · Ağda",
-      "summary": "Manikür, pedikür, kalıcı oje, kaş ve ağda — Gizem Hanım’ın titizliğiyle."
-    }
+    "titleAccent": "tek salonda.",
+    "cta": "Tüm fiyatlar",
+    "from": "{price} başlayan fiyatlarla",
+    "more": "İncele"
   },
   "work": {
-    "eyebrow": "Çalışmalar",
+    "eyebrow": "Çalışmalarımız",
     "titleLines": [
       "Ellerimizden "
     ],
     "titleAccent": "çıkanlar.",
-    "lede": "Emrahair koltuğundan çıkanlar: renkler, kesimler ve sonuçlar, gerçek misafirlerle.",
-    "cta": "Instagram’da tümünü gör",
+    "lede": "Emrahair koltuğunda, gerçek misafirlerle: balyaj, renk ve kesim çalışmaları.",
+    "cta": "Instagram’da tümünü görün",
     "tiles": {
       "a1": {
         "label": "Bal sarısı katlar",
@@ -141,24 +131,24 @@
     }
   },
   "atelier": {
-    "eyebrow": "Uzmanlık",
+    "eyebrow": "Kurucu",
     "titleLines": [
-      "Uzmanlığın "
+      "Emrah "
     ],
-    "titleAccent": "sanatı.",
+    "titleAccent": "Çabkur.",
     "bodyLines": [
-      "Emrahair, Emrah Çabkur’un uzmanlığıyla şekilleniyor: kendini saç rengine ve kesime adamış, bugün Echosline Türkiye Ambassador’ı olarak tanınan bir kuaför ve renk uzmanı.",
-      "Yolculuğu kesimle başladı; zamanla saçın yapısını, rengini ve ışığı okumayı işinin merkezine koydu. Bugün özellikle Air Touch balyaj ve saçı yıpratmadan açılan tonlarla tanınıyor. Bahçeşehir’deki salonunda renk, kesim, keratin bakımları, tırnak ve ağda tek bir çatı altında buluşuyor.",
-      "Emrahair’de uzmanlık teknik beceriden fazlası demek: deneyimin, titizliğin, sanatsal bakışın ve her misafiri özel kılan şeyi anlamanın birleşimi."
+      "Emrahair’i kuran Emrah Çabkur, saç rengi ve kesim üzerine çalışan bir kuaför. Bugün İtalyan profesyonel saç markası Echosline’ın Türkiye Ambassador’ı.",
+      "Uzmanlığı Air Touch balyaj ve saçı yıpratmadan açılan sarı tonlar. Misafir yorumlarında en sık geçen kelimeler bilgilendirme, güven ve titizlik.",
+      "Bahçeşehir’deki salonunda renk, kesim, keratin bakımları, gelin saçı, tırnak ve ağda, beş kişilik bir ekiple tek çatı altında yapılıyor."
     ],
-    "cta": "Uzmanınızı seçin",
+    "cta": "Randevu oluştur",
     "imageAlt": "Emrah Çabkur, tuğla duvarlı salonda bir misafirinin saçına folyo ile renk uyguluyor",
     "team": {
       "eyebrow": "Ekip",
       "titleLines": [
-        "Deneyimin "
+        "Emrahair "
       ],
-      "titleAccent": "arkasındakiler.",
+      "titleAccent": "ekibi.",
       "portraitAlt": "{name}, {role}",
       "emrah": {
         "name": "Emrah Çabkur",
@@ -180,15 +170,15 @@
         "name": "Gizem Değişener",
         "role": "Tırnak, kaş & ağda"
       }
-    }
+    },
+    "more": "Emrah Çabkur hakkında"
   },
   "testimonials": {
     "eyebrow": "Misafir yorumları",
     "titleLines": [
-      "Tekrar tekrar ",
-      "gelinen "
+      "Misafirlerimiz "
     ],
-    "titleAccent": "salon.",
+    "titleAccent": "ne diyor?",
     "countKr": "{count} Kolay Randevu puanı",
     "countGoogle": "Google’da {score} · {count} yorum",
     "cta": "Kolay Randevu’daki {count} yorumun tümü"
@@ -199,12 +189,12 @@
     "cta": "Instagram’da {handle}"
   },
   "invitation": {
-    "eyebrow": "Randevu",
+    "eyebrow": "Online randevu",
     "titleLines": [
-      "Sıradaki koltuk "
+      "Yeni saçınız "
     ],
-    "titleAccent": "sizin.",
-    "cta": "Hizmet seç & randevu al",
+    "titleAccent": "bir tık uzakta.",
+    "cta": "Hizmet seçin, randevu alın",
     "whatsapp": "WhatsApp’tan yazın"
   },
   "footer": {
@@ -215,18 +205,22 @@
     "bookAppointment": "Online randevu",
     "rights": "© {year} Emrahair · Bahçeşehir, İstanbul",
     "kolayRandevu": "Kolay Randevu sayfası",
-    "directions": "Yol tarifi"
+    "directions": "Yol tarifi",
+    "salon": "Salon",
+    "priceList": "Fiyat listesi 2026",
+    "founder": "Emrah Çabkur",
+    "contactPage": "İletişim ve adres"
   },
   "menu": {
     "meta": {
-      "title": "Hizmetler ve Fiyatlar — Emrahair Bahçeşehir",
-      "description": "Emrahair’in tüm hizmetleri ve fiyatları: balyaj, renk, kesim, keratin, tırnak, kaş ve ağda. Hizmetlerinizi seçin, randevunuzu Kolay Randevu’da onaylayın."
+      "title": "Bahçeşehir Kuaför Fiyatları 2026 — Emrahair",
+      "description": "Emrahair 2026 fiyat listesi: balyaj, saç boyama, saç kesimi, keratin bakım, gelin saçı, manikür, kaş ve ağda. 48 hizmet açık fiyatlarla; online randevu."
     },
-    "eyebrow": "Hizmetler & fiyatlar",
+    "eyebrow": "Fiyat listesi 2026",
     "titleLines": [
-      "Tüm menü, "
+      "Bahçeşehir kuaför "
     ],
-    "titleAccent": "açık fiyatlarla.",
+    "titleAccent": "fiyatları 2026.",
     "lede": "Fiyatlar, salonun Kolay Randevu’da yayımladığı listedir. Aralıklı fiyatlar saçın uzunluğuna ve yoğunluğuna göre değişir; kesin fiyat işlemden önce, koltukta söylenir. Hizmetlerinizi seçin, uzmanınızı belirleyin, tarih ve saati Kolay Randevu’da onaylayın.",
     "label": "Fiyat listesi",
     "jump": "Kategoriler",
@@ -265,7 +259,8 @@
     "addLabel": "{service} ekle",
     "source": "Kaynak: salonun Kolay Randevu sayfası, 4 Kasım 2026. Fiyatlar bilgi amaçlıdır; güncel fiyatı salon teyit eder.",
     "clear": "Temizle",
-    "continue": "Randevuya devam"
+    "continue": "Randevuya devam",
+    "groupPage": "Hizmet sayfası"
   },
   "booking": {
     "eyebrow": "Online randevu",
@@ -316,5 +311,22 @@
     "back": "Geri",
     "continue": "Devam",
     "whatsapp": "Ya da WhatsApp’tan yazın"
+  },
+  "service": {
+    "home": "Ana sayfa",
+    "breadcrumbLabel": "Sayfa konumu",
+    "book": "Randevu oluştur",
+    "seePrices": "Fiyatlar",
+    "allPrices": "Tüm fiyat listesi",
+    "staff": "Uzman",
+    "add": "Seç",
+    "added": "Seçildi",
+    "related": "Diğer hizmetler",
+    "relatedMore": "İncele",
+    "stepsLabel": "Adım",
+    "contactLine": "Bahçeşehir 1. Kısım, Galeria Çarşı · {phone}",
+    "founderLink": "Emrah Çabkur hakkında",
+    "priceFrom": "Başlangıç fiyatı",
+    "where": "Salon"
   }
 }

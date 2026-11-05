@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Gelin Saçı Bahçeşehir — Nişan Saçı & Topuz | Emrahair",
+    "description": "Bahçeşehir’de gelin saçı, nişan saçı, topuz, örgü ve at kuyruğu. Düğün gününe kadar planlanan, gün boyu yerinde kalan saç. 2026 fiyatları ve online randevu."
+  },
+  "breadcrumb": "Gelin saçı",
+  "card": {
+    "title": "Gelin Saçı & Topuz",
+    "summary": "Gelin başı, nişan saçı, topuz ve örgü: önceden planlanır, gün boyu yerinde kalır."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Bahçeşehir’de gelin saçı"],
+  "titleAccent": "ve nişan saçı",
+  "lede": "Düğün, nişan ya da kına: o gün saçınızın fotoğrafta da, gecenin sonunda da aynı kalması gerekir. Emrahair’de gelin saçı, elbiseniz, aksesuarınız ve gününüzün planıyla birlikte tasarlanır.",
+  "mediaAlt": "Yumuşak topuzlu gelin saçı, yandan",
+  "sections": [
+    {
+      "heading": "Gelin saçı modelleri",
+      "body": [
+        "Topuz modelleri klasik ve şık bir duruş verir; düşük topuz sade gelinliklerle, yüksek topuz duvak ve taçla iyi uyum sağlar. Yarım toplama ve açık dalgalı saç romantik ve doğal bir görünüm ister gelinlerin tercihidir. Örgülü modeller ve şık at kuyruğu ise kına ve nişan gibi uzun ve hareketli gecelerde rahatlık sağlar.",
+        "Model seçerken elbisenin yakası, saçınızın uzunluğu ve yoğunluğu, kullanacağınız duvak ya da taç ve günün ne kadar süreceği birlikte düşünülür."
+      ]
+    },
+    {
+      "heading": "Saçınızı düğüne nasıl hazırlamalı?",
+      "body": [
+        "Renk ya da balyaj düşünüyorsanız düğünden birkaç hafta önce yaptırmak, tonun oturması ve gerekirse düzeltme için zaman bırakır. Keratin bakım gibi işlemleri de son haftaya bırakmamak daha güvenlidir.",
+        "Gün öncesinde yoğun yağlı bakımlardan kaçınmak, saçın modeli daha iyi tutmasını sağlar. Hazırlık takvimini randevu sırasında birlikte planlayabiliriz."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Gelin saçı ve topuz fiyatları 2026",
+    "intro": "Fiyatlar salonun Kolay Randevu’da yayımladığı listedir. Modelin zorluğu, saçın uzunluğu ve aksesuar kullanımı fiyatı belirler."
+  },
+  "steps": {
+    "heading": "Gelin saçı randevusu nasıl planlanır?",
+    "items": [
+      { "title": "Erken randevu", "body": "Düğün tarihiniz belli olduğunda randevunuzu alın; özel günler hızla dolar." },
+      { "title": "Model ve hazırlık", "body": "Elbise, aksesuar ve beğendiğiniz modellerin fotoğraflarıyla model belirlenir." },
+      { "title": "Düğün günü", "body": "Saçınız sabitleyici ürünlerle, gün boyu yerinde kalacak şekilde hazırlanır." }
+    ]
+  },
+  "faq": {
+    "heading": "Gelin saçı hakkında sık sorulan sorular",
+    "items": [
+      { "q": "Bahçeşehir’de gelin saçı fiyatları ne kadar?", "a": "Emrahair’de gelin başı [[28-1]], nişan saçı [[232-1]], topuz [[25-1]] ve örgü [[752-1]] aralığındadır." },
+      { "q": "Gelin saçı randevusu ne kadar önceden alınmalı?", "a": "Özellikle yaz ve hafta sonu düğünlerinde birkaç hafta önceden almanızı öneririz. Kolay Randevu’da uygun saatleri görerek randevunuzu hemen oluşturabilirsiniz." },
+      { "q": "Gelin saçı ne kadar sürer?", "a": "Modelin zorluğuna göre genellikle 1–2 saat sürer. Düğün günü program yaparken bu süreyi ve makyaj süresini birlikte hesaba katın." },
+      { "q": "Saçım kısa, gelin topuzu yapılır mı?", "a": "Omuz hizasındaki saçlarda da düşük topuz ve yarım toplama modelleri yapılabilir; çok kısa saçlarda aksesuarla desteklenen modeller önerilir." },
+      { "q": "Nişan saçı ile gelin saçı arasındaki fark nedir?", "a": "Nişan saçı genellikle daha sade ve açık modellerdir; gelin saçı duvak ve taç gibi aksesuarlar ve gün boyu kalıcılık için daha yoğun hazırlanır." }
+    ]
+  }
+}

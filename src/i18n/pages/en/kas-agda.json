@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Waxing & Brows in Bahçeşehir — Brow Tinting | Emrahair",
+    "description": "Waxing, eyebrow shaping, brow tinting and upper lip in Bahçeşehir: partial and full-body waxing by Gizem Değişener. 2026 prices and online booking."
+  },
+  "breadcrumb": "Brows & waxing",
+  "card": {
+    "title": "Brows & Waxing",
+    "summary": "Eyebrow shaping, brow tinting, upper lip, and partial or full-body waxing."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Waxing & brows"],
+  "titleAccent": "in Bahçeşehir",
+  "lede": "At Emrahair, eyebrow shaping, brow tinting and waxing are done by Gizem Değişener, with care and attention to hygiene. They are easy to add before or after your hair appointment.",
+  "mediaAlt": "",
+  "sections": [
+    {
+      "heading": "Eyebrow shaping and brow tinting",
+      "body": [
+        "Eyebrow shaping refines the natural shape of your brows to suit your features. Brow tinting adds color and fullness to light or sparse brows. Done together, they make brows look more defined and groomed. Upper lip and chin can be done in the same appointment."
+      ]
+    },
+    {
+      "heading": "Partial and full-body waxing",
+      "body": [
+        "Areas such as underarms, arms and legs can be waxed individually, or all together as a full-body wax in one session. Coming with clean, dry skin, and avoiding hot showers, sun and pools for a few days afterward, helps your skin settle."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Waxing and brow prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu."
+  },
+  "steps": {
+    "heading": "What to expect at your appointment",
+    "items": [
+      { "title": "Choosing areas", "body": "We talk through which areas to wax and the shape of your brows." },
+      { "title": "Treatment", "body": "Your skin is cleansed, then the waxing or brow service is done." },
+      { "title": "Aftercare", "body": "A soothing treatment is applied, and you are told what to watch for at home." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about waxing and brows",
+    "items": [
+      { "q": "How much does waxing cost in Bahçeşehir?", "a": "At Emrahair, underarm waxing is [[571323-1]], arms [[571322-1]], legs [[571325-1]], partial waxing [[40-1]] and full-body waxing [[41-1]]." },
+      { "q": "How much are eyebrow shaping and brow tinting?", "a": "Eyebrow shaping is [[35-1]], brow tinting [[175-1]] and upper lip [[38-1]]." },
+      { "q": "How long should hair be for waxing?", "a": "For the best results, hair should be about 0.5 cm long." },
+      { "q": "How long does brow tint last?", "a": "Usually 2–4 weeks, depending on your brows and how you care for them." }
+    ]
+  }
+}

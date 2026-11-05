@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--col-gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+  padding-top: var(--space-s);
+  border-top: 1px solid var(--rule);
+}
+
+.value {
+  font-style: normal;
+  font-size: var(--t-body);
+  line-height: 1.6;
+  color: var(--fg);
+}
+
+.value a {
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.value a:hover,
+.value a:focus-visible {
+  color: var(--accent);
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+  font-size: var(--t-body);
+}
+
+.hours > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hours dd {
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
+.mapRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+  gap: var(--col-gap);
+  align-items: start;
+  margin-top: var(--space-2xl);
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-l);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid,
+  .mapRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

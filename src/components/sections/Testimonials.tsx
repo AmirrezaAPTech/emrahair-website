@@ -55,7 +55,7 @@ function Row({ items, reverse }: { items: readonly Review[]; reverse?: boolean }
 export async function Testimonials() {
   const t = await getTranslations('testimonials');
   const locale = await getLocale();
-  const fmt = (n: number) => n.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-GB');
+  const fmt = (n: number) => n.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-US');
 
   return (
     <section className={`${styles.wrap} on-light`} id="reviews" aria-labelledby="testimonials-title">

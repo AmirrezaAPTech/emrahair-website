@@ -21,7 +21,7 @@ export async function Hero({ locale }: { locale: string }) {
     props: { srcSet: mobileSrcSet },
   } = getImageProps({ ...common, src: heroPosterMobile, width: 720, height: 1280 });
 
-  const score = ratings.kolayRandevu.score.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-GB');
+  const score = ratings.kolayRandevu.score.toLocaleString(locale === 'tr' ? 'tr-TR' : 'en-US');
 
   return (
     <section className={`${styles.hero} on-dark grain`} id="top" data-hero>

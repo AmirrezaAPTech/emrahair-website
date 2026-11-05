@@ -83,6 +83,17 @@ for (const [key, [file, t, d]] of Object.entries(clips)) {
   video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', String(d), '-i', src('stock', file)], 'scale=540:-2,fps=30', 27);
 }
 
+/* The hair-colour page's film is the salon's own: reel 1, the brush going
+   through a root colour at about 15s. Not stock, so it is the one clip that
+   shows this salon's hands. */
+video(out('public/videos/services/dye.mp4'), ['-ss', '15', '-t', '5', '-i', src('reels', '1.mp4')], 'scale=540:-2,fps=30', 27);
+
+/* Posters for the service pages' hero film: its opening frame, so the page
+   paints a picture before the video has loaded (and for Reduce Motion). */
+for (const key of [...Object.keys(clips), 'dye']) {
+  poster(out(`src/assets/images/services/${key}.jpg`), out(`public/videos/services/${key}.mp4`), 0, 'scale=540:-2');
+}
+
 /* --- Çalışmalar: the client's files, "Çalışmalar*" in Downloads, in
    alphabetical order. The HEIC photos are converted to JPEG with Windows'
    own decoder first (sharp's build has no HEVC), see media-src/calismalar/

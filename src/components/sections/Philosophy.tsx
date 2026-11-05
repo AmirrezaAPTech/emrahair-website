@@ -5,7 +5,7 @@ import stations from '@/assets/images/salon/stations.jpg';
 import terrace from '@/assets/images/salon/terrace.jpg';
 import productWall from '@/assets/images/salon/product-wall.jpg';
 import { Headline } from '@/components/ui/Headline';
-import { ArrowLink } from '@/components/ui/LinkArrow';
+import { Link } from '@/i18n/navigation';
 import styles from './Philosophy.module.css';
 
 /**
@@ -77,9 +77,10 @@ export async function Philosophy() {
           {t('manifesto')}
         </p>
 
-        <ArrowLink href="#atelier" className={styles.cta}>
-          {t('cta')}
-        </ArrowLink>
+        <Link href="/emrah-cabkur" className={`link-arrow ${styles.cta}`} data-reveal>
+          <span>{t('cta')}</span>
+          <span className="link-arrow__line" aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );

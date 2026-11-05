@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { routing, localeLabel, localeShort, type Locale, type RouteKey } from '@/i18n/routing';
 import { SECTIONS, contact, hours } from '@/lib/site';
-import { HEADER_NAV, MENU_GROUPS } from '@/lib/nav';
+import { HEADER_NAV, MENU_PAGES } from '@/lib/nav';
 import { Wordmark } from '@/components/ui/Wordmark';
 import { gsap } from '@/motion/lib/gsap';
 import { prefersReducedMotion, qsa } from '@/motion/lib/env';
@@ -402,10 +402,10 @@ export function SiteNav({
             <div className={styles.indexGroup}>
               <h2 className={`eyebrow eyebrow--muted ${styles.indexHeading}`}>{t('menuIndex')}</h2>
               <ul className={styles.indexList}>
-                {MENU_GROUPS.map((g) => (
-                  <li key={g}>
-                    <Link className={styles.indexLink} href={{ pathname: '/hizmetler', hash: g }} onClick={close}>
-                      {t(`groups.${g}`)}
+                {MENU_PAGES.map((p) => (
+                  <li key={p.key}>
+                    <Link className={styles.indexLink} href={p.route} onClick={close}>
+                      {t(`pages.${p.key}`)}
                     </Link>
                   </li>
                 ))}

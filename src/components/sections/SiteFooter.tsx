@@ -4,19 +4,17 @@ import { contact, hours, booking } from '@/lib/site';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import { Wordmark } from '@/components/ui/Wordmark';
+import { MENU_PAGES } from '@/lib/nav';
 import styles from './SiteFooter.module.css';
 
 export async function SiteFooter({ onHome = true }: { onHome?: boolean } = {}) {
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
-  const tSvc = await getTranslations('menu.groups');
   const tHours = await getTranslations('hours');
   const locale = await getLocale();
   const year = new Date().getFullYear();
   const homePath = locale === routing.defaultLocale ? '' : `/${locale}`;
   const sectionHref = (id: string) => (onHome ? `#${id}` : `${homePath}/#${id}`);
-
-  const groups = ['color', 'cut', 'care', 'nails', 'brows', 'wax'] as const;
 
   return (
     <footer className={`${styles.foot} on-light`} id="contact">
@@ -40,13 +38,18 @@ export async function SiteFooter({ onHome = true }: { onHome?: boolean } = {}) {
             <div className={styles.col}>
               <h2 className="eyebrow eyebrow--muted">{t('services')}</h2>
               <ul className={styles.list}>
-                {groups.map((g) => (
-                  <li key={g}>
-                    <Link className={styles.link} href={{ pathname: '/hizmetler', hash: g }}>
-                      {tSvc(`${g}.title`)}
+                {MENU_PAGES.map((p) => (
+                  <li key={p.key}>
+                    <Link className={styles.link} href={p.route}>
+                      {tNav(`pages.${p.key}`)}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link className={styles.link} href="/hizmetler">
+                    {t('priceList')}
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -89,6 +92,16 @@ export async function SiteFooter({ onHome = true }: { onHome?: boolean } = {}) {
         <div className={styles.bottom}>
           <p className={styles.legal}>{t('rights', { year })}</p>
           <ul className={styles.legalLinks}>
+            <li>
+              <Link className={styles.link} href="/emrah-cabkur">
+                {t('founder')}
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.link} href="/iletisim">
+                {t('contactPage')}
+              </Link>
+            </li>
             <li>
               <a className={styles.link} href={booking.salonPage} target="_blank" rel="noreferrer noopener">
                 {t('kolayRandevu')}

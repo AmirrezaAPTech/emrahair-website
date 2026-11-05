@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Manicure & Pedicure in Bahçeşehir — Gel Polish | Emrahair",
+    "description": "Manicure, pedicure and gel polish in Bahçeşehir: careful, hygienic nail care by Gizem Değişener at Galeria Çarşı. 2026 prices and online booking."
+  },
+  "breadcrumb": "Manicure & pedicure",
+  "card": {
+    "title": "Manicure & Pedicure",
+    "summary": "Manicure, pedicure and gel polish: careful, hygienic nail care by Gizem Değişener."
+  },
+  "eyebrow": "Bahçeşehir 1. Kısım · Galeria Çarşı",
+  "titleLines": ["Manicure & pedicure"],
+  "titleAccent": "in Bahçeşehir",
+  "lede": "Have your nails ready along with your hair. At Emrahair, manicures, pedicures and gel polish are done by Gizem Değişener, with care and in line with hygiene standards.",
+  "mediaAlt": "Close-up of red polish being applied to nails",
+  "sections": [
+    {
+      "heading": "Manicure and pedicure",
+      "body": [
+        "In a manicure, nails are shaped, cuticles are cleaned up and hands are moisturized with a treatment. In a pedicure, feet are softened, hardened skin is removed and nails are tidied. Both can be scheduled on the same day as your hair appointment.",
+        "The words that come up most in guest reviews are care, cleanliness and attention to detail. Guests who write “Gizem Hanım yine müthiş iş çıkarttı” (“Gizem did a wonderful job again”) say so in their Kolay Randevu and Google reviews."
+      ]
+    },
+    {
+      "heading": "Gel polish",
+      "body": [
+        "Gel polish keeps its shine and color much longer than regular polish and resists scratches. It can be applied to hands and feet separately. Removal is also done at the salon, without wearing down the nail."
+      ]
+    }
+  ],
+  "prices": {
+    "heading": "Manicure and pedicure prices 2026",
+    "intro": "Prices are the list the salon publishes on Kolay Randevu."
+  },
+  "steps": {
+    "heading": "What to expect at your appointment",
+    "items": [
+      { "title": "Preparation", "body": "Any old gel polish is removed and your nails are cleaned." },
+      { "title": "Care", "body": "Nails are shaped, cuticles are tidied and a treatment is applied." },
+      { "title": "Polish", "body": "Regular polish or gel polish is applied." }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions about manicures and pedicures",
+    "items": [
+      { "q": "How much is a manicure and pedicure in Bahçeşehir?", "a": "At Emrahair, a manicure is [[33-1]], a pedicure [[34-1]], gel polish for hands [[67-1]], gel polish for feet [[68-1]] and gel polish removal [[69-1]]." },
+      { "q": "How long does gel polish last?", "a": "It usually keeps its shine for 2–3 weeks, depending on your nails and daily wear." },
+      { "q": "How long do a manicure and pedicure take?", "a": "A manicure usually takes 45 minutes and a pedicure about 1 hour; adding gel polish makes it a little longer." },
+      { "q": "Can I get a manicure on the same day as my hair appointment?", "a": "Yes. When you book, you can add a manicure or pedicure alongside your hair service." }
+    ]
+  }
+}

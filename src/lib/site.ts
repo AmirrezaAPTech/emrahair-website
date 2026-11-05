@@ -8,13 +8,23 @@
  *   IG  instagram.com/emrahair
  */
 
+/**
+ * The public origin every canonical, hreflang, sitemap and JSON-LD URL is
+ * built on. A canonical that points at a domain the site is not served from
+ * tells Google to index nothing, so it is never hard-coded:
+ *   NEXT_PUBLIC_SITE_URL           set it when the salon's own domain goes live
+ *   VERCEL_PROJECT_PRODUCTION_URL  Vercel's production host (emrahair-website.vercel.app)
+ *   localhost                      next dev
+ */
+const origin = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000')
+).replace(/\/$/, '');
+
 export const site = {
   name: 'EMRAHAIR',
   legalName: 'Emrahair',
-  domain: 'emrahair.com',
-  /* TO CONFIRM: the domain. Until the salon names one, canonical URLs point
-     here, which only matters once the site is public. */
-  url: 'https://emrahair.com',
+  url: origin,
 } as const;
 
 export const founder = {
@@ -131,7 +141,7 @@ export type SectionId = (typeof SECTIONS)[number];
 export const TIME_ZONE = 'Europe/Istanbul';
 
 export const formatTL = (n: number, locale: string) =>
-  new Intl.NumberFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', { maximumFractionDigits: 0 }).format(n);
+  new Intl.NumberFormat(locale === 'tr' ? 'tr-TR' : 'en-US', { maximumFractionDigits: 0 }).format(n);
 
 export function priceLabel(
   price: { min: number; max?: number } | null,
