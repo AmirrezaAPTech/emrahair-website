@@ -22,7 +22,12 @@ const nextConfig: NextConfig = {
   },
 
   async headers() {
+    /* Same rule as `indexable` in lib/site.ts: noindex everything (pages,
+       images, sitemap, llms.txt) until the salon's own domain is set. */
+    const own = process.env.NEXT_PUBLIC_SITE_URL;
+    const indexable = Boolean(own) && !/\.vercel\.app\/?$/.test(own ?? '');
     return [
+      ...(indexable ? [] : [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }]),
       {
         source: '/videos/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],

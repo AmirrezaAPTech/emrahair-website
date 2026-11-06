@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { site } from '@/lib/site';
+import { site, indexable } from '@/lib/site';
 
 /**
  * Everything is public. The AI crawlers are named so the choice is explicit:
@@ -22,6 +22,8 @@ const AI_BOTS = [
 ];
 
 export default function robots(): MetadataRoute.Robots {
+  /* Not on the salon's domain yet: no sitemap to advertise. See `indexable`. */
+  if (!indexable) return { rules: [{ userAgent: '*', allow: '/' }] };
   return {
     rules: [
       { userAgent: '*', allow: '/', disallow: ['/api/'] },

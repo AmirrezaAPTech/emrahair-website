@@ -27,6 +27,16 @@ export const site = {
   url: origin,
 } as const;
 
+/**
+ * Search engines index the site only on the salon's own domain. Until
+ * NEXT_PUBLIC_SITE_URL names it, every page says noindex (meta tag and
+ * X-Robots-Tag header, see next.config.ts) and robots.txt lists no sitemap,
+ * so the temporary vercel.app address never competes with the real one.
+ * Crawling stays allowed on purpose: a crawler has to fetch a page to see
+ * its noindex, which is also what removes anything already picked up.
+ */
+export const indexable = Boolean(process.env.NEXT_PUBLIC_SITE_URL) && !/\.vercel\.app$/.test(new URL(origin).host);
+
 export const founder = {
   name: 'Emrah Çabkur',
   /** IG bio: "🇮🇹 Echosline Türkiye Ambassador". */

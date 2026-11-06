@@ -6,7 +6,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { routing, htmlLang, type Locale } from '@/i18n/routing';
-import { site } from '@/lib/site';
+import { site, indexable } from '@/lib/site';
 import { salonSchema, websiteSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/ui/JsonLd';
 import '@/styles/tokens.css';
@@ -42,6 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: { icon: '/favicon.svg', apple: '/apple-touch-icon.png' },
     other: { 'theme-color': '#17181b' },
     formatDetection: { telephone: false },
+    ...(indexable ? {} : { robots: { index: false, follow: false, googleBot: { index: false, follow: false } } }),
   };
 }
 
