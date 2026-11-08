@@ -5,7 +5,6 @@ import a1 from '@/assets/images/work/01-A.jpg';
 import a3 from '@/assets/images/work/03-A.jpg';
 import b4 from '@/assets/images/work/04-B.jpg';
 import c6 from '@/assets/images/work/06-C.jpg';
-import e8 from '@/assets/images/work/08-E.jpg';
 import vbPoster from '@/assets/images/work/edited-b-poster.jpg';
 import vePoster from '@/assets/images/work/edited-e-poster.jpg';
 import vfPoster from '@/assets/images/work/edited-f-poster.jpg';
@@ -38,7 +37,6 @@ const TILES: Tile[] = [
   { key: 'a3', kind: 'photo', src: a3 },
   { key: 'b4', kind: 'photo', src: b4 },
   { key: 'c6', kind: 'photo', src: c6 },
-  { key: 'e8', kind: 'photo', src: e8 },
 ];
 
 export async function Work() {
