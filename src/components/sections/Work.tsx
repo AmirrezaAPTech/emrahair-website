@@ -16,16 +16,14 @@ import styles from './Work.module.css';
 
 /**
  * The client's order (2026-11-08): the four edited films first, editedB as the
- * opening one, then the photographs. On a desktop the first film takes a
- * double plate (two columns by two rows), which also makes the nine tiles
- * fill a four-column grid with nothing left alone on the last row. On a phone
- * every tile is the same size on the swipe rail, in the same order.
+ * opening one, then the photographs. Every tile is the same size, in the
+ * same grid as before; only the films and their order changed.
  *
  * Videos are silent loops that play only while on screen
  * (motion/modules/service-video); each has a poster for the first paint.
  * Bump VIDEO_VERSION when they are re-encoded (the /videos cache is a year).
  */
-const VIDEO_VERSION = 2;
+const VIDEO_VERSION = 3;
 
 type Tile =
   | { key: string; kind: 'photo'; src: StaticImageData }
@@ -76,7 +74,7 @@ export async function Work() {
                       className={styles.video}
                       data-svc-video
                       src={`/videos/work/${tile.file}.mp4?v=${VIDEO_VERSION}#t=0.001`}
-                      poster={getImageProps({ src: tile.poster, alt: '', width: tile.key === 'vb' ? 1080 : 720, quality: 72 }).props.src}
+                      poster={getImageProps({ src: tile.poster, alt: '', width: 720, quality: 72 }).props.src}
                       preload="none"
                       muted
                       loop

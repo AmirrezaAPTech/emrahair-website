@@ -91,10 +91,10 @@ for (const key of clips) {
 /* --- Çalışmalar: the client's order (2026-11-08). The four edited films
    (editedB, E, F, G from Downloads, copied to media-src/work-videos/,
    git-ignored) come first, cropped to the 3:4 plate a little above centre so
-   faces stay in frame; editedB is the double plate, so it is encoded larger.
+   faces stay in frame. All four at the same size as the other tiles.
    Then the photographs from the earlier Çalışmalar files (the HEIC ones
    converted with Windows' decoder, see media-src/calismalar/README.md). --- */
-for (const [key, w, crf] of [['b', 810, 30], ['e', 720, 28], ['f', 720, 28], ['g', 720, 28]]) {
+for (const [key, w, crf] of [['b', 720, 29], ['e', 720, 28], ['f', 720, 28], ['g', 720, 28]]) {
   const input = src('work-videos', `edited-${key}.mp4`);
   const file = out(`public/videos/work/edited-${key}.mp4`);
   mk(file);

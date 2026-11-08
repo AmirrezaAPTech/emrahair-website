@@ -22,8 +22,8 @@
   text-wrap: pretty;
 }
 
-/* Four columns of portrait plates. The first (the opening film) spans two
-   columns and two rows; with nine tiles that fills three rows exactly. */
+/* Four portrait plates by two rows, all the same size, so the eight items
+   read in exactly the order they were given (no reflowing tall plates). */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -33,15 +33,6 @@
 .tile {
   min-width: 0;
   aspect-ratio: 3 / 4;
-}
-
-@media (min-width: 900px) {
-  .tile:first-child {
-    grid-column: span 2;
-    grid-row: span 2;
-    /* Its height comes from the two rows it spans, not from its own ratio. */
-    aspect-ratio: auto;
-  }
 }
 
 .figure {
