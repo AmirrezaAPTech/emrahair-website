@@ -94,7 +94,8 @@
 .cardMedia {
   display: block;
   position: relative;
-  aspect-ratio: 4 / 3;
+  /* The salon's own films are shot 4:5; the plate takes their shape so no face is cropped. */
+  aspect-ratio: 4 / 5;
 }
 
 .cardVideo {
@@ -208,7 +209,7 @@
   }
 
   .cardMedia {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 5;
   }
 }
 

@@ -30,12 +30,12 @@ const img = (f) => path.join(root, 'src', 'assets', 'images', f);
 
 /* page key -> [source image, focal position for the crop] */
 const SOURCES = {
-  balyaj: [frame(stock('15802849_2160_3840_60fps.mp4'), 1.5), 'attention'],
-  'sac-boyama': [frame(path.join(root, 'media-src', 'reels', '1.mp4'), 15.5), 'attention'],
-  'sac-kesimi': [frame(stock('6502872-hd_1080_1920_30fps.mp4'), 31), 'attention'],
-  keratin: [frame(stock('5109926-hd_1080_1920_30fps.mp4'), 1), 'attention'],
-  'gelin-saci': [frame(stock('8935487-uhd_2160_3840_25fps.mp4'), 34), 'attention'],
-  'manikur-pedikur': [frame(stock('3997849-uhd_2160_4096_25fps.mp4'), 3), 'attention'],
+  'balyaj': [frame(path.join(root, 'media-src', 'cards', 'color.mp4'), 2), 'attention'],
+  'sac-boyama': [frame(path.join(root, 'media-src', 'cards', 'dye.mp4'), 1), 'attention'],
+  'sac-kesimi': [frame(path.join(root, 'media-src', 'cards', 'cut.mp4'), 3.5), 'attention'],
+  'keratin': [frame(path.join(root, 'media-src', 'cards', 'care.mp4'), 5), 'attention'],
+  'gelin-saci': [frame(path.join(root, 'media-src', 'cards', 'bridal.mp4'), 3), 'attention'],
+  'manikur-pedikur': [frame(path.join(root, 'media-src', 'cards', 'beauty.mp4'), 0.5), 'attention'],
   'kas-agda': [img('salon/product-wall.jpg'), 'centre'],
   'emrah-cabkur': [img('ritual.jpg'), 'attention'],
   iletisim: [img('salon/terrace.jpg'), 'centre'],
@@ -47,7 +47,7 @@ const SOURCES = {
   'post-keratin-botoks': [img('work/08-E.jpg'), 'attention'],
   'post-amonyaksiz-boya': [img('ritual.jpg'), 'attention'],
   'post-fiyatlar-2026': [img('salon/stations.jpg'), 'centre'],
-  'post-gelin-basi': [frame(stock('8935487-uhd_2160_3840_25fps.mp4'), 34), 'attention'],
+  'post-gelin-basi': [frame(path.join(root, 'media-src', 'cards', 'bridal.mp4'), 3), 'attention'],
 };
 
 /* A bottom band in the house ink with the wordmark, so the preview is

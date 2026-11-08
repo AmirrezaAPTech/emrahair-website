@@ -42,3 +42,6 @@ media-src/pexthumbs/
 media-src/calismalar/*.heic
 media-src/calismalar/*.mov
 media-src/calismalar/preview/
+
+# client card films (originals, ~55 MB); encoded copies live in public/videos/services
+media-src/cards/

@@ -34,7 +34,7 @@ import styles from './ServicePage.module.css';
 
 const POSTERS: Record<string, StaticImageData> = { color, dye, cut, care, bridal, beauty };
 /* Same cache-busting rule as the home cards (ServicesGrid): bump on re-encode. */
-const CLIP_VERSION = 3;
+const CLIP_VERSION = 4;
 
 type Section = { heading: string; body: string[] };
 type Copy = {

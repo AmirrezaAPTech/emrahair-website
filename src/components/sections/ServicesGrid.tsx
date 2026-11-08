@@ -10,7 +10,7 @@ import styles from './Services.module.css';
  * `?v=` busts the year-long cache on /videos (next.config.ts): bump it
  * whenever the clips are re-encoded, or returning visitors keep the old ones.
  */
-const CLIP_VERSION = 3;
+const CLIP_VERSION = 4;
 const openingFrame = (clip: string) => `/videos/services/${clip}.mp4?v=${CLIP_VERSION}#t=0.001`;
 
 /**

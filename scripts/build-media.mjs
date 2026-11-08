@@ -65,33 +65,27 @@ for (const n of [1, 2, 3, 4]) {
   console.log('copy  ', path.relative(root, file), Math.round(fs.statSync(file).size / 1024) + 'KB');
 }
 
-/* --- Service-card clips: 5s loops from Pexels (free licence). ------------
-   One per card, chosen for that card's service:
-     color   15802849 / pexels 37306468  balayage waves being shown off
-     cut     6502872   scissors close-up, profile
-     care    5109926   sleek straight hair after smoothing
-     bridal  8935487   a soft updo, in profile
-     beauty  3997849   red polish going on */
-const clips = {
-  color: ['15802849_2160_3840_60fps.mp4', 0, 5],
-  cut: ['6502872-hd_1080_1920_30fps.mp4', 30, 5],
-  care: ['5109926-hd_1080_1920_30fps.mp4', 0, 5.3],
-  bridal: ['8935487-uhd_2160_3840_25fps.mp4', 33, 4.8],
-  beauty: ['3997849-uhd_2160_4096_25fps.mp4', 2, 5],
-};
-for (const [key, [file, t, d]] of Object.entries(clips)) {
-  video(out(`public/videos/services/${key}.mp4`), ['-ss', String(t), '-t', String(d), '-i', src('stock', file)], 'scale=540:-2,fps=30', 27);
+/* --- Service-card films: the salon's own, one per card (2026-11-08). ----
+   The client's edits, "<card title>.mp4" from Downloads, copied to
+   media-src/cards/<key>.mp4 (git-ignored originals, 1080x1350, 7–10 s).
+   Encoded whole at 600x750 (the plate is 4:5), muted. Each card and its
+   service page share the file. Bump CLIP_VERSION in ServicesGrid.tsx and
+   ServicePage.tsx after re-encoding.
+     color   Balyaj & Air Touch      cut     Saç Kesimi & Fön
+     dye     Saç Boyama & Dip Boya   care    Keratin & Saç Bakımı
+     bridal  Gelin Saçı & Topuz      beauty  Manikür & Pedikür */
+const clips = ['color', 'dye', 'cut', 'care', 'bridal', 'beauty'];
+for (const key of clips) {
+  const file = out(`public/videos/services/${key}.mp4`);
+  mk(file);
+  ff(['-i', src('cards', `${key}.mp4`), '-an', '-vf', 'scale=600:750:flags=lanczos,fps=30', '-c:v', 'libx264', '-preset', 'veryslow', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file]);
+  console.log('video ', path.relative(root, file), Math.round(fs.statSync(file).size / 1024) + 'KB');
 }
-
-/* The hair-colour page's film is the salon's own: reel 1, the brush going
-   through a root colour at about 15s. Not stock, so it is the one clip that
-   shows this salon's hands. */
-video(out('public/videos/services/dye.mp4'), ['-ss', '15', '-t', '5', '-i', src('reels', '1.mp4')], 'scale=540:-2,fps=30', 27);
 
 /* Posters for the service pages' hero film: its opening frame, so the page
    paints a picture before the video has loaded (and for Reduce Motion). */
-for (const key of [...Object.keys(clips), 'dye']) {
-  poster(out(`src/assets/images/services/${key}.jpg`), out(`public/videos/services/${key}.mp4`), 0, 'scale=540:-2');
+for (const key of clips) {
+  poster(out(`src/assets/images/services/${key}.jpg`), out(`public/videos/services/${key}.mp4`), 0.3, 'scale=600:-2');
 }
 
 /* --- Çalışmalar: the client's files, "Çalışmalar*" in Downloads, in
