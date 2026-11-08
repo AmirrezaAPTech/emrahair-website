@@ -99,13 +99,25 @@
     "lede": "Real guests, photographed at Emrahair: balayage, color and cuts.",
     "cta": "See more on Instagram",
     "tiles": {
+      "vb": {
+        "label": "Natural curls",
+        "alt": "A guest showing off full, natural curls"
+      },
+      "ve": {
+        "label": "Volume blowout",
+        "alt": "The stylist shaping long brown hair into full waves"
+      },
+      "vf": {
+        "label": "Blonde balayage",
+        "alt": "A guest smiling with long blonde balayage"
+      },
+      "vg": {
+        "label": "Golden blonde",
+        "alt": "A guest showing long, sleek golden-blonde hair"
+      },
       "a1": {
         "label": "Honey-blonde layers",
         "alt": "Long layered hair in honey-blonde tones"
-      },
-      "a2": {
-        "label": "Volume blow-dry",
-        "alt": "Full, wavy brown hair in the stylist's hands"
       },
       "a3": {
         "label": "Curls",
@@ -115,17 +127,9 @@
         "label": "Platinum blonde",
         "alt": "Platinum-blonde hair with face-framing layers"
       },
-      "b5": {
-        "label": "Long balayage",
-        "alt": "Long blonde balayage lightening towards the ends"
-      },
       "c6": {
         "label": "Wavy balayage",
         "alt": "Wavy balayage on a guest in a denim jacket"
-      },
-      "d7": {
-        "label": "Light blonde",
-        "alt": "Light-blonde hair with wavy ends, from behind"
       },
       "e8": {
         "label": "Curtain bangs",

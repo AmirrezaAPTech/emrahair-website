@@ -2,41 +2,44 @@ import Image, { getImageProps, type StaticImageData } from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import a1 from '@/assets/images/work/01-A.jpg';
-import a2Poster from '@/assets/images/work/02-A-poster.jpg';
 import a3 from '@/assets/images/work/03-A.jpg';
 import b4 from '@/assets/images/work/04-B.jpg';
-import b5Poster from '@/assets/images/work/05-B-poster.jpg';
 import c6 from '@/assets/images/work/06-C.jpg';
-import d7Poster from '@/assets/images/work/07-D-poster.jpg';
 import e8 from '@/assets/images/work/08-E.jpg';
+import vbPoster from '@/assets/images/work/edited-b-poster.jpg';
+import vePoster from '@/assets/images/work/edited-e-poster.jpg';
+import vfPoster from '@/assets/images/work/edited-f-poster.jpg';
+import vgPoster from '@/assets/images/work/edited-g-poster.jpg';
 import { contact } from '@/lib/site';
 import { Headline } from '@/components/ui/Headline';
 import styles from './Work.module.css';
 
 /**
- * The client's "Çalışmalar" files, in alphabetical order of their original
- * names (see media-src/calismalar/README.md). Photos and loops are mixed, so
- * the grid is uniform — four portrait plates by two rows — which keeps the
- * order exactly as given; tall plates would make the grid reflow them.
+ * The client's order (2026-11-08): the four edited films first, editedB as the
+ * opening one, then the photographs. On a desktop the first film takes a
+ * double plate (two columns by two rows), which also makes the nine tiles
+ * fill a four-column grid with nothing left alone on the last row. On a phone
+ * every tile is the same size on the swipe rail, in the same order.
  *
  * Videos are silent loops that play only while on screen
  * (motion/modules/service-video); each has a poster for the first paint.
  * Bump VIDEO_VERSION when they are re-encoded (the /videos cache is a year).
  */
-const VIDEO_VERSION = 1;
+const VIDEO_VERSION = 2;
 
 type Tile =
   | { key: string; kind: 'photo'; src: StaticImageData }
   | { key: string; kind: 'video'; file: string; poster: StaticImageData };
 
 const TILES: Tile[] = [
+  { key: 'vb', kind: 'video', file: 'edited-b', poster: vbPoster },
+  { key: 've', kind: 'video', file: 'edited-e', poster: vePoster },
+  { key: 'vf', kind: 'video', file: 'edited-f', poster: vfPoster },
+  { key: 'vg', kind: 'video', file: 'edited-g', poster: vgPoster },
   { key: 'a1', kind: 'photo', src: a1 },
-  { key: 'a2', kind: 'video', file: '02-A', poster: a2Poster },
   { key: 'a3', kind: 'photo', src: a3 },
   { key: 'b4', kind: 'photo', src: b4 },
-  { key: 'b5', kind: 'video', file: '05-B', poster: b5Poster },
   { key: 'c6', kind: 'photo', src: c6 },
-  { key: 'd7', kind: 'video', file: '07-D', poster: d7Poster },
   { key: 'e8', kind: 'photo', src: e8 },
 ];
 
@@ -73,7 +76,7 @@ export async function Work() {
                       className={styles.video}
                       data-svc-video
                       src={`/videos/work/${tile.file}.mp4?v=${VIDEO_VERSION}#t=0.001`}
-                      poster={getImageProps({ src: tile.poster, alt: '', width: 720, quality: 72 }).props.src}
+                      poster={getImageProps({ src: tile.poster, alt: '', width: tile.key === 'vb' ? 1080 : 720, quality: 72 }).props.src}
                       preload="none"
                       muted
                       loop

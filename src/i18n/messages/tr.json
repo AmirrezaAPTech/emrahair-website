@@ -99,13 +99,25 @@
     "lede": "Emrahair koltuğunda, gerçek misafirlerle: balyaj, renk ve kesim çalışmaları.",
     "cta": "Instagram’da tümünü görün",
     "tiles": {
+      "vb": {
+        "label": "Doğal bukleler",
+        "alt": "Gür, doğal bukleli saçlarını gösteren bir misafir"
+      },
+      "ve": {
+        "label": "Hacimli fön",
+        "alt": "Kuaför, uzun kahve saçlara hacimli dalgalar verirken"
+      },
+      "vf": {
+        "label": "Sarı balyaj",
+        "alt": "Uzun sarı balyajlı saçlarıyla gülümseyen bir misafir"
+      },
+      "vg": {
+        "label": "Altın sarısı",
+        "alt": "Uzun, düz altın sarısı saçlarını gösteren bir misafir"
+      },
       "a1": {
         "label": "Bal sarısı katlar",
         "alt": "Bal sarısı tonlarda, katlı kesimli uzun saç"
-      },
-      "a2": {
-        "label": "Hacimli fön",
-        "alt": "Kuaförün elleri arasında hacimli, dalgalı kahve saç"
       },
       "a3": {
         "label": "Bukleler",
@@ -115,17 +127,9 @@
         "label": "Platin sarı",
         "alt": "Yüzü çevreleyen katlarla platin sarısı saç"
       },
-      "b5": {
-        "label": "Uzun balyaj",
-        "alt": "Uçlara doğru açılan uzun sarı balyaj"
-      },
       "c6": {
         "label": "Dalgalı balyaj",
         "alt": "Kot ceketli bir misafirde dalgalı balyaj"
-      },
-      "d7": {
-        "label": "Açık sarı",
-        "alt": "Arkadan görünen, uçları dalgalı açık sarı saç"
       },
       "e8": {
         "label": "Perdeli kahkül",

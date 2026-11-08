@@ -88,26 +88,25 @@ for (const key of clips) {
   poster(out(`src/assets/images/services/${key}.jpg`), out(`public/videos/services/${key}.mp4`), 0.3, 'scale=600:-2');
 }
 
-/* --- Çalışmalar: the client's files, "Çalışmalar*" in Downloads, in
-   alphabetical order. The HEIC photos are converted to JPEG with Windows'
-   own decoder first (sharp's build has no HEVC), see media-src/calismalar/
-   README.md; the .heic and .mov originals are git-ignored. -------------- */
-const WORK = [
-  ['01-A', 'photo'], ['02-A', 'video'], ['03-A', 'photo'], ['04-B', 'photo'],
-  ['05-B', 'video'], ['06-C', 'photo'], ['07-D', 'video'], ['08-E', 'photo'],
-];
-for (const [name, kind] of WORK) {
-  if (kind === 'photo') {
-    const from = fs.existsSync(src('calismalar', `${name}.jpg`)) ? `${name}.jpg` : `${name}.png`;
-    const file = out(`src/assets/images/work/${name}.jpg`);
-    mk(file);
-    await sharp(src('calismalar', from)).rotate().resize({ width: 1200, height: 1600, fit: 'cover', position: 'attention' }).jpeg({ quality: 82, mozjpeg: true }).toFile(file);
-  } else {
-    const input = src('calismalar', `${name}.mov`);
-    // ffmpeg applies the phone's rotation itself; 10s is plenty for a loop.
-    video(out(`public/videos/work/${name}.mp4`), ['-t', '10', '-i', input], 'scale=720:-2,fps=30', 25);
-    poster(out(`src/assets/images/work/${name}-poster.jpg`), input, 0.5, 'scale=720:-2');
-  }
+/* --- Çalışmalar: the client's order (2026-11-08). The four edited films
+   (editedB, E, F, G from Downloads, copied to media-src/work-videos/,
+   git-ignored) come first, cropped to the 3:4 plate a little above centre so
+   faces stay in frame; editedB is the double plate, so it is encoded larger.
+   Then the photographs from the earlier Çalışmalar files (the HEIC ones
+   converted with Windows' decoder, see media-src/calismalar/README.md). --- */
+for (const [key, w, crf] of [['b', 810, 30], ['e', 720, 28], ['f', 720, 28], ['g', 720, 28]]) {
+  const input = src('work-videos', `edited-${key}.mp4`);
+  const file = out(`public/videos/work/edited-${key}.mp4`);
+  mk(file);
+  const cap = key === 'b' ? ['-maxrate', '3500k', '-bufsize', '7000k'] : [];
+  ff(['-i', input, '-an', '-vf', `crop=1080:1440:0:168,scale=${w}:-2:flags=lanczos,fps=30`, '-c:v', 'libx264', '-preset', 'veryslow', '-crf', String(crf), ...cap, '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file]);
+  poster(out(`src/assets/images/work/edited-${key}-poster.jpg`), file, 0.5, 'null');
+}
+for (const name of ['01-A', '03-A', '04-B', '06-C', '08-E']) {
+  const from = fs.existsSync(src('calismalar', `${name}.jpg`)) ? `${name}.jpg` : `${name}.png`;
+  const file = out(`src/assets/images/work/${name}.jpg`);
+  mk(file);
+  await sharp(src('calismalar', from)).rotate().resize({ width: 1200, height: 1600, fit: 'cover', position: 'attention' }).jpeg({ quality: 82, mozjpeg: true }).toFile(file);
 }
 console.log('work media done');
 
